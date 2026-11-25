@@ -82,7 +82,8 @@ function metaCho(t, root) {
     '<meta name="twitter:card" content="summary_large_image">',
     `<link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml">`,
     `<link rel="icon" href="${root}assets/favicon-32.png" sizes="32x32" type="image/png">`,
-    `<link rel="apple-touch-icon" href="${root}assets/apple-touch-icon.png">`
+    `<link rel="apple-touch-icon" href="${root}assets/apple-touch-icon.png">`,
+    SITE ? `<script type="application/ld+json">${JSON.stringify({'@context': 'https://schema.org', '@type': 'ProfessionalService', name: 'Dũng Ads Strategy', url: SITE + '/', image: `${SITE}/assets/og/${t.lang}-home.png`, email: 'dungdm.mkt@outlook.com', telephone: '+84961618862', areaServed: t.lang === 'vi' ? 'TP.HCM, Việt Nam' : 'Ho Chi Minh City, Vietnam', founder: {'@type': 'Person', name: 'Đào Mạnh Dũng', jobTitle: 'Performance Marketer', sameAs: ['https://www.linkedin.com/in/manhdungdigital/', 'https://www.facebook.com/michael.jung03']}, sameAs: ['https://www.linkedin.com/in/manhdungdigital/'], knowsLanguage: ['vi', 'en']})}</script>` : ''
   ].filter(Boolean);
   return dong.join('\n');
 }
@@ -91,6 +92,10 @@ function dung(mau, t, root) {
   let h = mau.replace(/<!-- META:START -->[\s\S]*?<!-- META:END -->/, metaCho(t, root));
   h = h.replace('<html lang="vi">', `<html lang="${t.lang}" data-lang="${t.lang}" data-root="${root}" data-route="${t.route}">`);
   h = h.split('{{ROOT}}').join(root);
+  // mỗi trang con có 1 thẻ h1 hiển thị: đổi tiêu đề mục của trang đó từ h2 sang h1
+  const H1 = {toi: 'h-toi', 'dich-vu': 'h-dv', 'du-an': 'h-da', 'cach-lam': 'h-cl', 'lien-he': 'h-lh'};
+  const idH1 = t.route.startsWith('p:') ? 'h-da' : H1[t.route];
+  if (idH1) h = h.replace(new RegExp(`<h2 id="${idH1}"([^>]*)>([\\s\\S]*?)</h2>`), `<h1 id="${idH1}"$1>$2</h1>`);
   return h;
 }
 
