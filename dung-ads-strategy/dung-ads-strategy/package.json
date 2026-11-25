@@ -1,9 +1,0 @@
-{
-  "name": "dung-ads-strategy",
-  "private": true,
-  "scripts": {
-    "build": "node build.js",
-    "og": "node scripts/og.js",
-    "preview": "npx serve docs"
-  }
-}
