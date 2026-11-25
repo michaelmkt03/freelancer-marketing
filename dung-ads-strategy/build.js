@@ -22,27 +22,27 @@ const META = {
   vi: {
     '': ['Dũng Ads Strategy · Performance marketing tại TP.HCM', 'Meta Ads, Google Ads, SEO, đo lường, tối ưu performance cho ngành thẩm mỹ, nha khoa, sự kiện, khách sạn.'],
     toi: ['Giới thiệu · Dũng Ads Strategy', 'Đào Mạnh Dũng làm performance marketing tại Silverland Hospitality và nhận dự án freelance.'],
-    'dich-vu': ['Gói dịch vụ và bảng giá · Dũng Ads Strategy', 'Meta Ads từ 2,5 triệu, Google Ads từ 1,8 triệu mỗi tháng. Có gói SEO, GEO, đo lường, không phí khởi tạo.'],
-    'du-an': ['Dự án · Dũng Ads Strategy', 'Silverland Hotels, KBIT, KLA Center, Human, Nha khoa Việt Mỹ: việc đã làm và kết quả đo được.'],
+    'dich-vu': ['Gói dịch vụ và bảng giá · Dũng Ads Strategy', 'Meta Ads từ 2,5 triệu, Google Ads từ 1,8 triệu mỗi tháng. Có gói SEO và GEO. Gói nào cũng gồm đo lường và báo cáo.'],
+    'du-an': ['Dự án · Dũng Ads Strategy', 'Silverland Hotels, KBIT, KLA Center, CORA, Human: việc đã làm và kết quả đo được.'],
     'cach-lam': ['Cách làm việc · Dũng Ads Strategy', '4 bước: chẩn đoán trong 3 ngày, sửa tracking, test mỗi tuần, báo cáo bằng số đã đối chiếu.'],
     'lien-he': ['Liên hệ · Dũng Ads Strategy', 'Gửi thương hiệu và kênh đang chạy, Dũng trả lời trong 24 giờ kèm nhận xét miễn phí.'],
     human: ['Human · K-Beauty Expo 2026 · Dũng Ads Strategy', '284.170 người tiếp cận trong 3 ngày hội chợ, với 4,9 triệu đồng chi phí quảng cáo.'],
     kbit: ['KBIT · K-Beauty MEETS 2026 · Dũng Ads Strategy', '1.274 lượt đăng ký tham dự từ quảng cáo qua 4 đợt, cho 3 sự kiện ngành thẩm mỹ.'],
     kla: ['KLA Center · Phòng khám thẩm mỹ · Dũng Ads Strategy', '39,47 triệu đồng doanh thu tháng 9/2026 từ 18 khách đến khám.'],
-    vietmy: ['Nha khoa Việt Mỹ · Dũng Ads Strategy', 'Hồ sơ minh hoạ: tách quảng cáo theo dịch vụ, chi phí mỗi tin nhắn giảm 38%.'],
+    cora: ['CORA · Phòng khám thẩm mỹ · Dũng Ads Strategy', '287.837 người tiếp cận với 10 triệu đồng chạy nhận diện thương hiệu, và kế hoạch 30 ngày cho cắt mí.'],
     silverland: ['Silverland Hotels · Dũng Ads Strategy', 'Doanh thu đặt phòng trên web Bến Thành năm 2025 tăng 85,3% so với 2024. Google Ads, SEO và GEO.']
   },
   en: {
     '': ['Dũng Ads Strategy · Performance marketing in HCMC', 'Meta Ads, Google Ads, SEO, measurement and performance optimization for aesthetics, dental, events and hotels.'],
     toi: ['About · Dũng Ads Strategy', 'Đào Mạnh Dũng works in performance marketing at Silverland Hospitality and takes on freelance projects.'],
-    'dich-vu': ['Service plans and pricing · Dũng Ads Strategy', 'Meta Ads from VND 2.5M, Google Ads from VND 1.8M a month. SEO, GEO and measurement plans, no setup fee.'],
-    'du-an': ['Projects · Dũng Ads Strategy', 'Silverland Hotels, KBIT, KLA Center, Human, Nha khoa Việt Mỹ: the work and the measured results.'],
+    'dich-vu': ['Service plans and pricing · Dũng Ads Strategy', 'Meta Ads from VND 2.5M, Google Ads from VND 1.8M a month. SEO and GEO plans. Tracking and reporting come with every plan.'],
+    'du-an': ['Projects · Dũng Ads Strategy', 'Silverland Hotels, KBIT, KLA Center, CORA, Human: the work and the measured results.'],
     'cach-lam': ['Process · Dũng Ads Strategy', '4 steps: a 3-day diagnosis, tracking fixes, weekly tests, and reports with reconciled numbers.'],
     'lien-he': ['Contact · Dũng Ads Strategy', 'Send your brand and the channels you run. Dũng replies within 24 hours with free first feedback.'],
     human: ['Human · K-Beauty Expo 2026 · Dũng Ads Strategy', '284,170 people reached over a 3-day trade show, on VND 4.9 million in ad spend.'],
     kbit: ['KBIT · K-Beauty MEETS 2026 · Dũng Ads Strategy', '1,274 sign-ups from ads across 4 flights, for 3 aesthetics industry events.'],
     kla: ['KLA Center · Aesthetic clinic · Dũng Ads Strategy', 'VND 39.47 million in revenue in Sep 2026 from 18 clinic visits.'],
-    vietmy: ['Nha khoa Việt Mỹ · Dũng Ads Strategy', 'Illustrative case: ad sets split by treatment, cost per message down 38%.'],
+    cora: ['CORA · Aesthetic clinic · Dũng Ads Strategy', '287,837 people reached on VND 10 million of awareness ads, plus a 30-day plan for eyelid surgery.'],
     silverland: ['Silverland Hotels · Dũng Ads Strategy', 'Bến Thành web booking revenue up 85.3% in 2025 versus 2024. Google Ads, SEO and GEO.']
   }
 };

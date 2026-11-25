@@ -18,21 +18,21 @@ const LINK_FONT = FONT ? '' : '<link href="https://fonts.googleapis.com/css2?fam
 const ANH = {
   vi: {
     home: {nhan: 'PERFORMANCE MARKETING · TP.HCM', tieu: 'Khách rơi ở đâu,', nghieng: 'mình sửa ở đó', so: '5 dự án', so_nhan: 'xếp theo bước khách rơi khỏi phễu'},
-    'dich-vu': {nhan: 'GÓI DỊCH VỤ · BẢNG GIÁ', tieu: 'Gói dịch vụ', nghieng: 'từ cơ bản tới nâng cao, phí thấp hơn agency.', so: '2,5 tr', so_nhan: 'gói Facebook mỗi tháng, không phí khởi tạo'},
-    human: {nhan: 'DỰ ÁN 01 · LÀM ĐẸP', tieu: 'Human', nghieng: 'Gian hàng hội chợ làm đẹp 3 ngày.', so: '284.170', so_nhan: 'người tiếp cận, 1.123 đ mỗi lượt xem trang'},
-    kbit: {nhan: 'DỰ ÁN 03 · SỰ KIỆN', tieu: 'KBIT', nghieng: 'Sự kiện làm đẹp, 4 đợt đăng ký.', so: '54.270 đ', so_nhan: 'chi phí thật mỗi lượt đăng ký, Meta báo 199.697 đ'},
-    kla: {nhan: 'DỰ ÁN 04 · THẨM MỸ', tieu: 'KLA Center', nghieng: 'Phòng khám thẩm mỹ.', so: '39,47 tr', so_nhan: 'doanh thu tháng 9/2026 từ 18 khách đến'},
-    vietmy: {nhan: 'DỰ ÁN 02 · NHA KHOA · MINH HOẠ', tieu: 'Nha khoa Việt Mỹ', nghieng: 'Nha khoa, niềng răng và implant.', so: '−38%', so_nhan: 'chi phí mỗi tin nhắn (số minh hoạ)'},
-    silverland: {nhan: 'DỰ ÁN 05 · KHÁCH SẠN', tieu: 'Silverland Hotels', nghieng: 'Web đặt phòng khách sạn.', so: '14,26 tỷ', so_nhan: 'doanh thu web Bến Thành 2025, tăng 85,3%'}
+    'dich-vu': {nhan: 'GÓI DỊCH VỤ · BẢNG GIÁ', tieu: 'Gói dịch vụ', nghieng: 'từ cơ bản tới nâng cao', so: '2,5 tr', so_nhan: 'gói Meta Ads mỗi tháng, không phí khởi tạo'},
+    human: {nhan: 'DỰ ÁN 01 · LÀM ĐẸP', tieu: 'Human', nghieng: 'Gian hàng hội chợ làm đẹp 3 ngày', so: '284.170', so_nhan: 'người tiếp cận, 1.123 đ mỗi lượt xem trang'},
+    kbit: {nhan: 'DỰ ÁN 02 · SỰ KIỆN', tieu: 'KBIT', nghieng: 'Sự kiện làm đẹp, 4 đợt đăng ký', so: '54.270 đ', so_nhan: 'chi phí thật mỗi lượt đăng ký, Meta báo 199.697 đ'},
+    kla: {nhan: 'DỰ ÁN 03 · THẨM MỸ', tieu: 'KLA Center', nghieng: 'Phòng khám thẩm mỹ', so: '39,47 tr', so_nhan: 'doanh thu tháng 9/2026 từ 18 khách đến'},
+    cora: {nhan: 'DỰ ÁN 04 · THẨM MỸ', tieu: 'CORA', nghieng: 'Phòng khám phẫu thuật thẩm mỹ', so: '287.837', so_nhan: 'người tiếp cận với 10 triệu đồng chạy nhận diện'},
+    silverland: {nhan: 'DỰ ÁN 05 · KHÁCH SẠN', tieu: 'Silverland Hotels', nghieng: 'Web đặt phòng khách sạn', so: '14,26 tỷ', so_nhan: 'doanh thu web Bến Thành 2025, tăng 85,3%'}
   },
   en: {
-    home: {nhan: 'PERFORMANCE MARKETING · HO CHI MINH CITY', tieu: 'Customers drop off somewhere.', nghieng: 'I find where, and fix it', so: '5 projects', so_nhan: 'ordered by where customers dropped off'},
-    'dich-vu': {nhan: 'SERVICE PLANS · PRICING', tieu: 'Service plans', nghieng: 'from basic to advanced, priced below agencies.', so: 'VND 2.5M', so_nhan: 'Facebook plan per month, no setup fee'},
-    human: {nhan: 'PROJECT 01 · BEAUTY', tieu: 'Human', nghieng: 'A booth at a 3-day beauty trade show.', so: '284,170', so_nhan: 'people reached, VND 1,123 per landing page view'},
-    kbit: {nhan: 'PROJECT 03 · EVENTS', tieu: 'KBIT', nghieng: 'A beauty event, 4 sign-up flights.', so: 'VND 54,270', so_nhan: 'real cost per sign-up; Meta said VND 199,697'},
-    kla: {nhan: 'PROJECT 04 · AESTHETICS', tieu: 'KLA Center', nghieng: 'An aesthetics clinic.', so: 'VND 39.47M', so_nhan: 'revenue in Sep 2026 from 18 clinic visits'},
-    vietmy: {nhan: 'PROJECT 02 · DENTAL · ILLUSTRATIVE', tieu: 'Nha khoa Việt Mỹ', nghieng: 'A dental clinic, braces and implants.', so: '−38%', so_nhan: 'cost per message (illustrative figures)'},
-    silverland: {nhan: 'PROJECT 05 · HOTELS', tieu: 'Silverland Hotels', nghieng: 'Direct bookings for a hotel group.', so: 'VND 14.26B', so_nhan: 'Bến Thành web revenue 2025, up 85.3%'}
+    home: {nhan: 'PERFORMANCE MARKETING · HO CHI MINH CITY', tieu: 'Where they drop off,', nghieng: 'I fix it there', so: '5 projects', so_nhan: 'ordered by where customers dropped off'},
+    'dich-vu': {nhan: 'SERVICE PLANS · PRICING', tieu: 'Service plans', nghieng: 'from basic to advanced', so: 'VND 2.5M', so_nhan: 'Meta Ads plan per month, no setup fee'},
+    human: {nhan: 'PROJECT 01 · BEAUTY', tieu: 'Human', nghieng: 'A booth at a 3-day beauty trade show', so: '284,170', so_nhan: 'people reached, VND 1,123 per landing page view'},
+    kbit: {nhan: 'PROJECT 02 · EVENTS', tieu: 'KBIT', nghieng: 'A beauty event, 4 sign-up flights', so: 'VND 54,270', so_nhan: 'real cost per sign-up; Meta said VND 199,697'},
+    kla: {nhan: 'PROJECT 03 · AESTHETICS', tieu: 'KLA Center', nghieng: 'An aesthetics clinic', so: 'VND 39.47M', so_nhan: 'revenue in Sep 2026 from 18 clinic visits'},
+    cora: {nhan: 'PROJECT 04 · AESTHETICS', tieu: 'CORA', nghieng: 'An aesthetic surgery clinic', so: '287,837', so_nhan: 'people reached on VND 10M of awareness ads'},
+    silverland: {nhan: 'PROJECT 05 · HOTELS', tieu: 'Silverland Hotels', nghieng: 'Direct bookings for a hotel group', so: 'VND 14.26B', so_nhan: 'Bến Thành web revenue 2025, up 85.3%'}
   }
 };
 
