@@ -514,38 +514,6 @@ footer.ft::after{content:"";position:absolute;left:50%;top:0;width:38px;height:3
 @media (max-width:560px){.pheu-dau{flex-direction:column;gap:4px}.pheu-than{grid-template-columns:1fr}.pheu svg{max-width:290px;margin:0 auto}.pheu{padding:16px}}
 @media (prefers-reduced-motion:reduce){.pheu *{animation:none!important}}
 
-/* menu xổ xem trước */
-.nav-mo{position:relative;display:flex}
-.nav-xem{position:absolute;top:calc(100% + 22px);left:50%;width:min(560px,80vw);transform:translate(-50%,6px);background:#FAFAF6;color:var(--muc);border:1.5px solid var(--muc);border-radius:16px;padding:18px 18px 14px;box-shadow:10px 12px 0 rgba(46,75,255,.18);opacity:0;visibility:hidden;transition:opacity .18s,transform .18s,visibility 0s .18s;z-index:60}
-.nav-xem::before{content:"";position:absolute;left:0;right:0;top:-24px;height:24px}
-.nav-mo:is(:hover,:focus-within):not(.dong) .nav-xem{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .18s,transform .18s}
-.nav-mo:is(:hover,:focus-within):not(.dong)>a{opacity:1;color:var(--nhan-s)}
-.dau nav .nav-xem a{color:inherit;text-decoration:none;opacity:1;font:inherit;letter-spacing:0;white-space:normal}
-.dau nav .nav-xem a:hover{color:inherit}
-.dau nav .nx-da a:hover,.dau nav .nx-da a:focus-visible{color:var(--giay)}
-.dau nav .nx-chan a,.dau nav .nx-chan a:hover{color:var(--nhan);font:500 12.5px/1.3 var(--f-so)}
-.nx-t{margin:0 0 10px;font:500 11px/1 var(--f-so);letter-spacing:.08em;text-transform:uppercase;color:var(--xam)}
-.nx-dv,.nx-da{list-style:none;margin:0;padding:0}
-.nx-dv{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.nx-dv a{display:grid;gap:4px;padding:12px 13px;border:1.3px solid var(--vien);border-radius:11px;transition:border-color .15s,background .15s}
-.nx-dv a:hover,.nx-dv a:focus-visible{border-color:var(--muc);background:#fff}
-.nx-dv b{font:700 15px/1.2 var(--f-tieu)}
-.nx-dv small{font:400 12px/1.35 var(--f-so);color:var(--xam)}
-.nx-dv em{font:500 12.5px/1.2 var(--f-so);font-style:normal;color:var(--nhan);margin-top:4px}
-.nx-da a{display:grid;grid-template-columns:128px 118px minmax(0,1fr);gap:6px 14px;align-items:baseline;padding:10px 8px;border-bottom:1px solid var(--vien);border-radius:6px;transition:background .15s}
-.nx-da li:first-child a{border-top:1px solid var(--vien)}
-.nx-da a:hover,.nx-da a:focus-visible{background:var(--muc);color:var(--giay)}
-.nx-da span{font:700 15px/1.2 var(--f-tieu)}
-.nx-da span small{display:block;font:400 11px/1.3 var(--f-so);color:var(--xam);margin-top:3px}
-.nx-da b{font:800 16px/1.15 var(--f-tieu);font-stretch:85%;color:var(--nhan)}
-.nx-da a:hover b,.nx-da a:focus-visible b{color:var(--nhan-s)}
-.nx-nh{font:400 12px/1.4 var(--f-so);color:var(--xam)}
-.nx-da a:hover .nx-nh,.nx-da a:hover span small{color:var(--xam-s)}
-.nx-chan{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin-top:12px}
-.nx-chan a{font:500 12.5px/1.3 var(--f-so);color:var(--nhan);padding:6px 0;border-bottom:1px solid transparent}
-.nx-chan a:hover{border-bottom-color:currentColor}
-@media (max-width:1080px){.nav-xem{width:min(500px,86vw)}}
-@media (prefers-reduced-motion:reduce){.nav-xem{transition:none}}
 
 /* trang chủ: 2 dự án nổi bật */
 .tc-noi{margin-bottom:clamp(70px,9vw,120px)}
@@ -1272,8 +1240,7 @@ vi: {
     {nam: "2026", noi_dung: "Mở thêm mảng sự kiện: K-Beauty MEETS 2026 của KBIT, 1.274 lượt đăng ký từ quảng cáo."},
     {nam: "12/2026", noi_dung: "Nhận thêm dự án freelance mới.", sap: true}
   ],
-  ky_nang: [{nhom: "Chuyên môn", ds: ["Phân tích dữ liệu", "Thiết kế media", "Ứng dụng AI vào công việc", "Tin học văn phòng"]},
-            {nhom: "Làm việc", ds: ["Làm việc độc lập", "Làm việc nhóm", "Đàm phán"]}],
+  ky_nang: [{nhom: "Chuyên môn", ds: ["Phân tích dữ liệu", "Thiết kế media", "Ứng dụng AI vào công việc", "Tin học văn phòng"]}],
   cong_cu_dan: "Xếp theo đường đi của dữ liệu, từ lúc quảng cáo chạy tới lúc lên báo cáo",
   cong_cu: [{nhom: "Quảng cáo", ds: ["Meta Ads Manager", "Google Ads"]}, {nhom: "Tracking", ds: ["GA4", "Google Tag Manager"]},
             {nhom: "SEO, GEO", ds: ["Search Console", "Semrush"]}, {nhom: "Dữ liệu, báo cáo", ds: ["Google Sheets", "Looker Studio", "Power BI"]}],
@@ -1470,7 +1437,6 @@ vi: {
   ],
   du_an: [
     {
-      noi_bat: {so: "284.170", nhan: "người tiếp cận gian hàng trong 3 ngày hội chợ"},
       id: "human", gia_dinh: false, thuong_hieu: "Human", phu: "K-Beauty Expo Vietnam 2026, gian H03", nganh: "Làm đẹp", nam: "2026", buoc: 0,
       vai_tro: "Meta Ads, báo cáo sau sự kiện", thoi_gian: "trước và trong 3 ngày sự kiện",
       van_de: "Quảng cáo nhận diện cho gian hàng hội chợ: 284.170 người tiếp cận trong 3 ngày, với 4,9 triệu đồng",
@@ -1497,7 +1463,6 @@ vi: {
       bai_hoc: "Sự kiện 3 ngày thì đo bằng chi phí tiếp cận và lượt xem trang. Lần này chiến dịch tin nhắn tiêu 1,35 triệu đồng mà không ra cuộc trò chuyện nào, lần sau dồn phần đó sang tiếp cận."
     },
     {
-      noi_bat: {so: "128 so với 471", nhan: "lượt đăng ký đợt 1: Meta báo và danh sách đối chiếu"},
       id: "kbit", gia_dinh: false, thuong_hieu: "KBIT", phu: "K-Beauty MEETS 2026", nganh: "Sự kiện", nam: "2026", buoc: 2,
       vai_tro: "Meta Ads, theo dõi đăng ký, báo cáo chi phí", thoi_gian: "4 đợt, từ 27/08/2026",
       van_de: "Cùng 25,56 triệu đồng ở đợt 1, Meta ghi nhận 128 lượt đăng ký, danh sách đối chiếu có 471 lượt từ quảng cáo",
@@ -1524,7 +1489,6 @@ vi: {
       bai_hoc: "Số đăng ký thật cao gấp gần 3,7 lần số Meta tự báo. Muốn biết quảng cáo nào hiệu quả thì phải đối chiếu với danh sách đăng ký thật."
     },
     {
-      noi_bat: {so: "84,93 tr", nhan: "doanh thu từ 56 lượt khách đến khám, tháng 8 đến 10/2026"},
       id: "kla", gia_dinh: false, thuong_hieu: "KLA Center", nganh: "Thẩm mỹ", nam: "2026", buoc: 3,
       vai_tro: "Meta Ads, bảng theo dõi khách theo dịch vụ", thoi_gian: "từ 08/2026",
       van_de: "Tháng 9/2026, Pico + Meso có 110 tin nhắn và ghi nhận 350.000 đồng doanh thu, còn HIFU 5D có 23 tin nhắn và ghi nhận 15 triệu đồng",
@@ -1553,7 +1517,6 @@ vi: {
       bai_hoc: "Tin nhắn rẻ nhất chưa chắc ra tiền. Phải nhìn tới doanh thu từng dịch vụ rồi mới chia ngân sách."
     },
     {
-      noi_bat: {so: "51 tin nhắn", nhan: "gần như không có khách đến khám"},
       id: "cora", gia_dinh: false, thuong_hieu: "CORA", phu: "Phòng khám chuyên khoa thẩm mỹ, Quận 10", nganh: "Thẩm mỹ", nam: "2026", buoc: 3,
       vai_tro: "Meta Ads, nghiên cứu đối thủ, kế hoạch 30 ngày", thoi_gian: "tháng 6 đến 9",
       van_de: "51 tin nhắn, gần như không có khách đến khám. CORA đã điều chỉnh thông điệp thế nào?",
@@ -1581,7 +1544,6 @@ vi: {
       bai_hoc: "Với dịch vụ phẫu thuật, giá rẻ trong quảng cáo kéo về người hỏi giá. Khách thật cần thấy giấy phép, bác sĩ và giá trọn gói trước khi đặt lịch."
     },
     {
-      noi_bat: {so: "+35,1%", nhan: "doanh thu đặt phòng web 3 khách sạn, 1 đến 10/2026 so với cùng kỳ, kết quả cả đội"},
       id: "silverland", gia_dinh: false, thuong_hieu: "Silverland Hotels", phu: "Bến Thành, Sakyo, Jolie", nganh: "Khách sạn", nam: "2025 đến 2026", buoc: 4,
       vai_tro: "Google Ads, đối soát tracking, SEO, GEO", thoi_gian: "đang làm",
       van_de: "Mình phát hiện Google Ads tính một lượt đặt phòng thành hai, rồi đối chiếu lại theo từng mã đặt phòng",
@@ -1638,8 +1600,7 @@ en: {
     {nam: "2026", noi_dung: "Added events: KBIT's K-Beauty MEETS 2026, 1,274 sign-ups from ads."},
     {nam: "12/2026", noi_dung: "Opening up for new freelance projects.", sap: true}
   ],
-  ky_nang: [{nhom: "Expertise", ds: ["Data analytics", "Media design", "Applying AI at work", "Office software"]},
-            {nhom: "Ways of working", ds: ["Working independently", "Teamwork", "Negotiation"]}],
+  ky_nang: [{nhom: "Expertise", ds: ["Data analytics", "Media design", "Applying AI at work", "Office software"]}],
   cong_cu_dan: "Ordered the way data flows, from the ad running to the report",
   cong_cu: [{nhom: "Ads", ds: ["Meta Ads Manager", "Google Ads"]}, {nhom: "Tracking", ds: ["GA4", "Google Tag Manager"]},
             {nhom: "SEO and GEO", ds: ["Search Console", "Semrush"]}, {nhom: "Data and reporting", ds: ["Google Sheets", "Looker Studio", "Power BI"]}],
@@ -1836,7 +1797,6 @@ en: {
   ],
   du_an: [
     {
-      noi_bat: {so: "284,170", nhan: "people reached for the booth over a 3-day trade show"},
       id: "human", gia_dinh: false, thuong_hieu: "Human", phu: "K-Beauty Expo Vietnam 2026, booth H03", nganh: "Beauty", nam: "2026", buoc: 0,
       vai_tro: "Meta Ads, post-event reporting", thoi_gian: "before and during the 3-day show",
       van_de: "Awareness ads for a trade-show booth: 284,170 people reached over 3 days, on VND 4.9 million",
@@ -1863,7 +1823,6 @@ en: {
       bai_hoc: "For a 3-day show, judge the ads on cost per reach and landing page views. This time the messaging campaign spent VND 1.35 million without a single conversation, so next time that money goes to reach."
     },
     {
-      noi_bat: {so: "128 vs 471", nhan: "flight 1 sign-ups: Meta reported vs the matched list"},
       id: "kbit", gia_dinh: false, thuong_hieu: "KBIT", phu: "K-Beauty MEETS 2026", nganh: "Events", nam: "2026", buoc: 2,
       vai_tro: "Meta Ads, sign-up tracking, cost reporting", thoi_gian: "4 flights, from 27 Aug 2026",
       van_de: "On the same VND 25.56 million in flight 1, Meta recorded 128 sign-ups while the matched list had 471 from ads",
@@ -1890,7 +1849,6 @@ en: {
       bai_hoc: "The real sign-up count was nearly 3.7 times what Meta reported. To know which ads work, check them against the real sign-up list."
     },
     {
-      noi_bat: {so: "VND 84.93M", nhan: "revenue from 56 clinic visits, Aug to Oct 2026"},
       id: "kla", gia_dinh: false, thuong_hieu: "KLA Center", nganh: "Aesthetics", nam: "2026", buoc: 3,
       vai_tro: "Meta Ads, customer tracking by treatment", thoi_gian: "since Aug 2026",
       van_de: "In Sep 2026, Pico + Meso drew 110 messages and VND 350,000 in revenue, while HIFU 5D drew 23 messages and VND 15 million",
@@ -1919,7 +1877,6 @@ en: {
       bai_hoc: "The cheapest message is not always the one that pays. Look at revenue per treatment before you split the budget."
     },
     {
-      noi_bat: {so: "51 messages", nhan: "almost no one came in for a consultation"},
       id: "cora", gia_dinh: false, thuong_hieu: "CORA", phu: "Aesthetic surgery clinic, District 10", nganh: "Aesthetics", nam: "2026", buoc: 3,
       vai_tro: "Meta Ads, competitor research, 30-day plan", thoi_gian: "Jun to Sep",
       van_de: "51 messages, almost no clinic visits. How did CORA change its message?",
@@ -1947,7 +1904,6 @@ en: {
       bai_hoc: "For surgery, a cheap price in the ad brings in price-checkers. Real patients need to see the licence, the doctor and an all-in price before they book."
     },
     {
-      noi_bat: {so: "+35.1%", nhan: "web booking revenue at 3 hotels, Jan to Oct 2026 vs same period, a team result"},
       id: "silverland", gia_dinh: false, thuong_hieu: "Silverland Hotels", phu: "Bến Thành, Sakyo, Jolie", nganh: "Hotels", nam: "2025 to 2026", buoc: 4,
       vai_tro: "Google Ads, tracking reconciliation, SEO, GEO", thoi_gian: "ongoing",
       van_de: "I found Google Ads counting each booking twice, then matched results back by booking number",
@@ -1985,8 +1941,7 @@ en: {
 /* Chữ giao diện. Bản tiếng Việt của phần tĩnh nằm sẵn trong HTML; UI.en thay thế khi mở bản tiếng Anh. */
 const UI_ALL = {
 vi: {
-  mega: {da: "5 dự án, mỗi dự án một con số", da_tat: "Xem đủ 5 dự án", dv: "Gói theo tháng", tu: "từ", thang: "mỗi tháng", dv_da: "Dữ liệu, website, nội dung báo giá theo dự án", chua_ro: "Chưa rõ nên chọn dịch vụ nào? Hỏi mình"},
-  pheu: {t: "Một đồng quảng cáo đi tới đâu", minh: "Hình minh hoạ", aria: "Minh hoạ phễu 5 bước và thứ tự 4 việc mình làm", tang: ["Hiển thị", "Click", "Tin nhắn", "Lịch hẹn", "Khách đến"], roi: "rơi nhiều nhất", lich: "Lịch làm 30 ngày đầu",
+  pheu: {t: "Một đồng quảng cáo đi tới đâu", aria: "Minh hoạ phễu 5 bước và thứ tự 4 việc mình làm", tang: ["Hiển thị", "Click", "Tin nhắn", "Lịch hẹn", "Khách đến"], roi: "rơi nhiều nhất", lich: "Lịch làm 30 ngày đầu",
     buoc: [["Kiểm số liệu", "Số nào cũng có nguồn và ngày lấy số."], ["Tìm bước rơi nhiều nhất", "Đo tỷ lệ qua từng bước, bước nào rơi mạnh nhất thì xử lý trước."], ["Sửa tracking", "Gắn nguồn cho từng lượt khách để biết khách đến từ quảng cáo nào."], ["Rồi mới tăng ngân sách", "Không tăng ngân sách khi chưa biết khách đến từ quảng cáo nào."]]},
   tieu_de: document.title,
   so_gia_dinh: "SỐ MINH HOẠ", so_that: "SỐ THẬT",
@@ -2019,10 +1974,9 @@ vi: {
   doi_ngu: {href: '?lang=en', text: 'EN', lang: 'en', aria: 'Switch to English'}
 },
 en: {
-  mega: {da: "5 projects, each with one number", da_tat: "See all 5 projects", dv: "Monthly plans", tu: "from", thang: "a month", dv_da: "Data, websites and content are quoted per project", chua_ro: "Not sure which service fits? Ask me"},
   chua_ro_lk: "Not sure which service you need? <b>Tell me where you are, I will suggest a plan</b> <span aria-hidden=\"true\">→</span>",
   dl_so: "SERVICE DETAIL 01", h_dl: "Data analysis and dashboards",
-  pheu: {t: "Where an ad dollar goes", minh: "Illustration", aria: "Illustrated 5-step funnel and the 4 things I do, in order", tang: ["Impressions", "Clicks", "Messages", "Bookings", "Visits"], roi: "biggest drop", lich: "The first 30 days, week by week",
+  pheu: {t: "Where an ad dollar goes", aria: "Illustrated 5-step funnel and the 4 things I do, in order", tang: ["Impressions", "Clicks", "Messages", "Bookings", "Visits"], roi: "biggest drop", lich: "The first 30 days, week by week",
     buoc: [["Check the numbers", "Every number has a source and a pull date."], ["Find the biggest drop", "Measure the rate between steps and fix the steepest drop first."], ["Fix tracking", "Tag every visit with its source so you know which ad brought it."], ["Then scale the budget", "Never scale before knowing which ads bring in customers."]]},
   tieu_de: "Đào Mạnh Dũng · Dũng Ads Strategy · Ad strategy and campaign management",
   mo_ta_trang: "Dũng is a performance marketer in Ho Chi Minh City: ads, tracking and reporting for aesthetics, beauty, dental, events and hotels. 5 projects, ordered by the funnel step where customers dropped off.",
@@ -2158,21 +2112,6 @@ $('#ds-chot').innerHTML = DATA.chot.map(c => `<li>${esc(c)}</li>`).join('');
     <span class="tc-xem">${esc(T.xem)} <span aria-hidden="true">→</span></span></a>`).join('')}</div>`;
 }
 
-/* menu xổ xem trước: rê vào Gói dịch vụ hoặc Dự án để thấy giá và con số trước khi bấm */
-{
-  const M = UI.mega, nav = $('.dau nav');
-  const boc = (href, html) => { const a = nav.querySelector(`:scope > a[href="${href}"]`); if (!a) return; const w = document.createElement('div'); w.className = 'nav-mo'; a.replaceWith(w); w.appendChild(a); a.setAttribute('aria-haspopup', 'true'); w.insertAdjacentHTML('beforeend', `<div class="nav-xem">${html}</div>`); };
-  boc('#dich-vu', `<p class="nx-t">${esc(M.dv)}</p><ul class="nx-dv">${DATA.goi_kenh.map(k => `<li><a href="#dich-vu" data-tab="${k.ma}"><b>${esc(k.ten)}</b><small>${esc(k.mo)}</small><em>${esc(M.tu)} ${esc(k.muc[0].gia)}</em></a></li>`).join('')}</ul>
-    <div class="nx-chan"><a href="#du-lieu">${esc(M.dv_da)} <span aria-hidden="true">→</span></a><a href="#lien-he" data-goi="${esc(DATA.dv_nhan.chua_ro)}">${esc(M.chua_ro)} <span aria-hidden="true">→</span></a></div>`);
-  boc('#du-an', `<p class="nx-t">${esc(M.da)}</p><ul class="nx-da">${DATA.du_an.map(d => `<li><a href="#/${d.id}"><span>${esc(d.thuong_hieu)}<small>${esc(d.nganh)}</small></span><b>${esc(d.noi_bat.so)}</b><small class="nx-nh">${esc(d.noi_bat.nhan)}</small></a></li>`).join('')}</ul>
-    <div class="nx-chan"><a href="#du-an">${esc(M.da_tat)} <span aria-hidden="true">→</span></a></div>`);
-  /* chọn đúng tab dịch vụ sau khi tới trang */
-  document.addEventListener('click', e => { const a = e.target.closest('[data-tab]'); if (!a) return; const id = a.dataset.tab; setTimeout(() => { const t = document.getElementById('tab-' + id); if (t) t.click(); }, 30); });
-  /* Esc đóng menu đang mở bằng bàn phím; bấm xong thì đóng */
-  nav.addEventListener('keydown', e => { if (e.key === 'Escape') { const w = e.target.closest('.nav-mo'); if (w) { w.querySelector(':scope > a').focus(); w.classList.add('dong'); } } });
-  nav.addEventListener('click', e => { const w = e.target.closest('.nav-mo'); if (w && e.target.closest('.nav-xem')) { w.classList.add('dong'); document.activeElement.blur(); } });
-  nav.querySelectorAll('.nav-mo').forEach(w => w.addEventListener('mouseleave', () => w.classList.remove('dong')));
-}
 
 /* phễu minh hoạ: kiểm số, tìm bước rơi, sửa tracking, tăng ngân sách */
 (() => {
@@ -2187,7 +2126,7 @@ $('#ds-chot').innerHTML = DATA.chot.map(c => `<li>${esc(c)}</li>`).join('');
       <text class="tg-ten" x="200" y="${y + H / 2 + 3.5}">${esc(P.tang[i])}</text></g>`; }).join('');
   const yRoi = TOP + (ROI + 1) * BUOC;
   F.setAttribute('aria-label', P.aria);
-  F.innerHTML = `<figcaption class="pheu-dau"><span>${esc(P.t)}</span><span><b id="pheu-so">01</b> / 04 · ${esc(P.minh)}</span></figcaption>
+  F.innerHTML = `<figcaption class="pheu-dau"><span>${esc(P.t)}</span><span><b id="pheu-so">01</b> / 04</span></figcaption>
     <div class="pheu-than">
       <svg viewBox="0 0 290 268" aria-hidden="true"><defs><linearGradient id="pheu-gr" x1="0" x2="1"><stop offset="0" stop-color="rgba(14,17,22,.13)"/><stop offset=".55" stop-color="rgba(14,17,22,.03)"/><stop offset="1" stop-color="rgba(14,17,22,.1)"/></linearGradient></defs>
         ${tang}
@@ -2360,7 +2299,7 @@ $('#ds-nganh').innerHTML = DATA.nganh.map((n, i) => {
 
 $('#ds-th-khac').innerHTML = DATA.thuong_hieu_khac.map(t => `<li>${esc(t.ten)}<small>${esc(t.nganh)}</small></li>`).join('');
 $('#ds-hanh-trinh').innerHTML = DATA.hanh_trinh.map((h, i) => `<li class="${h.sap ? 'sap' : ''}" style="--i:${i}"><time>${esc(h.nam)}</time><p>${esc(h.noi_dung)}</p></li>`).join('');
-$('#ds-ky-nang').innerHTML = DATA.ky_nang.map((n, g) => `<div class="kn-nhom${g === 0 ? ' dam' : ''}"><h3>${esc(n.nhom)}</h3><ul>${n.ds.map((k, i) => `<li style="--i:${i}"><span>${esc(k)}</span></li>`).join('')}</ul></div>`).join('');
+$('#ds-ky-nang').innerHTML = DATA.ky_nang.map((n, g) => `<div class="kn-nhom${g === 0 ? ' dam' : ''}">${DATA.ky_nang.length > 1 ? `<h3>${esc(n.nhom)}</h3>` : ''}<ul>${n.ds.map((k, i) => `<li style="--i:${i}"><span>${esc(k)}</span></li>`).join('')}</ul></div>`).join('');
 $('#cc-dan').textContent = DATA.cong_cu_dan;
 $('#ds-cong-cu').innerHTML = DATA.cong_cu.map((n, i) => `<li style="--i:${i}"><h3><b>0${i + 1}</b>${esc(n.nhom)}</h3><ul>${n.ds.map(t => `<li>${esc(t)}</li>`).join('')}</ul></li>`).join('');
 {
@@ -2498,7 +2437,7 @@ function route() { apDung(hashSangDich(location.hash), false); }
 const THU_TU = ['dau-trang', 'toi', 'dich-vu', 'du-an', 'cach-lam', 'lien-he'];
 /* trang Dữ liệu cũ đã gộp vào Gói dịch vụ: 'du-lieu' mở Gói dịch vụ rồi cuộn tới khối dữ liệu */
 const cuonDuLieu = () => requestAnimationFrame(() => { const e = $('#du-lieu'); if (e) e.scrollIntoView({block: 'start'}); });
-const links = [...document.querySelectorAll('.dau nav > a, .dau nav .nav-mo > a, .thanh-duoi a')];
+const links = [...document.querySelectorAll('.dau nav a, .thanh-duoi a')];
 let trangHienTai = null;
 function hienTrang(id) {
   if (!THU_TU.includes(id)) id = 'dau-trang';
