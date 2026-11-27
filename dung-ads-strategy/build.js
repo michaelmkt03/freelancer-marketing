@@ -20,32 +20,30 @@ const DU_AN = layHang('SLUG_DA');
 
 const META = {
   vi: {
-    '': ['Dũng Ads Strategy · Performance marketing tại TP.HCM', 'Meta Ads, Google Ads, SEO, đo lường, tối ưu performance cho ngành thẩm mỹ, nha khoa, sự kiện, khách sạn.'],
+    '': ['Dũng Ads Strategy · Performance marketing tại TP.HCM', 'Dũng giúp doanh nghiệp dịch vụ biết kênh quảng cáo nào mang về khách, bằng cách đối chiếu số quảng cáo với lượt đăng ký, lịch hẹn, đơn đặt phòng.'],
     toi: ['Giới thiệu · Dũng Ads Strategy', 'Đào Mạnh Dũng làm performance marketing tại Silverland Hospitality và nhận dự án freelance.'],
-    'dich-vu': ['Gói dịch vụ và bảng giá · Dũng Ads Strategy', 'Meta Ads từ 2,5 triệu, Google Ads từ 1,8 triệu mỗi tháng. SEO và GEO, chăm sóc fanpage và website từ 5 triệu. Làm website bán hàng và nội dung thương hiệu theo dự án.'],
+    'dich-vu': ['Gói dịch vụ và bảng giá · Dũng Ads Strategy', 'Meta Ads từ 2,5 triệu, Google Ads từ 1,8 triệu mỗi tháng. SEO và GEO, chăm sóc fanpage và website từ 5 triệu. Phân tích dữ liệu, dashboard, website bán hàng và nội dung thương hiệu theo dự án.'],
     'du-an': ['Dự án · Dũng Ads Strategy', 'Silverland Hotels, KBIT, KLA Center, CORA, Human: việc đã làm và kết quả đo được.'],
-    'du-lieu': ['Phân tích dữ liệu và dashboard · Dũng Ads Strategy', 'Gom dữ liệu bán hàng, khách hàng, quảng cáo về một chỗ, phân tích và dựng dashboard theo ngành để doanh nghiệp ra quyết định bằng số.'],
     'cach-lam': ['Cách làm việc · Dũng Ads Strategy', '4 bước: chẩn đoán trong 3 ngày, sửa tracking, test mỗi tuần, báo cáo bằng số đã đối chiếu.'],
     'lien-he': ['Liên hệ · Dũng Ads Strategy', 'Gửi thương hiệu và kênh đang chạy, Dũng trả lời trong 24 giờ kèm nhận xét miễn phí.'],
     human: ['Human · K-Beauty Expo 2026 · Dũng Ads Strategy', '284.170 người tiếp cận trong 3 ngày hội chợ, với 4,9 triệu đồng chi phí quảng cáo.'],
-    kbit: ['KBIT · K-Beauty MEETS 2026 · Dũng Ads Strategy', '1.274 lượt đăng ký tham dự từ quảng cáo qua 4 đợt, cho 3 sự kiện ngành thẩm mỹ.'],
-    kla: ['KLA Center · Phòng khám thẩm mỹ · Dũng Ads Strategy', '84,93 triệu đồng doanh thu từ 56 lượt khách đến khám, tháng 8 đến 10/2026.'],
-    cora: ['CORA · Phòng khám thẩm mỹ · Dũng Ads Strategy', '287.837 người tiếp cận với 10 triệu đồng chạy nhận diện thương hiệu, và kế hoạch 30 ngày cho cắt mí.'],
-    silverland: ['Silverland Hotels · Dũng Ads Strategy', 'Doanh thu đặt phòng trên web Bến Thành, Sakyo, Jolie tăng 56,5% năm 2025 và tăng 35,1% tháng 1 đến 10/2026 so với cùng kỳ. Google Ads, SEO và GEO.']
+    kbit: ['KBIT · K-Beauty MEETS 2026 · Dũng Ads Strategy', 'Đợt 1, cùng 25,56 triệu đồng: Meta ghi nhận 128 lượt đăng ký, danh sách đối chiếu có 471. Tổng 1.274 lượt đăng ký từ quảng cáo qua 4 đợt.'],
+    kla: ['KLA Center · Phòng khám thẩm mỹ · Dũng Ads Strategy', 'Tháng 9/2026, Pico + Meso có 110 tin nhắn và 350.000 đ doanh thu, HIFU 5D có 23 tin nhắn và 15 triệu đồng. Doanh thu 84,93 triệu đồng từ 56 lượt khách, tháng 8 đến 10/2026.'],
+    cora: ['CORA · Phòng khám thẩm mỹ · Dũng Ads Strategy', '51 tin nhắn, gần như không có khách đến khám. Thông điệp được đổi thế nào, và kế hoạch 30 ngày đề xuất cho cắt mí.'],
+    silverland: ['Silverland Hotels · Dũng Ads Strategy', 'Phát hiện Google Ads tính một lượt đặt phòng hai lần, đối chiếu theo từng mã đặt phòng. Doanh thu web 3 khách sạn tháng 1 đến 10/2026 tăng 35,1% so với cùng kỳ, kết quả của cả đội.']
   },
   en: {
-    '': ['Dũng Ads Strategy · Performance marketing in HCMC', 'Meta Ads, Google Ads, SEO, measurement and performance optimization for aesthetics, dental, events and hotels.'],
+    '': ['Dũng Ads Strategy · Performance marketing in HCMC', 'Dũng helps service businesses see which ads lead to bookings and sales, by matching ad numbers against real sign-ups, appointments and bookings.'],
     toi: ['About · Dũng Ads Strategy', 'Đào Mạnh Dũng works in performance marketing at Silverland Hospitality and takes on freelance projects.'],
-    'dich-vu': ['Service plans and pricing · Dũng Ads Strategy', 'Meta Ads from VND 2.5M, Google Ads from VND 1.8M a month. SEO and GEO, page and site care from VND 5M. Sales websites and brand content as projects.'],
+    'dich-vu': ['Service plans and pricing · Dũng Ads Strategy', 'Meta Ads from VND 2.5M, Google Ads from VND 1.8M a month. SEO and GEO, page and site care from VND 5M. Data analysis and dashboards, sales websites and brand content as projects.'],
     'du-an': ['Projects · Dũng Ads Strategy', 'Silverland Hotels, KBIT, KLA Center, CORA, Human: the work and the measured results.'],
-    'du-lieu': ['Data analysis and dashboards · Dũng Ads Strategy', 'Bring sales, customer and ad data into one place, analyse it, and build industry dashboards so business decisions rest on numbers.'],
     'cach-lam': ['Process · Dũng Ads Strategy', '4 steps: a 3-day diagnosis, tracking fixes, weekly tests, and reports with reconciled numbers.'],
     'lien-he': ['Contact · Dũng Ads Strategy', 'Send your brand and the channels you run. Dũng replies within 24 hours with free first feedback.'],
     human: ['Human · K-Beauty Expo 2026 · Dũng Ads Strategy', '284,170 people reached over a 3-day trade show, on VND 4.9 million in ad spend.'],
-    kbit: ['KBIT · K-Beauty MEETS 2026 · Dũng Ads Strategy', '1,274 sign-ups from ads across 4 flights, for 3 aesthetics industry events.'],
-    kla: ['KLA Center · Aesthetic clinic · Dũng Ads Strategy', 'VND 84.93 million in revenue from 56 clinic visits, Aug to Oct 2026.'],
-    cora: ['CORA · Aesthetic clinic · Dũng Ads Strategy', '287,837 people reached on VND 10 million of awareness ads, plus a 30-day plan for eyelid surgery.'],
-    silverland: ['Silverland Hotels · Dũng Ads Strategy', 'Direct web booking revenue at Bến Thành, Sakyo and Jolie up 56.5% in 2025 and 35.1% year on year in Jan to Oct 2026. Google Ads, SEO and GEO.']
+    kbit: ['KBIT · K-Beauty MEETS 2026 · Dũng Ads Strategy', 'Flight 1, same VND 25.56M: Meta recorded 128 sign-ups, the matched list had 471. 1,274 sign-ups from ads across 4 flights.'],
+    kla: ['KLA Center · Aesthetic clinic · Dũng Ads Strategy', 'Sep 2026: Pico + Meso drew 110 messages and VND 350,000, HIFU 5D drew 23 messages and VND 15M. VND 84.93M from 56 clinic visits, Aug to Oct 2026.'],
+    cora: ['CORA · Aesthetic clinic · Dũng Ads Strategy', '51 messages, almost no clinic visits. How the message changed, and the proposed 30-day plan for eyelid surgery.'],
+    silverland: ['Silverland Hotels · Dũng Ads Strategy', 'Found Google Ads counting each booking twice and matched results by booking number. Web booking revenue at the 3 hotels up 35.1% in Jan to Oct 2026, a team result.']
   }
 };
 
@@ -95,7 +93,7 @@ function dung(mau, t, root) {
   h = h.replace('<html lang="vi">', `<html lang="${t.lang}" data-lang="${t.lang}" data-root="${root}" data-route="${t.route}">`);
   h = h.split('{{ROOT}}').join(root);
   // mỗi trang con có 1 thẻ h1 hiển thị: đổi tiêu đề mục của trang đó từ h2 sang h1
-  const H1 = {toi: 'h-toi', 'dich-vu': 'h-dv', 'du-lieu': 'h-dl', 'du-an': 'h-da', 'cach-lam': 'h-cl', 'lien-he': 'h-lh'};
+  const H1 = {toi: 'h-toi', 'dich-vu': 'h-dv', 'du-an': 'h-da', 'cach-lam': 'h-cl', 'lien-he': 'h-lh'};
   const idH1 = t.route.startsWith('p:') ? 'h-da' : H1[t.route];
   if (idH1) h = h.replace(new RegExp(`<h2 id="${idH1}"([^>]*)>([\\s\\S]*?)</h2>`), `<h1 id="${idH1}"$1>$2</h1>`);
   return h;

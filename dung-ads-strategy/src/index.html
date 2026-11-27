@@ -49,8 +49,8 @@ img{max-width:100%}
 .logo .mo-ta{font:500 8.5px/1 var(--f-so);letter-spacing:.16em;text-transform:uppercase;color:var(--xam-s);white-space:nowrap}
 .logo:hover .bd{stroke:var(--giay)}
 @media (max-width:860px){.logo{gap:9px}.logo svg{width:30px;height:24px}.logo .ten{font-size:17px;padding:0;border:0}.logo .mo-ta{display:none}}
-.dau nav{margin-left:auto;display:flex;gap:26px}
-.dau nav a{font:500 13px/1 var(--f-so);text-decoration:none;letter-spacing:.04em;opacity:.78;white-space:nowrap}
+.dau nav{margin-left:auto;display:flex;gap:24px}
+.dau nav a{font:500 14.5px/1 var(--f-tieu);text-decoration:none;letter-spacing:0;opacity:.78;white-space:nowrap}
 .dau nav a:hover,.dau nav a[aria-current="true"]{opacity:1;color:var(--nhan-s)}
 .nut-nho .ngan{display:none}
 @media (max-width:480px){.nut-nho .dai{display:none}.nut-nho .ngan{display:inline}}
@@ -71,6 +71,7 @@ img{max-width:100%}
 .hh:nth-child(2)>span{animation-delay:.12s}.hh:nth-child(3)>span{animation-delay:.26s}
 @keyframes len{from{transform:translateY(110%)}to{transform:none}}
 .mo-nhan,.mo-duoi{animation:mo .9s .5s both}@keyframes mo{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (min-width:861px){html[lang="en"] .mo h1{font-size:clamp(3.4rem,6.4vw,7rem)}}
 .mo h1 em{display:block;font:italic 400 .82em/1.02 var(--f-van);letter-spacing:-.02em;color:var(--nhan-s);font-stretch:100%}
 .mo-duoi{display:grid;gap:26px;max-width:34rem;margin-top:30px}
 .mo-duoi p{margin:0;font-size:clamp(18px,1.5vw,21px);color:#C9CED6}
@@ -212,6 +213,29 @@ body[data-xem] .da{padding-top:clamp(80px,12vw,150px)}
 @media (max-width:640px){.dn-phai{margin-left:0;width:100%;justify-content:space-between}}
 /* trang dữ liệu */
 #h-dl{text-wrap:balance}
+.dl{margin-top:clamp(70px,9vw,120px);padding-top:clamp(40px,5vw,64px);border-top:2px solid var(--muc);scroll-margin-top:110px}
+.dl-dau{margin-bottom:clamp(28px,3.5vw,44px)}
+.dl-dau .dvda-so{display:block;margin-bottom:14px}
+.muc .dl-dau h2{margin:0;font:850 clamp(2rem,3.4vw,3rem)/1.02 var(--f-tieu);font-stretch:73%;letter-spacing:-.005em;padding-top:.06em}
+.dl .bc{margin-top:clamp(56px,7vw,90px)}
+.dl-nguon{margin:28px 0 0}
+.dl-nguon svg{width:100%;height:auto;display:block;overflow:visible}
+.dn-o rect{fill:#FAFAF6;stroke:var(--muc);stroke-width:1.3}
+.dn-o text{font:500 12.5px var(--f-so);fill:var(--muc)}
+.dn-day{fill:none;stroke:var(--nhan);stroke-width:1.5;stroke-dasharray:4 5;opacity:.75;animation:dnChay 1.2s linear infinite;animation-delay:calc(var(--i)*-.2s)}
+@keyframes dnChay{to{stroke-dashoffset:-18}}
+.dn-bang>rect:first-child{fill:var(--muc)}
+.dn-bang text{font:500 11.5px var(--f-so);fill:var(--nhan-s);letter-spacing:.03em}
+.dn-bang line{stroke:rgba(236,238,234,.18)}
+.dn-cot{fill:var(--nhan-s);transform-box:fill-box;transform-origin:bottom;transform:scaleY(.15);transition:transform .8s cubic-bezier(.2,.7,.2,1) calc(.3s + var(--i)*.1s)}
+.dl-mo.da-hien .dn-cot{transform:none}
+.dn-o{opacity:0;transform:translateX(-8px);transition:opacity .4s calc(var(--i)*.08s),transform .4s calc(var(--i)*.08s)}
+.dl-mo.da-hien .dn-o{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.dn-day{animation:none}.dn-cot,.dn-o{transition:none;transform:none;opacity:1}}
+@media print{.dn-cot,.dn-o{transform:none!important;opacity:1!important}}
+.dl-cta{align-self:end;border:1.5px solid var(--muc);border-radius:16px;padding:24px;background:#FAFAF6;box-shadow:6px 6px 0 rgba(46,75,255,.14)}
+.dl-cta .nut{margin:0}
+.pheu-lk{display:inline-block;margin:12px 0 0 10px;font:500 12.5px/1.3 var(--f-so);color:var(--nhan);text-decoration:none;border-bottom:1px solid currentColor;padding:14px 0 6px}
 .dl-mo{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(30px,6vw,96px);align-items:start}
 .dl-dan{margin:0;font-size:clamp(19px,1.7vw,23px);line-height:1.6}
 .dl-dh ul{list-style:none;margin:0;padding:0;border-top:2px solid var(--muc)}
@@ -244,6 +268,9 @@ body[data-xem] .da{padding-top:clamp(80px,12vw,150px)}
 .dvda-o{border:1.5px solid var(--muc);border-radius:18px;padding:24px 22px;display:flex;flex-direction:column;gap:12px;background:rgba(255,255,255,.35)}
 .dvda-o.dvda-dl{background:var(--muc);color:var(--giay)}
 .dvda-so{font:500 12px/1 var(--f-so);color:var(--nhan)}
+.dvda-dau{display:flex;justify-content:space-between;align-items:flex-start}
+.dvda-ic{width:46px;height:46px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.9}
+.dvda-o:hover .dvda-ic{stroke:var(--nhan)}.dvda-o.dvda-dl:hover .dvda-ic{stroke:var(--nhan-s)}
 .dvda-o.dvda-dl .dvda-so{color:var(--nhan-s)}
 .dvda-o h3{margin:0;font:850 clamp(1.8rem,2.6vw,2.4rem)/1.02 var(--f-tieu);font-stretch:73%;letter-spacing:.004em;padding-top:.06em}
 .dvda-o p{margin:0;font-size:16px;line-height:1.55}
@@ -261,6 +288,9 @@ body[data-xem] .da{padding-top:clamp(80px,12vw,150px)}
 @media (max-width:1020px){.dvda{grid-template-columns:1fr}}
 .ft-cot-lh a{display:inline-flex;align-items:center;gap:9px}
 .ft-ic{width:16px;height:16px;flex:none;color:var(--nhan-s)}
+/* logo Zalo, Facebook: Simple Icons (CC0). Logo LinkedIn: Font Awesome Free (CC BY 4.0) */
+.ft-brand{width:18px;height:18px;fill:#fff;background:var(--c);border-radius:4px;padding:2px;box-sizing:border-box}
+#ft-li .ft-brand{fill:var(--c);background:#fff;padding:0;border-radius:3px}
 /* vạch ngăn nội dung và chân trang: đường mảnh, ở giữa là dấu phễu */
 footer.ft{position:relative}
 footer.ft::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(143,162,255,.45) 18%,rgba(143,162,255,.45) 82%,transparent)}
@@ -338,6 +368,18 @@ footer.ft::after{content:"";position:absolute;left:50%;top:0;width:38px;height:3
 .may-the summary::before{content:"+ ";font-style:normal}
 .may-the details[open] summary::before{content:"− "}
 .may-the details ul{margin-top:10px;opacity:.72}
+.t-tong{margin:auto 0 0;display:grid;gap:0;border:1px solid rgba(236,238,234,.18);border-radius:12px;padding:6px 14px;font:400 13.5px/1.4 var(--f-so)}
+.t-tong div{display:flex;justify-content:space-between;gap:12px;padding:7px 0}
+.t-tong div+div{border-top:1px dashed rgba(236,238,234,.16)}
+.t-tong dt{color:#B4BAC2}.t-tong dd{margin:0;font-variant-numeric:tabular-nums;white-space:nowrap}
+.t-tong .cong dt{color:var(--giay);font-weight:500}.t-tong .cong dd{color:var(--nhan-s);font-weight:600;font-size:15px}
+.t-bc{margin:auto 0 0;font:400 13.5px/1.5 var(--f-so);color:#C9CED5;border-left:2px solid var(--nhan-s);padding-left:12px}
+.t-bc b{display:block;font-weight:500;color:var(--nhan-s);margin-bottom:2px}
+.t-tong+.chon,.t-bc+.chon{margin-top:4px}
+.chua-ro{display:inline-flex;flex-wrap:wrap;gap:4px 8px;align-items:baseline;margin:0 0 16px;font:400 14px/1.4 var(--f-so);color:var(--xam);text-decoration:none;border:1.3px dashed var(--vien);border-radius:999px;padding:10px 16px}
+.chua-ro b{font-weight:500;color:var(--nhan)}
+.chua-ro:hover{border-color:var(--nhan);border-style:solid}
+.may-moc em{display:block;font:500 11px/1.3 var(--f-so);font-style:normal;color:var(--nhan);margin-top:3px}
 .may-the .chon{margin-top:auto;align-self:flex-start;font:500 14px/1 var(--f-so);text-decoration:none;color:inherit;border:1.5px solid currentColor;border-radius:999px;padding:13px 18px;transition:background .2s,color .2s}
 .may-the .chon:hover{background:var(--giay);color:var(--muc)}
 .may-the.doi{animation:mayDoi .45s cubic-bezier(.2,.7,.2,1)}
@@ -392,14 +434,17 @@ footer.ft::after{content:"";position:absolute;left:50%;top:0;width:38px;height:3
 @media (max-width:720px){.muc-dau{grid-template-columns:1fr;gap:14px}.muc-so{width:90px}}
 
 /* tôi là ai */
-.toi{display:grid;grid-template-columns:330px minmax(0,1fr);gap:clamp(32px,6vw,90px);align-items:start}
+.toi{display:grid;grid-template-columns:clamp(340px,34vw,460px) minmax(0,1fr);gap:clamp(32px,6vw,90px);align-items:stretch}
+.toi>.the{align-self:start}
+.toi-chu{display:flex;flex-direction:column}
+.toi-chu>p:not(.lon){margin-top:0}
 .the{background:var(--muc);color:var(--giay);border-radius:20px;padding:22px;transform:rotate(-2deg);box-shadow:14px 16px 0 rgba(46,75,255,.14);position:relative}
 .the-dau{display:flex;justify-content:space-between;font:500 11px/1 var(--f-so);letter-spacing:.08em;color:var(--xam-s)}
 .anh{margin:18px 0;aspect-ratio:4/5;border-radius:12px;background:radial-gradient(120% 90% at 30% 20%,#25304A,#0E1116);display:grid;place-items:center;position:relative;overflow:hidden}
 .anh img{width:100%;height:100%;object-fit:cover;object-position:50% 24%;display:block}
 .anh b{font:900 190px/1 var(--f-tieu);font-stretch:62%;color:var(--nhan-s);letter-spacing:-.04em;transform:translateY(6px)}
 .anh small{position:absolute;bottom:12px;left:0;right:0;text-align:center;font:400 11px/1 var(--f-so);color:#8C939E}
-.the dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 14px;font:400 13px/1.45 var(--f-so)}
+.the dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px;font:400 14px/1.45 var(--f-so)}
 .the dt{color:var(--xam-s)} .the dd{margin:0}
 .ke-ma{margin-top:16px;height:34px;background:repeating-linear-gradient(90deg,var(--giay) 0 2px,transparent 2px 5px,var(--giay) 5px 6px,transparent 6px 10px);opacity:.75}
 .toi-chu .lon{font:400 clamp(26px,2.7vw,36px)/1.32 var(--f-van);margin:0 0 28px;letter-spacing:-.01em}
@@ -407,13 +452,110 @@ footer.ft::after{content:"";position:absolute;left:50%;top:0;width:38px;height:3
 .toi-chu p{max-width:40em}
 .chot{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;padding:0;list-style:none}
 .chot li{font:500 13px/1 var(--f-so);border:1.5px solid var(--muc);padding:10px 14px;border-radius:999px}
-@media (max-width:860px){.toi{grid-template-columns:1fr}.the{max-width:330px}}
+@media (max-width:860px){.toi{grid-template-columns:1fr}.the{max-width:none}}
+@media (min-width:561px) and (max-width:860px){.the{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);column-gap:26px;align-items:start}.the-dau,.ke-ma{grid-column:1/-1}.the .anh{margin:18px 0 0}.the dl{margin-top:18px;align-self:center}}
 
+/* phễu minh hoạ */
+.pheu{margin:36px 0 0;margin-top:max(36px,auto);flex:none;border:1.3px solid var(--muc);border-radius:16px;background:#FAFAF6;padding:18px 20px 20px;box-shadow:8px 8px 0 rgba(46,75,255,.14)}
+.toi-chu .pheu{margin-top:auto}
+.toi-chu .chot{margin-bottom:36px}
+.pheu-dau{display:flex;justify-content:space-between;gap:12px;font:500 11px/1.3 var(--f-so);letter-spacing:.08em;text-transform:uppercase;color:var(--xam);padding-bottom:12px;border-bottom:1px dashed var(--vien)}
+.pheu-dau b{font-weight:500;color:var(--nhan)}
+.pheu-than{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:22px;align-items:center;margin-top:12px}
+.pheu svg{display:block;width:100%;height:auto;overflow:visible}
+.pheu .tg-mat{fill:rgba(46,75,255,.06);stroke:var(--muc);stroke-width:1.1}
+.pheu .tg-than{fill:url(#pheu-gr);stroke:var(--muc);stroke-width:1.1}
+.pheu .tg-ten{font:500 12px var(--f-so);fill:var(--xam)}
+.pheu .tg-noi{stroke:var(--vien);stroke-dasharray:2 3}
+.pheu .tg.roi .tg-mat,.pheu .tg.roi .tg-than{transition:stroke .4s,fill .4s}
+.pheu[data-pha="1"] .tg.roi .tg-mat{stroke:#D9572B;fill:rgba(217,87,43,.12);animation:nhay 1s ease-in-out infinite}
+.pheu[data-pha="1"] .tg.roi .tg-than{stroke:#D9572B}
+.pheu:is([data-pha="2"],[data-pha="3"]) .tg.roi .tg-mat{stroke:var(--nhan);fill:rgba(46,75,255,.14)}
+.pheu:is([data-pha="2"],[data-pha="3"]) .tg.roi .tg-than{stroke:var(--nhan)}
+@keyframes nhay{50%{fill:rgba(217,87,43,.28)}}
+.pheu .the-roi{opacity:0;transition:opacity .4s}
+.pheu .the-roi rect{fill:#D9572B}.pheu .the-roi text{font:500 9.5px var(--f-so);fill:#fff;letter-spacing:.04em}
+.pheu[data-pha="1"] .the-roi{opacity:1}
+.pheu .pheu-quet{stroke:var(--nhan);stroke-width:1.5;opacity:0}
+.pheu[data-pha="0"] .pheu-quet{animation:quetx 3.6s ease-in-out infinite}
+@keyframes quetx{0%{opacity:0;transform:translateY(0)}10%{opacity:.8}85%{opacity:.8}100%{opacity:0;transform:translateY(248px)}}
+.pheu .day.sang .tg-mat{fill:rgba(46,75,255,.32)}
+.pheu .hat circle{fill:var(--muc)}.pheu .hat circle.ro{fill:#D9572B}
+.pheu-buoc{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.pheu-buoc button{all:unset;box-sizing:border-box;display:grid;grid-template-columns:26px 1fr;column-gap:8px;width:100%;padding:9px 10px 10px;border-radius:10px;cursor:pointer;opacity:.5;position:relative;transition:opacity .3s,background .3s}
+.pheu-buoc button:hover{opacity:.85}
+.pheu-buoc button:focus-visible{outline:2px solid var(--nhan);outline-offset:1px}
+.pheu-buoc button[aria-pressed="true"]{opacity:1;background:rgba(46,75,255,.07)}
+.pheu-buoc span{font:500 11px/1.6 var(--f-so);color:var(--xam)}
+.pheu-buoc button[aria-pressed="true"] span{color:var(--nhan)}
+.pheu-buoc b{font:500 13.5px/1.35 var(--f-so)}
+.pheu-buoc small{grid-column:2;font:400 14.5px/1.4 var(--f-van);color:var(--xam);display:none;margin-top:3px}
+.pheu-buoc button[aria-pressed="true"] small{display:block}
+.pheu-buoc i{position:absolute;left:10px;right:10px;bottom:3px;height:2px;background:var(--nhan);transform:scaleX(0);transform-origin:left}
+.pheu.chay .pheu-buoc button[aria-pressed="true"] i{animation:tien var(--t,3.8s) linear forwards}
+@keyframes tien{to{transform:none}}
+@media (max-width:560px){.pheu-dau{flex-direction:column;gap:4px}.pheu-than{grid-template-columns:1fr}.pheu svg{max-width:290px;margin:0 auto}.pheu{padding:16px}}
+@media (prefers-reduced-motion:reduce){.pheu *{animation:none!important}}
+
+/* menu xổ xem trước */
+.nav-mo{position:relative;display:flex}
+.nav-xem{position:absolute;top:calc(100% + 22px);left:50%;width:min(560px,80vw);transform:translate(-50%,6px);background:#FAFAF6;color:var(--muc);border:1.5px solid var(--muc);border-radius:16px;padding:18px 18px 14px;box-shadow:10px 12px 0 rgba(46,75,255,.18);opacity:0;visibility:hidden;transition:opacity .18s,transform .18s,visibility 0s .18s;z-index:60}
+.nav-xem::before{content:"";position:absolute;left:0;right:0;top:-24px;height:24px}
+.nav-mo:is(:hover,:focus-within):not(.dong) .nav-xem{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .18s,transform .18s}
+.nav-mo:is(:hover,:focus-within):not(.dong)>a{opacity:1;color:var(--nhan-s)}
+.dau nav .nav-xem a{color:inherit;text-decoration:none;opacity:1;font:inherit;letter-spacing:0;white-space:normal}
+.dau nav .nav-xem a:hover{color:inherit}
+.dau nav .nx-da a:hover,.dau nav .nx-da a:focus-visible{color:var(--giay)}
+.dau nav .nx-chan a,.dau nav .nx-chan a:hover{color:var(--nhan);font:500 12.5px/1.3 var(--f-so)}
+.nx-t{margin:0 0 10px;font:500 11px/1 var(--f-so);letter-spacing:.08em;text-transform:uppercase;color:var(--xam)}
+.nx-dv,.nx-da{list-style:none;margin:0;padding:0}
+.nx-dv{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.nx-dv a{display:grid;gap:4px;padding:12px 13px;border:1.3px solid var(--vien);border-radius:11px;transition:border-color .15s,background .15s}
+.nx-dv a:hover,.nx-dv a:focus-visible{border-color:var(--muc);background:#fff}
+.nx-dv b{font:700 15px/1.2 var(--f-tieu)}
+.nx-dv small{font:400 12px/1.35 var(--f-so);color:var(--xam)}
+.nx-dv em{font:500 12.5px/1.2 var(--f-so);font-style:normal;color:var(--nhan);margin-top:4px}
+.nx-da a{display:grid;grid-template-columns:128px 118px minmax(0,1fr);gap:6px 14px;align-items:baseline;padding:10px 8px;border-bottom:1px solid var(--vien);border-radius:6px;transition:background .15s}
+.nx-da li:first-child a{border-top:1px solid var(--vien)}
+.nx-da a:hover,.nx-da a:focus-visible{background:var(--muc);color:var(--giay)}
+.nx-da span{font:700 15px/1.2 var(--f-tieu)}
+.nx-da span small{display:block;font:400 11px/1.3 var(--f-so);color:var(--xam);margin-top:3px}
+.nx-da b{font:800 16px/1.15 var(--f-tieu);font-stretch:85%;color:var(--nhan)}
+.nx-da a:hover b,.nx-da a:focus-visible b{color:var(--nhan-s)}
+.nx-nh{font:400 12px/1.4 var(--f-so);color:var(--xam)}
+.nx-da a:hover .nx-nh,.nx-da a:hover span small{color:var(--xam-s)}
+.nx-chan{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;margin-top:12px}
+.nx-chan a{font:500 12.5px/1.3 var(--f-so);color:var(--nhan);padding:6px 0;border-bottom:1px solid transparent}
+.nx-chan a:hover{border-bottom-color:currentColor}
+@media (max-width:1080px){.nav-xem{width:min(500px,86vw)}}
+@media (prefers-reduced-motion:reduce){.nav-xem{transition:none}}
+
+/* trang chủ: 2 dự án nổi bật */
+.tc-noi{margin-bottom:clamp(70px,9vw,120px)}
+.tc-luoi{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.tc-the{display:flex;flex-direction:column;gap:10px;padding:clamp(22px,2.6vw,32px);border:1.5px solid var(--muc);border-radius:20px;background:#FAFAF6;color:var(--muc);text-decoration:none;box-shadow:8px 8px 0 rgba(46,75,255,.14);transition:transform .2s,box-shadow .2s}
+.tc-the:hover,.tc-the:focus-visible{transform:translate(-2px,-2px);box-shadow:12px 12px 0 rgba(46,75,255,.22)}
+.tc-nhan{font:500 11.5px/1.3 var(--f-so);letter-spacing:.08em;text-transform:uppercase;color:var(--xam)}
+.tc-so{display:flex;align-items:baseline;gap:14px;margin-top:6px}
+.tc-so b{font:850 clamp(2.8rem,5vw,4.4rem)/1 var(--f-tieu);font-stretch:72%;color:var(--xam-s);text-decoration:line-through;text-decoration-thickness:3px}
+.tc-so b.moi{color:var(--nhan);text-decoration:none}
+.tc-so i{font-style:normal;font:400 28px/1 var(--f-so);color:var(--xam)}
+.tc-so-nhan{font:400 12px/1.4 var(--f-so);color:var(--xam);margin-top:-4px}
+.tc-the strong{font:600 clamp(19px,1.7vw,23px)/1.3 var(--f-van);margin-top:8px}
+.tc-ct{font-size:16px;line-height:1.55;color:#3A4048}
+.tc-lam{font:400 13.5px/1.5 var(--f-so);border-left:2px solid var(--nhan);padding-left:12px}
+.tc-ghi{font:italic 400 14px/1.45 var(--f-van);color:var(--xam)}
+.tc-xem{margin-top:auto;padding-top:8px;font:500 13.5px/1 var(--f-so);color:var(--nhan)}
+@media (max-width:860px){.tc-luoi{grid-template-columns:1fr}}
+
+.duan-vai{margin:-4px 0 14px;font:400 13.5px/1.5 var(--f-so);color:var(--xam)}
+.duan-vai b{font-weight:500;color:var(--giay)}
+.duan-vai{color:var(--xam-s)!important}
 /* con số */
 
 /* ngành */
 .nganh{margin-top:clamp(60px,8vw,110px)}
-.muc :is(.nganh,.hanh-trinh,.cong-cu)>h2,.muc .hanh-trinh h2,.muc .cong-cu h2{font:500 13px/1 var(--f-so);letter-spacing:.08em;text-transform:uppercase;color:var(--xam);margin:0 0 18px;padding-top:0}
+.muc :is(.nganh,.hanh-trinh,.cong-cu)>h2,.muc .hanh-trinh h2,.muc .cong-cu h2,.muc .ky-nang h2{font:500 13px/1 var(--f-so);letter-spacing:.08em;text-transform:uppercase;color:var(--xam);margin:0 0 18px;padding-top:0}
 .dong{display:grid;grid-template-columns:70px minmax(0,1fr) auto 184px;gap:20px;align-items:center;padding:20px 12px;border-top:1px solid var(--vien);text-decoration:none;transition:background .25s,color .25s,padding .25s;position:relative}
 .dong:last-child{border-bottom:1px solid var(--vien)}
 .dong .s{font:500 13px/1 var(--f-so);color:var(--xam)}
@@ -478,29 +620,62 @@ footer.ft::after{content:"";position:absolute;left:50%;top:0;width:38px;height:3
 @media (prefers-reduced-motion:reduce){.bc *{transition:none!important}}
 
 /* hành trình + công cụ */
-.hai-cot{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(40px,6vw,90px);margin-top:clamp(60px,8vw,110px)}
-.hanh-trinh ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--muc)}
-.hanh-trinh li{position:relative;padding:0 0 26px 26px}
-.hanh-trinh li::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;background:var(--giay);border:2px solid var(--muc);border-radius:50%}
-.hanh-trinh li:last-child::before{background:var(--nhan);border-color:var(--nhan)}
-.hanh-trinh time{font:500 13px/1 var(--f-so);color:var(--xam);display:block;margin-bottom:6px}
-.hanh-trinh p{margin:0;font-size:18px}
-.ky-nang{margin-top:clamp(36px,4vw,52px)}
-.ky-nang dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);border-top:1px solid var(--vien)}
-.ky-nang dt{font:500 12px/1.4 var(--f-so);letter-spacing:.08em;text-transform:uppercase;color:var(--xam);padding:16px 28px 16px 0;border-bottom:1px solid var(--vien)}
-.ky-nang dd{margin:0;padding:13px 0;border-bottom:1px solid var(--vien);display:flex;flex-wrap:wrap;gap:8px 22px}
-.ky-nang span{font:500 14px/1.4 var(--f-so);padding-left:17px;position:relative}
-.ky-nang span::before{content:"";position:absolute;left:0;top:.66em;width:9px;height:2px;background:var(--nhan)}
-@media (max-width:640px){.ky-nang dl{grid-template-columns:1fr}.ky-nang dt{padding:16px 0 0;border-bottom:0}.ky-nang dd{padding:10px 0 16px}}
-.cong-cu ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:28px;border-top:1px solid var(--vien)}
-.cong-cu li{font:500 14px/1.3 var(--f-so);padding:12px 0;border-bottom:1px solid var(--vien);display:grid;gap:4px}
-.cong-cu li span{font-weight:400;font-size:12px}
-.cong-cu li span{color:var(--xam)}
-.cach-lam{margin-top:30px;background:var(--muc);color:var(--giay);padding:24px;border-radius:16px}
-.cach-lam p{margin:0 0 10px;font-size:17px}
-.cach-lam p:last-child{margin:0}
-.cach-lam b{color:var(--nhan-s);font:500 12px/1 var(--f-so);letter-spacing:.08em;display:block;margin-bottom:6px}
-@media (max-width:860px){.hai-cot{grid-template-columns:1fr}}
+/* quá trình: tuyến ngang */
+.hanh-trinh{margin-top:clamp(60px,8vw,110px)}
+.hanh-trinh ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:relative}
+.hanh-trinh ol::before{content:"";position:absolute;left:0;right:25%;top:62px;height:2px;background:var(--muc);transform:scaleX(0);transform-origin:left;transition:transform 1.4s cubic-bezier(.6,0,.2,1)}
+.hanh-trinh ol::after{content:"";position:absolute;left:75%;right:0;top:62px;height:2px;background:repeating-linear-gradient(90deg,var(--muc) 0 6px,transparent 6px 12px);opacity:0;transition:opacity .5s 1.3s}
+.hanh-trinh.da-hien ol::before{transform:none}.hanh-trinh.da-hien ol::after{opacity:.55}
+.hanh-trinh li{position:relative;padding:0 28px 0 0;opacity:0;transform:translateY(10px);transition:opacity .5s calc(.25s + var(--i)*.32s),transform .5s calc(.25s + var(--i)*.32s)}
+.hanh-trinh.da-hien li{opacity:1;transform:none}
+.hanh-trinh time{display:block;font:800 clamp(34px,3.6vw,52px)/1 var(--f-tieu);font-stretch:80%;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:1.2px var(--muc);height:48px}
+.hanh-trinh li:nth-last-child(2) time{color:var(--muc)}
+.hanh-trinh li::before{content:"";position:absolute;left:0;top:55px;width:12px;height:12px;background:var(--giay);border:2px solid var(--muc);border-radius:50%;z-index:1}
+.hanh-trinh li:nth-last-child(2)::before{background:var(--nhan);border-color:var(--nhan);box-shadow:0 0 0 6px rgba(46,75,255,.16)}
+.hanh-trinh li.sap::before{border-style:dashed;border-color:var(--xam)}
+.hanh-trinh li.sap time{-webkit-text-stroke-color:var(--xam-s);font-size:clamp(26px,2.6vw,38px);padding-top:10px}
+.hanh-trinh p{margin:34px 0 0;font-size:18px;line-height:1.45;max-width:22em}
+.hanh-trinh li.sap p{color:var(--xam)}
+@media (max-width:860px){
+  .hanh-trinh ol{grid-template-columns:1fr;padding-left:26px}
+  .hanh-trinh ol::before{left:5px;right:auto;top:6px;bottom:72px;width:2px;height:auto;transform:scaleY(0);transform-origin:top}
+  .hanh-trinh ol::after{left:5px;right:auto;top:auto;bottom:0;height:72px;width:2px;background:repeating-linear-gradient(180deg,var(--muc) 0 6px,transparent 6px 12px)}
+  .hanh-trinh li{padding:0 0 26px}
+  .hanh-trinh li::before{left:-26px;top:10px}
+  .hanh-trinh time{height:auto;font-size:34px}
+  .hanh-trinh li.sap time{font-size:26px;padding-top:0}
+  .hanh-trinh p{margin-top:8px}
+}
+/* công cụ + kỹ năng */
+.ve-sau{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:clamp(40px,6vw,90px);margin-top:clamp(56px,7vw,96px);align-items:start}
+.cc-dan{margin:-6px 0 22px;color:var(--xam);font-size:16px}
+.cong-cu>ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}
+.cong-cu>ol>li{position:relative}
+.cong-cu>ol>li:not(:last-child)::after{content:"";position:absolute;top:8px;left:calc(100% + 5px);width:20px;height:2px;background:repeating-linear-gradient(90deg,var(--nhan) 0 4px,transparent 4px 7px);background-size:7px 2px;animation:chay .7s linear infinite}
+.cong-cu>ol>li:not(:last-child)::before{content:"";position:absolute;top:4px;left:calc(100% + 21px);border:5px solid transparent;border-left:6px solid var(--nhan);border-right:0}
+@keyframes chay{to{background-position:7px 0}}
+.cong-cu h3{min-height:2.7em;margin:0 0 10px;font:500 12px/1.3 var(--f-so);letter-spacing:.08em;text-transform:uppercase;color:var(--xam);display:flex;gap:8px;align-items:baseline}
+.cong-cu h3 b{font-weight:500;color:var(--nhan)}
+.cong-cu li ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.cong-cu li li{font:500 13.5px/1.3 var(--f-so);background:#FAFAF6;border:1.3px solid var(--muc);border-radius:8px;padding:10px 11px;box-shadow:3px 3px 0 var(--muc);opacity:0;transform:translate(-6px,0);transition:opacity .4s calc(var(--i)*.18s),transform .4s calc(var(--i)*.18s)}
+.cong-cu.da-hien li li{opacity:1;transform:none}
+.ky-nang{display:block}
+.kn-nhom+.kn-nhom{margin-top:22px}
+.kn-nhom h3{margin:0 0 12px;font:500 12px/1 var(--f-so);letter-spacing:.08em;text-transform:uppercase;color:var(--xam)}
+.kn-nhom ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px 10px}
+.kn-nhom li span{display:inline-block;font:500 13.5px/1.2 var(--f-so);padding:11px 14px 10px;border:1.5px solid var(--muc);border-radius:10px;background:#FAFAF6;color:var(--muc);box-shadow:0 5px 0 var(--muc);transform:translateY(0);transition:transform .12s,box-shadow .12s;cursor:default;user-select:none}
+.kn-nhom.dam li span{background:var(--muc);color:var(--giay);box-shadow:0 5px 0 var(--nhan)}
+.kn-nhom li span:hover,.kn-nhom li span:active{transform:translateY(4px);box-shadow:0 1px 0 var(--muc)}
+.kn-nhom.dam li span:hover,.kn-nhom.dam li span:active{box-shadow:0 1px 0 var(--nhan)}
+.ky-nang .kn-nhom li{opacity:0;transform:translateY(-8px);transition:opacity .35s calc(.2s + var(--i)*.09s),transform .35s calc(.2s + var(--i)*.09s)}
+.ky-nang.da-hien .kn-nhom li{opacity:1;transform:none}
+@media (max-width:1180px){.ve-sau{grid-template-columns:1fr}}
+@media (max-width:640px){
+  .cong-cu>ol{grid-template-columns:1fr 1fr;gap:26px 22px}
+  .cong-cu>ol>li::before,.cong-cu>ol>li::after{display:none}
+}
+@media (prefers-reduced-motion:reduce){.hanh-trinh ol::before,.hanh-trinh ol::after,.hanh-trinh li,.cong-cu li li,.ky-nang .kn-nhom li{transition:none}.cong-cu>ol>li::after{animation:none}}
+@media print{.hanh-trinh ol::before{transform:none!important}.hanh-trinh li,.cong-cu li li,.ky-nang .kn-nhom li{opacity:1!important;transform:none!important}}
 
 /* dự án */
 .da{background:var(--muc);color:var(--giay)}
@@ -582,7 +757,8 @@ footer{background:var(--muc);color:var(--xam-s);font:400 13px/1.6 var(--f-so);pa
 .ft-len{font:inherit;color:var(--xam-s);background:none;border:0;padding:0;cursor:pointer}
 .ft-len:hover{color:var(--giay)}
 /* ở trang Liên hệ, chân trang không lặp lại thông tin liên hệ và nút dẫn về chính trang đó */
-body[data-xem="lien-he"] .ft-cot-lh,body[data-xem="lien-he"] .ft-nut{display:none}
+body[data-xem="lien-he"] .ft-cot-lh,body[data-xem="lien-he"] .ft-nut,body[data-xem="lien-he"] .ft-24{display:none}
+.ft-24{margin:12px 0 0;max-width:30em;font:400 12.5px/1.5 var(--f-so);color:var(--xam-s)}
 body[data-xem="lien-he"] .ft-luoi{grid-template-columns:minmax(0,1.5fr) minmax(0,.8fr) minmax(0,.9fr)}
 @media (max-width:860px){body[data-xem="lien-he"] .ft-luoi,.ft-luoi{grid-template-columns:1fr 1fr}.ft-th,.ft-cot:last-child{grid-column:1/-1}footer{padding-bottom:calc(90px + env(safe-area-inset-bottom))}}
 
@@ -660,7 +836,7 @@ td.tot{color:var(--nhan);font-weight:500}
 .nut-tim,.nut-tim kbd{white-space:nowrap}
 @media (max-width:1240px){.dau nav{gap:20px}.nut-tim span{display:none}}
 @media (max-width:1260px){.logo .mo-ta{display:none}.logo .ten{padding:0;border:0}.dau nav{gap:18px}.nut-nho .dai{display:none}.nut-nho .ngan{display:inline}}
-@media (min-width:861px) and (max-width:1080px){.logo .chu-lg{display:none}.dau nav{gap:14px}.dau nav a{font-size:12.5px;letter-spacing:.02em}}
+@media (min-width:861px) and (max-width:1080px){.logo .chu-lg{display:none}.dau nav{gap:16px}.dau nav a{font-size:14px}}
 .nut-ngu{font:500 12px/1 var(--f-so);color:var(--giay);text-decoration:none;border:1px solid rgba(236,238,234,.22);border-radius:8px;padding:9px 10px;letter-spacing:.06em}
 .nut-ngu:hover{border-color:var(--nhan-s);color:var(--nhan-s)}
 @media (max-width:860px){.nut-ngu{padding:8px 8px;margin-left:auto}.dau .wrap{gap:10px}}
@@ -803,7 +979,6 @@ p,li,dd{text-wrap:pretty}
       <a href="#dau-trang" data-t="nav0">Trang chủ</a>
       <a href="#toi" data-t="nav1">Giới thiệu</a>
       <a href="#dich-vu" data-t="nav5">Gói dịch vụ</a>
-      <a href="#du-lieu" data-t="nav6">Dữ liệu</a>
       <a href="#du-an" data-t="nav2">Dự án</a>
       <a href="#cach-lam" data-t="nav3">Cách làm</a>
       <a href="#lien-he" data-t="nav4">Liên hệ</a>
@@ -816,7 +991,6 @@ p,li,dd{text-wrap:pretty}
 <nav class="thanh-duoi" aria-label="Điều hướng nhanh" data-t-aria="thanh_duoi_aria">
   <a href="#toi" data-t="nav1_ngan">Về mình</a>
   <a href="#dich-vu" data-t="nav5_ngan">Dịch vụ</a>
-  <a href="#du-lieu" data-t="nav6">Dữ liệu</a>
   <a href="#du-an" data-t="nav2">Dự án</a>
   <a href="#cach-lam" data-t="nav3">Cách làm</a>
   <a href="#lien-he" data-t="nav4">Liên hệ</a>
@@ -829,7 +1003,7 @@ p,li,dd{text-wrap:pretty}
     <p class="mo-nhan" data-t="mo_nhan"><span>Performance marketing</span><span>TP.HCM</span></p>
     <h1 id="h-mo" data-t="h1"><span class="hh"><span>Khách rơi</span></span><span class="hh"><span>ở đâu,</span></span><em class="hh"><span>mình sửa ở đó</span></em></h1>
     <div class="mo-duoi">
-      <p data-t="mo_dan">Mình là Dũng, làm performance marketing ở TP.HCM. Mình theo khách từ lúc thấy quảng cáo tới lúc trả tiền. Bước nào khách bỏ đi nhiều nhất, mình sửa bước đó trước, bằng quảng cáo, tracking hoặc nội dung.</p>
+      <p data-t="mo_dan">Mình là Dũng. Mình giúp các doanh nghiệp dịch vụ biết kênh quảng cáo nào mang về khách. Mình đối chiếu số liệu quảng cáo với lượt đăng ký, lịch hẹn hoặc đơn đặt phòng để tìm ra việc nên sửa trước khi bạn chi thêm.</p>
       <div class="mo-nut">
         <a class="nut dac" href="#du-an"><span data-t="mo_nut1">Xem 5 dự án</span> <span aria-hidden="true">→</span></a>
         <a class="nut" href="#dich-vu" data-t="mo_nut2">Xem dịch vụ</a>
@@ -845,6 +1019,7 @@ p,li,dd{text-wrap:pretty}
 <!-- TRANG CHỦ: TỔNG QUAN -->
 <section class="muc tq" id="tong-quan" data-trang="dau-trang" aria-labelledby="h-tq">
   <div class="wrap">
+    <div class="tc-noi hien" id="tc-noi"></div>
     <div class="muc-dau hien"><span class="muc-so" data-t="tq_so">TỔNG QUAN</span><h2 id="h-tq" data-t="h_tq">Tư duy dữ liệu, <em>tối ưu từng điểm chạm</em></h2></div>
     <div class="tq-luoi">
       <div class="bl-boc quet" id="bien-lai"></div>
@@ -856,7 +1031,7 @@ p,li,dd{text-wrap:pretty}
 <!-- 01 GIỚI THIỆU -->
 <section class="muc" id="toi" data-trang="toi" aria-labelledby="h-toi">
   <div class="wrap">
-    <div class="muc-dau hien"><span class="muc-so">01 / 06</span><h2 id="h-toi" data-t="h_toi">Mình là ai, <em>đã làm gì</em></h2></div>
+    <div class="muc-dau hien"><span class="muc-so">01 / 05</span><h2 id="h-toi" data-t="h_toi">Mình là ai, <em>đã làm gì</em></h2></div>
 
     <div class="toi">
       <figure class="the hien" aria-label="Thẻ hồ sơ" data-t-aria="the_aria">
@@ -867,7 +1042,7 @@ p,li,dd{text-wrap:pretty}
           <dt data-t="the_sinh">Năm sinh</dt><dd>2001</dd>
           <dt data-t="the_que">Quê quán</dt><dd>Đồng Nai</dd>
           <dt data-t="the_vai">Vai trò</dt><dd>Performance Marketer</dd>
-          <dt data-t="the_noi">Sống tại</dt><dd data-t="the_noi_v">TP.HCM, nhận việc online</dd>
+          <dt data-t="the_noi">Sống tại</dt><dd data-t="the_noi_v">TP.HCM</dd>
           <dt data-t="the_hoc">Học vấn</dt><dd data-t="the_hoc_v">Đại học Kinh tế TP. Hồ Chí Minh (UEH)</dd>
           <dt data-t="the_ngu">Ngôn ngữ</dt><dd data-t="the_ngu_v">Tiếng Việt, tiếng Anh</dd>
         </dl>
@@ -876,8 +1051,9 @@ p,li,dd{text-wrap:pretty}
 
       <div class="toi-chu hien">
         <p class="lon" data-t="lon">Mình làm performance marketing tại <b>Silverland Hospitality</b> {{CHIP_SVL}}, phụ trách Google Ads, SEO và GEO cho các khách sạn ở Quận 1. Ngoài giờ, mình nhận dự án freelance cho <b>thẩm mỹ, làm đẹp, nha khoa và sự kiện</b> {{CHIP_DA}}.</p>
-        <p data-t="toi_p2">Khách tìm đến mình thường gặp chung một chuyện: quảng cáo vẫn tiêu tiền nhưng không ra khách. Mình làm theo thứ tự: kiểm số liệu, tìm bước khách rơi nhiều nhất, sửa tracking, rồi mới tăng ngân sách.</p>
+        <p data-t="toi_p2">Khách tìm đến mình thường gặp chung một chuyện: quảng cáo vẫn tiêu tiền nhưng không ra khách. Ở các dự án mình đã làm, tiền hay mất ở bước sau quảng cáo: tin nhắn không thành lịch hẹn, lịch hẹn không thành khách đến.</p>
         <ul class="chot" id="ds-chot"></ul>
+        <figure class="pheu hien" id="pheu"></figure>
       </div>
     </div>
 
@@ -887,22 +1063,20 @@ p,li,dd{text-wrap:pretty}
       <div class="th-khac hien"><h3 data-t="h_th_khac">Thương hiệu khác đã làm</h3><ul id="ds-th-khac"></ul></div>
     </div>
 
-    <div class="hai-cot">
-      <div class="hanh-trinh hien">
-        <h2 data-t="h_qua_trinh">Quá trình làm việc</h2>
-        <ol id="ds-hanh-trinh"></ol>
-        <div class="ky-nang">
-          <h2 data-t="h_ky_nang">Kỹ năng</h2>
-          <dl id="ds-ky-nang"></dl>
-        </div>
-      </div>
+    <div class="hanh-trinh hien">
+      <h2 data-t="h_qua_trinh">Quá trình làm việc</h2>
+      <ol id="ds-hanh-trinh"></ol>
+    </div>
+
+    <div class="ve-sau">
       <div class="cong-cu hien">
         <h2 data-t="h_cong_cu">Công cụ dùng hằng ngày</h2>
-        <ul id="ds-cong-cu"></ul>
-        <div class="cach-lam" data-t="nguyen_tac">
-          <p><b>NGUYÊN TẮC 1</b>Không tăng ngân sách khi chưa biết khách đến từ quảng cáo nào.</p>
-          <p><b>NGUYÊN TẮC 2</b>Số nào trong báo cáo cũng có nguồn và ngày lấy số.</p>
-        </div>
+        <p class="cc-dan" id="cc-dan"></p>
+        <ol id="ds-cong-cu"></ol>
+      </div>
+      <div class="ky-nang hien">
+        <h2 data-t="h_ky_nang">Kỹ năng</h2>
+        <div id="ds-ky-nang"></div>
       </div>
     </div>
   </div>
@@ -911,32 +1085,28 @@ p,li,dd{text-wrap:pretty}
 <!-- 02 DỊCH VỤ -->
 <section class="muc dv-trang" id="dich-vu" data-trang="dich-vu" aria-labelledby="h-dv">
   <div class="wrap">
-    <div class="muc-dau hien"><span class="muc-so">02 / 06</span><h2 id="h-dv" data-t="h_dv">Gói dịch vụ <em>từ cơ bản tới nâng cao</em></h2></div>
+    <div class="muc-dau hien"><span class="muc-so">02 / 05</span><h2 id="h-dv" data-t="h_dv">Gói dịch vụ <em>từ cơ bản tới nâng cao</em></h2></div>
     <p class="dv-dan hien" data-t="dv_dan">Chọn dịch vụ, kéo tới mức bạn cần: ngân sách quảng cáo hoặc số bài mỗi tháng. Gói phù hợp và phí hiện ra ngay.</p>
     <h2 class="dv-h" id="dv-goi" data-t="dv_h1">Gói theo tháng</h2>
+    <a class="chua-ro" id="chua-ro" href="#lien-he" data-t="chua_ro_lk">Chưa rõ nên chọn dịch vụ nào? <b>Gửi tình hình, mình gợi ý gói</b> <span aria-hidden="true">→</span></a>
     <div class="kenh-tab" id="kenh-tab" role="tablist" aria-label="Chọn dịch vụ" data-t-aria="kenh_aria"></div>
     <div id="kenh-noi-dung"></div>
     <p class="dv-ghi" data-t="dv_ghi">Giá chưa gồm ngân sách quảng cáo, khoản này trả thẳng cho Meta, Google qua tài khoản đứng tên doanh nghiệp.</p>
     <h2 class="dv-h dv-h-da" id="dv-da" data-t="dv_da">Dịch vụ theo dự án</h2>
     <div class="dvda" id="ds-dvda"></div>
-  </div>
-</section>
-
-<!-- 03 DỮ LIỆU -->
-<section class="muc dl" id="du-lieu" data-trang="du-lieu" aria-labelledby="h-dl">
-  <div class="wrap">
-    <div class="muc-dau hien"><span class="muc-so">03 / 06</span><h2 id="h-dl" data-t="h_dl">Dữ liệu nhiều, <em>quyết định vẫn đoán</em></h2></div>
-    <div class="dl-mo hien" id="dl-mo"></div>
-    <div class="bc" id="bao-cao"></div>
-    <div class="dl-buoc hien" id="dl-buoc"></div>
-    <div class="dl-chan hien" id="dl-chan"></div>
+    <div class="dl" id="du-lieu">
+      <div class="dl-dau hien"><span class="dvda-so" data-t="dl_so">CHI TIẾT DỊCH VỤ 01</span><h2 id="h-dl" data-t="h_dl">Phân tích dữ liệu và dashboard</h2></div>
+      <div class="dl-mo hien" id="dl-mo"></div>
+      <div class="bc" id="bao-cao"></div>
+      <div class="dl-chan hien" id="dl-chan"></div>
+    </div>
   </div>
 </section>
 
 <!-- 04 DỰ ÁN -->
 <section class="muc da" id="du-an" data-trang="du-an" aria-labelledby="h-da">
   <div class="wrap">
-    <div class="muc-dau hien"><span class="muc-so">04 / 06</span><h2 id="h-da" data-t="h_da">5 dự án, <em>xếp theo bước khách rơi</em></h2></div>
+    <div class="muc-dau hien"><span class="muc-so">03 / 05</span><h2 id="h-da" data-t="h_da">5 dự án, <em>xếp theo bước khách rơi</em></h2></div>
     <div class="da-luoi">
       <aside class="phieu-dinh" aria-hidden="true">
         <svg id="svg-phieu" viewBox="0 0 300 470"></svg>
@@ -950,7 +1120,7 @@ p,li,dd{text-wrap:pretty}
 <!-- 05 CÁCH LÀM -->
 <section class="muc" id="cach-lam" data-trang="cach-lam" aria-labelledby="h-cl">
   <div class="wrap">
-    <div class="muc-dau hien"><span class="muc-so">05 / 06</span><h2 id="h-cl" data-t="h_cl">Làm việc với mình <em>gồm 4 bước:</em></h2></div>
+    <div class="muc-dau hien"><span class="muc-so">04 / 05</span><h2 id="h-cl" data-t="h_cl">Làm việc với mình <em>gồm 4 bước:</em></h2></div>
     <div class="lt hien" id="ds-buoc"></div>
   </div>
 </section>
@@ -958,10 +1128,10 @@ p,li,dd{text-wrap:pretty}
 <!-- 06 LIÊN HỆ -->
 <section class="muc lh" id="lien-he" data-trang="lien-he" aria-labelledby="h-lh">
   <div class="wrap">
-    <div class="muc-dau"><span class="muc-so">06 / 06</span><h2 id="h-lh" data-t="h_lh">Khách của bạn đang rơi ở bước nào?</h2></div>
+    <div class="muc-dau"><span class="muc-so">05 / 05</span><h2 id="h-lh" data-t="h_lh">Khách của bạn đang rơi ở bước nào?</h2></div>
     <div class="lh-luoi">
       <div>
-        <p class="dan" data-t="lh_dan">Gửi mình tên thương hiệu và kênh quảng cáo đang chạy. Mình trả lời trong 24 giờ, kèm nhận xét đầu tiên về phễu của bạn, không tính phí.</p>
+        <p class="dan" data-t="lh_dan">Bạn chỉ cần gửi 3 thứ: tên thương hiệu, đường link website hoặc fanpage, và vấn đề đang gặp. Mình trả lời trong 24 giờ, kèm nhận xét đầu tiên, không tính phí.</p>
         <div class="kenh">
           <a id="lk-zalo" href="#" target="_blank" rel="noopener">Zalo <span><span data-d="dien_thoai"></span> ↗</span></a>
           <a id="lk-tel" href="#"><span data-t="goi">Gọi</span> <span data-d="dien_thoai"></span></a>
@@ -972,7 +1142,7 @@ p,li,dd{text-wrap:pretty}
       </div>
       <form id="form" novalidate>
         <label><span data-t="f_ten">TÊN CỦA BẠN</span><input name="ten" autocomplete="name" required></label>
-        <label><span data-t="f_th">THƯƠNG HIỆU HOẶC LINK FANPAGE</span><input name="thuong_hieu" required></label>
+        <label><span data-t="f_th">THƯƠNG HIỆU VÀ LINK WEBSITE HOẶC FANPAGE</span><input name="thuong_hieu" required></label>
         <label><span data-t="f_nganh">NGÀNH</span>
           <select name="nganh" id="f-nganh"></select>
         </label>
@@ -980,8 +1150,8 @@ p,li,dd{text-wrap:pretty}
           <select name="dich_vu" id="f-dv"></select>
         </label>
         <label><span data-t="f_vd">VẤN ĐỀ BẠN ĐANG GẶP</span><textarea name="van_de" id="f-vd" placeholder="Ví dụ: tin nhắn nhiều nhưng ít người đặt lịch"></textarea></label>
-        <button class="nut dac" type="submit"><span data-t="f_gui">Gửi cho Dũng</span> <span aria-hidden="true">→</span></button>
-        <p class="form-ghi" id="form-ghi" role="status" data-t="f_ghi">Bấm gửi sẽ mở Gmail với nội dung đã điền sẵn.</p>
+        <button class="nut dac" type="submit"><span data-t="f_gui">Soạn email cho Dũng</span> <span aria-hidden="true">→</span></button>
+        <p class="form-ghi" id="form-ghi" role="status" data-t="f_ghi">Gmail sẽ mở một bản nháp đã điền sẵn, bạn xem lại rồi mới bấm gửi.</p>
       </form>
     </div>
   </div>
@@ -993,16 +1163,17 @@ p,li,dd{text-wrap:pretty}
     <div class="ft-th">
       <p class="ft-ten">Dũng <b>Ads Strategy</b></p>
       <p class="ft-cau" data-t="ft_cau">Khách rơi ở đâu, mình sửa ở đó</p>
-      <a class="ft-nut" href="#lien-he"><span data-t="ft_nut">Gửi phễu, mình xem miễn phí</span> <span aria-hidden="true">→</span></a>
+      <a class="ft-nut" href="#lien-he"><span data-t="ft_nut">Gửi website hoặc fanpage cho Dũng</span> <span aria-hidden="true">→</span></a>
+      <p class="ft-24" data-t="ft_24">Mình phản hồi trong 24 giờ. Chỉ cần tên thương hiệu, đường link và vấn đề đang gặp.</p>
     </div>
     <nav class="ft-cot" aria-label="Trang" data-t-aria="ft_trang_aria"><p data-t="ft_trang">Trang</p><ul id="ft-trang"></ul></nav>
     <nav class="ft-cot" aria-label="Dự án" data-t-aria="ft_da_aria"><p data-t="ft_da">Dự án</p><ul id="ft-da"></ul></nav>
     <div class="ft-cot ft-cot-lh"><p data-t="ft_lh">Liên hệ</p>
       <ul>
-        <li><a id="ft-zalo" href="#" target="_blank" rel="noopener"><svg class="ft-ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>Zalo <span data-d="dien_thoai"></span></a></li>
+        <li><a id="ft-zalo" href="#" target="_blank" rel="noopener"><svg class="ft-ic ft-brand" viewBox="0 0 24 24" aria-hidden="true" style="--c:#0068FF"><path d="M12.49 10.2722v-.4496h1.3467v6.3218h-.7704a.576.576 0 01-.5763-.5729l-.0006.0005a3.273 3.273 0 01-1.9372.6321c-1.8138 0-3.2844-1.4697-3.2844-3.2823 0-1.8125 1.4706-3.2822 3.2844-3.2822a3.273 3.273 0 011.9372.6321l.0006.0005zM6.9188 7.7896v.205c0 .3823-.051.6944-.2995 1.0605l-.03.0343c-.0542.0615-.1815.206-.2421.2843L2.024 14.8h4.8948v.7682a.5764.5764 0 01-.5767.5761H0v-.3622c0-.4436.1102-.6414.2495-.8476L4.8582 9.23H.1922V7.7896h6.7266zm8.5513 8.3548a.4805.4805 0 01-.4803-.4798v-7.875h1.4416v8.3548H15.47zM20.6934 9.6C22.52 9.6 24 11.0807 24 12.9044c0 1.8252-1.4801 3.306-3.3066 3.306-1.8264 0-3.3066-1.4808-3.3066-3.306 0-1.8237 1.4802-3.3044 3.3066-3.3044zm-10.1412 5.253c1.0675 0 1.9324-.8645 1.9324-1.9312 0-1.065-.865-1.9295-1.9324-1.9295s-1.9324.8644-1.9324 1.9295c0 1.0667.865 1.9312 1.9324 1.9312zm10.1412-.0033c1.0737 0 1.945-.8707 1.945-1.9453 0-1.073-.8713-1.9436-1.945-1.9436-1.0753 0-1.945.8706-1.945 1.9436 0 1.0746.8697 1.9453 1.945 1.9453z"/></svg>Zalo <span data-d="dien_thoai"></span></a></li>
         <li><a id="ft-mail" href="#"><svg class="ft-ic" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="3.5" width="12" height="9" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M2.5 4.5l5.5 4 5.5-4" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg><span data-d="email"></span></a></li>
-        <li><a id="ft-li" href="#" target="_blank" rel="noopener"><svg class="ft-ic" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.8" y="3" width="12.4" height="10" rx="1.4" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="5.6" cy="7.2" r="1.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M3.6 11c.4-1.2 1.1-1.8 2-1.8s1.6.6 2 1.8M9.5 6.5h3M9.5 9h3" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>LinkedIn</a></li>
-        <li><a id="ft-fb" href="#" target="_blank" rel="noopener"><svg class="ft-ic" viewBox="0 0 16 16" aria-hidden="true"><circle cx="6" cy="5.5" r="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M2.5 12.5c.5-2 1.8-3 3.5-3s3 1 3.5 3" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="11" cy="6" r="1.6" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M10.5 9.6c1.5 0 2.6.9 3 2.6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Facebook</a></li>
+        <li><a id="ft-li" href="#" target="_blank" rel="noopener"><svg class="ft-ic ft-brand" viewBox="0 0 448 512" aria-hidden="true" style="--c:#0A66C2"><path d="M416 32L31.9 32C14.3 32 0 46.5 0 64.3L0 447.7C0 465.5 14.3 480 31.9 480L416 480c17.6 0 32-14.5 32-32.3l0-383.4C448 46.5 433.6 32 416 32zM135.4 416l-66.4 0 0-213.8 66.5 0 0 213.8-.1 0zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77zM384.3 416l-66.4 0 0-104c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9l0 105.8-66.4 0 0-213.8 63.7 0 0 29.2 .9 0c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9l0 117.2z"/></svg>LinkedIn</a></li>
+        <li><a id="ft-fb" href="#" target="_blank" rel="noopener"><svg class="ft-ic ft-brand" viewBox="0 0 24 24" aria-hidden="true" style="--c:#0866FF"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg>Facebook</a></li>
       </ul>
     </div>
   </div>
@@ -1057,7 +1228,7 @@ const LOGO = {
 };
 
 /* Slug cho từng phần. Đổi ở đây thì chạy lại build.js để tạo lại thư mục. */
-const SLUG_MUC = {toi: {vi: "gioi-thieu", en: "about"}, "dich-vu": {vi: "dich-vu", en: "services"}, "du-an": {vi: "du-an", en: "projects"}, "du-lieu": {vi: "phan-tich-du-lieu", en: "data-analytics"}, "cach-lam": {vi: "cach-lam", en: "process"}, "lien-he": {vi: "lien-he", en: "contact"}};
+const SLUG_MUC = {toi: {vi: "gioi-thieu", en: "about"}, "dich-vu": {vi: "dich-vu", en: "services"}, "du-an": {vi: "du-an", en: "projects"}, "cach-lam": {vi: "cach-lam", en: "process"}, "lien-he": {vi: "lien-he", en: "contact"}};
 const SLUG_DA = {human: "human", kbit: "kbit-k-beauty-meets", kla: "kla-center", cora: "cora", silverland: "silverland-hotels"};
 
 const NOI_DUNG = {
@@ -1080,17 +1251,15 @@ vi: {
   ],
   hanh_trinh: [
     {nam: "2023", noi_dung: "Bắt đầu làm performance marketing, nhận dự án cho spa và thẩm mỹ ở TP.HCM."},
-    {nam: "2025", noi_dung: "Làm tại Silverland Hospitality, phụ trách Google Ads, SEO, GEO cho chuỗi khách sạn ở Quận 1."},
-    {nam: "2026", noi_dung: "Chạy truyền thông và quảng cáo cho sự kiện K-Beauty MEETS 2026 của KBIT."}
+    {nam: "2025", noi_dung: "Vào Silverland Hospitality. Năm 2025, doanh thu đặt phòng trên web 3 khách sạn tăng 56,5% so với 2024."},
+    {nam: "2026", noi_dung: "Mở thêm mảng sự kiện: K-Beauty MEETS 2026 của KBIT, 1.274 lượt đăng ký từ quảng cáo."},
+    {nam: "12/2026", noi_dung: "Nhận thêm dự án freelance mới.", sap: true}
   ],
   ky_nang: [{nhom: "Chuyên môn", ds: ["Phân tích dữ liệu", "Thiết kế media", "Ứng dụng AI vào công việc", "Tin học văn phòng"]},
             {nhom: "Làm việc", ds: ["Làm việc độc lập", "Làm việc nhóm", "Đàm phán"]}],
-  cong_cu: [
-    ["Meta Ads Manager", "Quảng cáo"], ["Google Ads", "Quảng cáo"],
-    ["GA4", "Tracking"], ["Google Tag Manager", "Tracking"],
-    ["Search Console", "SEO"], ["Semrush", "SEO, GEO"],
-    ["Google Sheets", "Dữ liệu"], ["Looker Studio", "Báo cáo"], ["Power BI", "Báo cáo"]
-  ],
+  cong_cu_dan: "Xếp theo đường đi của dữ liệu, từ lúc quảng cáo chạy tới lúc lên báo cáo",
+  cong_cu: [{nhom: "Quảng cáo", ds: ["Meta Ads Manager", "Google Ads"]}, {nhom: "Tracking", ds: ["GA4", "Google Tag Manager"]},
+            {nhom: "SEO, GEO", ds: ["Search Console", "Semrush"]}, {nhom: "Dữ liệu, báo cáo", ds: ["Google Sheets", "Looker Studio", "Power BI"]}],
   dv_du_an: {nhan_gia: "Báo giá theo phạm vi", hoi: "Hỏi báo giá", xem: "Xem chi tiết", nhom: "Dịch vụ theo dự án",
     ds: [
       {ma: "du-lieu", ten: "Phân tích dữ liệu và dashboard", mo: "Gom dữ liệu bán hàng, khách hàng, quảng cáo về một chỗ, đọc ra chỗ đang ra tiền và chỗ đang mất tiền, dựng dashboard để ra quyết định.", trang: "du-lieu",
@@ -1100,20 +1269,24 @@ vi: {
       {ma: "noi-dung", ten: "Nội dung thương hiệu", mo: "Xác định thương hiệu nói gì, với ai, rồi viết và tối ưu nội dung trên website, fanpage và Google.",
        gom: ["Thông điệp chính và giọng văn của thương hiệu", "Trụ cột nội dung và lịch nội dung theo tháng", "Viết lại nội dung website, trang dịch vụ, hồ sơ Google Business Profile", "Tối ưu để Google và các công cụ AI hiểu đúng thương hiệu"]}
     ]},
+  noi_bat_tc: {t: "Hai việc mình đã làm", xem: "Xem hồ sơ dự án", ds: [
+    {du_an: "silverland", nhan: "Khách sạn · Google Ads", so: ["2", "1"], so_nhan: "chuyển đổi chính cho mỗi lượt đặt phòng",
+     phat_hien: "Một lượt đặt phòng bị Google Ads tính hai lần.", chi_tiet: "Từ 08 đến 12/2025, tài khoản Bến Thành có 2 hành động mua hàng cùng là chuyển đổi chính, nên ROAS trên báo cáo cao hơn thực tế.",
+     lam: "Mình đối chiếu từng mã đặt phòng giữa Google Ads, GA4 và hệ thống đặt phòng, rồi chỉ giữ 1 chuyển đổi chính.",
+     ghi: "Doanh thu đặt phòng trên web 3 khách sạn tháng 1 đến 10/2026 tăng 35,1% so với cùng kỳ, theo ngày đặt. Đây là kết quả của cả đội Silverland."},
+    {du_an: "kbit", nhan: "Sự kiện · Meta Ads", so: ["128", "471"], so_nhan: "lượt đăng ký đợt 1: Meta báo, danh sách đối chiếu",
+     phat_hien: "Cùng 25,56 triệu đồng, Meta báo 128 lượt đăng ký, danh sách có 471.", chi_tiet: "Chi phí mỗi lượt vì thế là 199.697 đ theo Meta, nhưng chỉ 54.270 đ theo danh sách đăng ký thật.",
+     lam: "Mình gom form đăng ký về một bảng, tách nguồn quảng cáo theo UTM và báo chi phí thật mỗi lượt.",
+     ghi: "Cả 4 đợt: 1.274 lượt đăng ký từ quảng cáo."}]},
   du_lieu: {
-    dan: "Doanh nghiệp đã có dữ liệu bán hàng, khách hàng, quảng cáo, nhưng nằm rải rác trong Excel, phần mềm bán hàng, CRM, Meta, Google. Mình gom lại, làm sạch, đối chiếu giữa các nguồn, chỉ ra chỗ đang ra tiền và chỗ đang mất tiền, rồi dựng dashboard tự cập nhật để bạn ra quyết định bằng số.",
+    dan: "Số bán hàng, khách hàng, quảng cáo thường nằm rải rác ở Excel, phần mềm bán hàng, CRM, Meta và Google. Mỗi nơi báo một con số, nên dữ liệu có nhiều mà quyết định vẫn dựa vào cảm giác.",
     dh_t: "Bạn cần dịch vụ này khi",
     dh: ["Mỗi bộ phận báo một con số doanh thu khác nhau", "Báo cáo cuối tháng mất vài ngày tổng hợp bằng tay", "Chi quảng cáo đều mà không biết kênh nào ra doanh thu", "Có số liệu nhưng không biết nên nhìn con số nào trước"],
-    buoc_t: "Mình làm gì",
-    buoc: [{ten: "Gom dữ liệu", mo: "Kết nối Excel, Google Sheets, phần mềm bán hàng, CRM, Meta Ads, Google Ads, GA4 về một chỗ."},
-           {ten: "Làm sạch, đối chiếu", mo: "Gộp trùng, thống nhất tên kênh và sản phẩm, đối chiếu số giữa các nguồn tới từng đơn hàng."},
-           {ten: "Phân tích", mo: "Tách theo kênh, sản phẩm, nhóm khách và thời gian để thấy chỗ nào ra tiền, chỗ nào đang lỗ."},
-           {ten: "Dashboard và đề xuất", mo: "Dashboard tự cập nhật trên Looker Studio, Power BI hoặc Google Sheets, kèm việc nên làm tiếp theo."}],
     da_t: "Đã làm thật",
     da: [{du_an: "silverland", mo: "Đối soát đặt phòng giữa Google Ads, GA4 và hệ thống đặt phòng theo từng mã booking, tự cập nhật bằng Apps Script"},
          {du_an: "kla", mo: "Dashboard phễu theo dịch vụ: tin nhắn, lịch hẹn, khách đến, doanh thu"},
          {du_an: "kbit", mo: "Bảng xu hướng đăng ký theo sự kiện và theo nguồn, tự cập nhật mỗi ngày"}],
-    cc_t: "Công cụ", cc: ["Google Sheets", "Apps Script", "Looker Studio", "Power BI", "Excel", "GA4", "Meta Ads", "Google Ads"],
+    nguon: ["Excel", "Phần mềm bán hàng", "CRM", "Meta Ads", "Google Ads"], ve_mot: "Một bảng số chung",
     gia: "Báo giá theo số nguồn dữ liệu và số dashboard cần dựng.", cta: "Gửi mô tả dữ liệu cho mình", goi: "Phân tích dữ liệu và dashboard",
     db: {tieu_de: "Dashboard theo ngành", dan: "Mỗi ngành cần nhìn những con số khác nhau. Chọn ngành và khoảng thời gian, dashboard đổi theo. Toàn bộ số bên dưới là số giả định.",
       nhan_mau: "SỐ GIẢ ĐỊNH", ky: n => `${n} ngày gần nhất, so với ${n} ngày trước đó`, ky_ngan: n => `${n} ngày`, so_ky: "so với kỳ trước",
@@ -1159,7 +1332,6 @@ vi: {
   loi_tat: [
     {dich: "toi",      ten: "Giới thiệu", mo: "Mình là ai, quá trình làm việc, công cụ dùng hằng ngày."},
     {dich: "dich-vu",  ten: "Gói dịch vụ", mo: "Meta Ads, Google Ads, SEO và GEO, chăm sóc fanpage và website, có giá theo tháng. Website bán hàng và nội dung thương hiệu làm theo dự án."},
-    {dich: "du-lieu",  ten: "Dữ liệu",    mo: "Phân tích dữ liệu sẵn có của doanh nghiệp, dựng dashboard theo ngành để ra quyết định."},
     {dich: "du-an",    ten: "Dự án",      mo: "5 dự án có số liệu, xếp theo bước khách rơi khỏi phễu."},
     {dich: "cach-lam", ten: "Cách làm",   mo: "4 bước, từ chẩn đoán tới báo cáo định kỳ."},
     {dich: "lien-he",  ten: "Liên hệ",    mo: "Trả lời trong 24 giờ, kèm nhận xét đầu tiên về phễu."}
@@ -1168,16 +1340,20 @@ vi: {
     gom_goi: n => `Gồm toàn bộ gói ${n}, thêm:`, vuot: "Vuốt ngang để xem 3 mức", khong_gom: "Không gồm", gia_le: "Giá lẻ", nhom_goi: "Gói theo tháng", nhom_combo: "Combo", nhom_le: "Dịch vụ lẻ",
     phi_cot: ["Cách tính", "Áp dụng cho", "Chi tiết"],
     ns: "Ngân sách quảng cáo mỗi tháng", bai: "Số bài viết mỗi tháng", don_ns: "triệu đồng", don_bai: "bài viết mỗi tháng", tren: "Trên 60 triệu",
-    moc: ["dưới 10 triệu", "10 đến 30 triệu", "31 đến 60 triệu", "trên 60 triệu"], moc_bai: ["2 bài", "4 bài", "8 bài"], moc_tren: "10%",
+    moc: ["dưới 10 triệu", "10 đến 30 triệu", "31 đến 60 triệu", "trên 60 triệu"], moc_bai: ["2 bài", "4 bài", "8 bài"], moc_tren: "Ngân sách lớn",
+    phi_moc: f => f.pt ? (f.min ? `${f.pt}%, tối thiểu ${so(f.min)} tr` : `${f.pt}% ngân sách`) : `${so(f.v)} tr/tháng`,
+    tr: v => `${so(+v.toFixed(1))} triệu đ`, ns_tra: n => `Ngân sách trả cho ${n}`, phi_dv: "Phí dịch vụ của mình", tong: "Tổng mỗi tháng",
+    tong_aria: (a, b, c, n) => `Ngân sách ${a} trả cho ${n}, cộng phí dịch vụ ${b}, tổng ${c} mỗi tháng`, bao_cao: "Báo cáo tháng cho bạn thấy:",
+    phi_pt: f => f.min ? `mỗi tháng, bằng ${f.pt}% ngân sách, tối thiểu ${Math.round(f.min * 1e6).toLocaleString('vi-VN')} đ` : `mỗi tháng, bằng ${f.pt}% ngân sách thực chi`,
     goi_y: "Kéo tới mức bạn đang chi, gói hợp với ngân sách đó và phí hiện ra bên cạnh.", goi_y_bai: "Kéo tới số bài bạn cần mỗi tháng. SEO và GEO ký tối thiểu 3 tháng.",
     muc_n: (i, n) => `MỨC ${i} / ${n}`, theo_ns: "THEO NGÂN SÁCH", tien: v => `${Math.round(v * 1e6).toLocaleString('vi-VN')} đ`,
     phi10: "mỗi tháng, bằng 10% ngân sách thực chi", phi10_min: "mỗi tháng, bằng 10% ngân sách, tối thiểu 3.500.000 đ",
     gom_truoc: (n, c) => `Gồm toàn bộ ${c} việc của gói ${n}`, gia_tri: (v, g) => `${v} triệu đồng, gói ${g}`, gia_tri_bai: (v, g) => `${v} bài, gói ${g}`},
   goi_kenh: [
-    {ma: "facebook", ten: "Meta Ads", mo: "Facebook và Instagram", vd: "kla",
+    {ma: "facebook", ten: "Meta Ads", mo: "Facebook và Instagram", vd: "kla", nen_tang: "Meta", tren_pt: 10,
      khong_gom: "thiết kế hình, quay dựng video, viết và đăng bài fanpage hằng ngày (có gói Fanpage, website riêng), ngân sách quảng cáo.",
      muc: [
-      {ten: "Cơ bản", gia: "2.500.000 đ", don_vi: "mỗi tháng", ngan_sach: "Ngân sách quảng cáo dưới 10 triệu đồng mỗi tháng",
+      {ten: "Cơ bản", gia: "2.500.000 đ", phi: 2.5, don_vi: "mỗi tháng", ngan_sach: "Ngân sách quảng cáo dưới 10 triệu đồng mỗi tháng",
        gom: ["Rà soát và tối ưu fanpage: ảnh bìa, giới thiệu, nút hành động, tin nhắn chào, trả lời nhanh, câu hỏi thường gặp",
              "Kết nối Business Manager, tài khoản quảng cáo, Instagram, cài Meta Pixel",
              "Nghiên cứu tệp khách và quảng cáo của 3 đối thủ trên Thư viện quảng cáo Meta",
@@ -1186,7 +1362,7 @@ vi: {
              "Theo dõi và tối ưu 2 lần mỗi tuần",
              "Kịch bản trả lời tin nhắn mẫu cho người trực page",
              "Báo cáo tháng: chi phí, tin nhắn, chi phí mỗi tin nhắn, số khách chốt"]},
-      {ten: "Tiêu chuẩn", gia: "3.500.000 đ", don_vi: "mỗi tháng", ngan_sach: "Ngân sách quảng cáo 10 đến 30 triệu đồng mỗi tháng",
+      {ten: "Tiêu chuẩn", gia: "3.500.000 đ", phi: 3.5, don_vi: "mỗi tháng", ngan_sach: "Ngân sách quảng cáo 10 đến 30 triệu đồng mỗi tháng",
        gom: ["Content plan chi tiết: tiêu đề và ý chính 12 bài mỗi tháng",
              "Brief hình và video cho 6 đến 8 mẫu quảng cáo, test mẫu mới mỗi tuần",
              "Tệp remarketing (người đã nhắn, tương tác, xem video) và tệp tương tự",
@@ -1194,31 +1370,31 @@ vi: {
              "Tối ưu mỗi ngày làm việc",
              "Đọc hội thoại inbox mỗi tháng, góp ý kịch bản chốt khách",
              "Báo cáo tuần và báo cáo tháng"]},
-      {ten: "Nâng cao", gia: "5.000.000 đ", don_vi: "mỗi tháng", ngan_sach: "Ngân sách quảng cáo 30 đến 60 triệu đồng mỗi tháng",
+      {ten: "Nâng cao", gia: "5.000.000 đ", phi: 5, don_vi: "mỗi tháng", ngan_sach: "Ngân sách quảng cáo 31 đến 60 triệu đồng mỗi tháng",
        gom: ["Phễu đủ 3 tầng: nhận diện, cân nhắc, chuyển đổi, tách theo từng dịch vụ hoặc sản phẩm",
              "10 đến 15 mẫu quảng cáo mỗi tháng, test thông điệp và trang đích",
              "Kế hoạch ưu đãi theo mùa và dịp lễ",
              "Dashboard tự cập nhật: chi phí, lead, lịch hẹn, doanh thu",
              "Họp review 2 tuần một lần"]}
      ]},
-    {ma: "google", ten: "Google Ads", mo: "Search, Performance Max, YouTube", vd: "silverland",
+    {ma: "google", ten: "Google Ads", mo: "Search, Performance Max, YouTube", vd: "silverland", nen_tang: "Google", tren_pt: 10,
      khong_gom: "thiết kế hình, quay dựng video, làm mới trang đích, ngân sách quảng cáo.",
      muc: [
-      {ten: "Cơ bản", gia: "1.800.000 đ", don_vi: "mỗi tháng", ngan_sach: "Ngân sách quảng cáo dưới 10 triệu đồng mỗi tháng",
+      {ten: "Cơ bản", gia: "1.800.000 đ", phi: 1.8, don_vi: "mỗi tháng", ngan_sach: "Ngân sách quảng cáo dưới 10 triệu đồng mỗi tháng",
        gom: ["Kiểm tra hoặc tạo tài khoản, liên kết GA4 và Google Business Profile",
              "Cài chuyển đổi: gọi điện, form, Zalo",
              "Nghiên cứu từ khoá và danh sách từ khoá phủ định",
              "1 đến 2 chiến dịch Search: viết quảng cáo, sitelink, callout, tiện ích gọi",
              "Rà cụm từ tìm kiếm và thêm từ khoá phủ định mỗi tuần",
              "Báo cáo tháng"]},
-      {ten: "Tiêu chuẩn", gia: "2.800.000 đ", don_vi: "mỗi tháng", ngan_sach: "Ngân sách quảng cáo 10 đến 30 triệu đồng mỗi tháng",
+      {ten: "Tiêu chuẩn", gia: "2.800.000 đ", phi: 2.8, don_vi: "mỗi tháng", ngan_sach: "Ngân sách quảng cáo 10 đến 30 triệu đồng mỗi tháng",
        gom: ["Thêm Performance Max hoặc Demand Gen, và remarketing",
              "Giá thầu theo CPA hoặc ROAS mục tiêu",
              "Góp ý trang đích: nội dung khớp quảng cáo, tốc độ tải, form",
              "Theo dõi đối thủ cùng đấu giá",
              "Gắn nguồn quảng cáo vào từng lead, đối chiếu với số lịch hẹn thật",
              "Báo cáo tuần"]},
-      {ten: "Nâng cao", gia: "10% ngân sách", don_vi: "tối thiểu 3.500.000 đ mỗi tháng", ngan_sach: "Ngân sách quảng cáo 30 đến 60 triệu đồng mỗi tháng",
+      {ten: "Nâng cao", gia: "10% ngân sách", phi_pt: 10, phi_min: 3.5, don_vi: "tối thiểu 3.500.000 đ mỗi tháng", ngan_sach: "Ngân sách quảng cáo 31 đến 60 triệu đồng mỗi tháng",
        gom: ["Chạy nhiều thị trường, nhiều ngôn ngữ, thêm YouTube",
              "Đối soát chuyển đổi với CRM hoặc hệ thống đặt lịch, đặt phòng",
              "Dashboard tự cập nhật",
@@ -1232,16 +1408,19 @@ vi: {
              "Tối ưu Google Business Profile: thông tin, danh mục, ảnh, 4 bài đăng mỗi tháng, mẫu trả lời đánh giá",
              "Nghiên cứu 10 từ khoá chính, tối ưu 5 trang chính",
              "2 bài viết chuẩn SEO mỗi tháng",
-             "Cài GA4 và Search Console nếu chưa có, báo cáo Search Console mỗi tháng"]},
+             "Cài GA4 và Search Console nếu chưa có, báo cáo Search Console mỗi tháng"],
+       bao_cao: "lượt hiển thị, lượt nhấp và vị trí trung bình trên Google của 10 từ khoá chính, lấy từ Search Console."},
       {ten: "Tiêu chuẩn", gia: "5.000.000 đ", don_vi: "mỗi tháng", ngan_sach: "Tối thiểu 3 tháng",
        gom: ["20 đến 30 từ khoá, 4 bài viết mỗi tháng, liên kết nội bộ",
              "FAQ và schema cho các trang chính",
-             "GEO cơ bản: thống nhất tên, địa chỉ, thông tin thương hiệu trên mọi nền tảng để AI đọc đúng"]},
+             "GEO cơ bản: thống nhất tên, địa chỉ, thông tin thương hiệu trên mọi nền tảng để AI đọc đúng"],
+       bao_cao: "lượt hiển thị, lượt nhấp và vị trí trung bình của 20 đến 30 từ khoá, lượt truy cập vào các bài viết mới."},
       {ten: "Nâng cao", gia: "8.000.000 đ", don_vi: "mỗi tháng", ngan_sach: "Tối thiểu 3 tháng",
        gom: ["8 bài viết mỗi tháng theo cụm chủ đề",
              "Bộ câu hỏi đo mỗi tháng: thương hiệu có được ChatGPT, Gemini, AI Overviews nhắc tên và trích dẫn không",
              "Nội dung viết để AI dễ trích dẫn, đề xuất kênh báo chí và review để thương hiệu được nhắc tên",
-             "Dashboard theo dõi thứ hạng, lượt truy cập, lượt được AI nhắc tên"]}
+             "Dashboard theo dõi thứ hạng, lượt truy cập, lượt được AI nhắc tên"],
+       bao_cao: "thứ hạng, lượt truy cập, và trong bộ câu hỏi đo mỗi tháng có bao nhiêu câu ChatGPT, Gemini, AI Overviews nhắc tên thương hiệu."}
      ]},
     {ma: "cham-soc", ten: "Fanpage, website", ten_goi: "Chăm sóc fanpage, website", mo: "Nội dung và duy trì hằng tháng",
      bai: [12, 20, 30], moc_bai: ["12 bài", "20 bài", "30 bài"], nhan: "Số bài fanpage mỗi tháng", don: "bài fanpage mỗi tháng",
@@ -1274,13 +1453,14 @@ vi: {
   ],
   du_an: [
     {
+      noi_bat: {so: "284.170", nhan: "người tiếp cận gian hàng trong 3 ngày hội chợ"},
       id: "human", gia_dinh: false, thuong_hieu: "Human", phu: "K-Beauty Expo Vietnam 2026, gian H03", nganh: "Làm đẹp", nam: "2026", buoc: 0,
       vai_tro: "Meta Ads, báo cáo sau sự kiện", thoi_gian: "trước và trong 3 ngày sự kiện",
-      van_de: "284.170 người tiếp cận trong 3 ngày hội chợ, với 4,9 triệu đồng chi phí quảng cáo",
+      van_de: "Quảng cáo nhận diện cho gian hàng hội chợ: 284.170 người tiếp cận trong 3 ngày, với 4,9 triệu đồng",
       chi_so: [
-        {so: "3 ngày", nhan: "quảng cáo gian hàng H03 tại K-Beauty Expo, SECC, với ưu đãi soi da tại chỗ"},
+        {so: "284.170", nhan: "người tiếp cận, 29 đến 31/10/2026. Hồ sơ chưa có số khách thực tế ghé gian hàng, nên hiệu quả chỉ đo tới lượt tiếp cận và lượt xem trang"},
         {so: "1.123 đ", nhan: "chi phí mỗi lượt xem trang đích, tổng 1.823 lượt"},
-        {so: "−28,1%",  nhan: "chi phí mỗi 1.000 người tiếp cận của ưu đãi soi da, so với benchmark trong báo cáo"}
+        {so: "−28,1%", nhan: "chi phí mỗi 1.000 người tiếp cận của ưu đãi soi da, so với benchmark trong báo cáo"}
       ],
       boi_canh: "Human tham gia K-Beauty Expo Vietnam 2026 và Saigon Beauty Show tại SECC, gian H03, từ 29 đến 31/10/2026. Quảng cáo cần kéo người quan tâm làm đẹp biết gian hàng và ưu đãi soi da tại chỗ.",
       chan_doan: [
@@ -1300,13 +1480,14 @@ vi: {
       bai_hoc: "Sự kiện 3 ngày thì đo bằng chi phí tiếp cận và lượt xem trang. Lần này chiến dịch tin nhắn tiêu 1,35 triệu đồng mà không ra cuộc trò chuyện nào, lần sau dồn phần đó sang tiếp cận."
     },
     {
+      noi_bat: {so: "128 so với 471", nhan: "lượt đăng ký đợt 1: Meta báo và danh sách đối chiếu"},
       id: "kbit", gia_dinh: false, thuong_hieu: "KBIT", phu: "K-Beauty MEETS 2026", nganh: "Sự kiện", nam: "2026", buoc: 2,
       vai_tro: "Meta Ads, theo dõi đăng ký, báo cáo chi phí", thoi_gian: "4 đợt, từ 27/08/2026",
-      van_de: "1.274 lượt đăng ký tham dự từ quảng cáo qua 4 đợt",
+      van_de: "Cùng 25,56 triệu đồng ở đợt 1, Meta ghi nhận 128 lượt đăng ký, danh sách đối chiếu có 471 lượt từ quảng cáo",
       chi_so: [
-        {so: "3 sự kiện", nhan: "cho bác sĩ và chủ cơ sở thẩm mỹ: Symposium, K.A.T tại TP.HCM và Congress tại Hà Nội"},
-        {so: "54.270 đ", nhan: "chi phí thật mỗi lượt đăng ký đợt 1, Meta báo 199.697 đ"},
-        {so: "130,5%",   nhan: "mục tiêu đăng ký Symposium, 522 trên 400 lượt"}
+        {so: "54.270 đ", nhan: "chi phí mỗi lượt đăng ký đợt 1 theo danh sách đối chiếu. Cùng kỳ, theo số Meta ghi nhận là 199.697 đ"},
+        {so: "1.274", nhan: "tổng lượt đăng ký từ quảng cáo qua 4 đợt, từ 27/08/2026"},
+        {so: "130,5%", nhan: "mục tiêu đăng ký Symposium, 522 trên 400 lượt"}
       ],
       boi_canh: "KBIT tổ chức K-Beauty MEETS 2026, chuỗi 3 sự kiện cho bác sĩ và chủ cơ sở thẩm mỹ: Symposium ngày 03/10 và K.A.T ngày 04/10 tại TP.HCM, Congress ngày 17 và 18/10 tại Hà Nội. Quảng cáo Meta chạy 4 đợt để kéo lượt đăng ký, ngân sách kế hoạch 70 triệu đồng, mục tiêu 2.600 lượt.",
       chan_doan: [
@@ -1326,13 +1507,14 @@ vi: {
       bai_hoc: "Số đăng ký thật cao gấp gần 3,7 lần số Meta tự báo. Muốn biết quảng cáo nào hiệu quả thì phải đối chiếu với danh sách đăng ký thật."
     },
     {
+      noi_bat: {so: "84,93 tr", nhan: "doanh thu từ 56 lượt khách đến khám, tháng 8 đến 10/2026"},
       id: "kla", gia_dinh: false, thuong_hieu: "KLA Center", nganh: "Thẩm mỹ", nam: "2026", buoc: 3,
       vai_tro: "Meta Ads, bảng theo dõi khách theo dịch vụ", thoi_gian: "từ 08/2026",
-      van_de: "84,93 triệu đồng doanh thu từ 56 lượt khách đến khám, tháng 8 đến 10/2026",
+      van_de: "Tháng 9/2026, Pico + Meso có 110 tin nhắn và ghi nhận 350.000 đồng doanh thu, còn HIFU 5D có 23 tin nhắn và ghi nhận 15 triệu đồng",
       chi_so: [
-        {so: "4 dịch vụ",    nhan: "quảng cáo tin nhắn: HIFU 5D, Pico + Meso, chăm sóc da 280K, triệt lông"},
+        {so: "84,93 tr", nhan: "doanh thu từ 56 lượt khách đến khám, tháng 8 đến 10/2026, gồm mọi nguồn khách trong bảng theo dõi"},
         {so: "1,38 tr", nhan: "chi phí quảng cáo cho mỗi khách đến khám, tháng 9/2026"},
-        {so: "78,3%",        nhan: "khách đặt lịch có đến khám, 18 trên 23 lịch hẹn"}
+        {so: "78,3%", nhan: "khách đặt lịch có đến khám, 18 trên 23 lịch hẹn, tháng 9/2026"}
       ],
       boi_canh: "KLA Center là phòng khám thẩm mỹ, chạy quảng cáo tin nhắn trên Meta cho 4 dịch vụ: HIFU 5D, Pico + Meso, chăm sóc da 280K và triệt lông. Ngân sách khoảng 350.000 đến 400.000 đ mỗi ngày cho mỗi chiến dịch. Đội tư vấn ghi từng khách vào bảng theo dõi: nhu cầu, lịch hẹn, có đến khám không, doanh thu.",
       chan_doan: [
@@ -1347,20 +1529,21 @@ vi: {
             "Làm lại tệp và mẫu quảng cáo: chi phí mỗi cuộc trò chuyện giảm từ 79.561 đ (tháng 9) xuống 57.624 đ (tháng 10)."],
       minh_hoa: {loai: "cot", tieu_de: "THÁNG 9/2026 · THEO DỊCH VỤ", cot: ["TIN NHẮN", "DOANH THU"],
         hang: [["Pico + Meso", [110, "110"], [0.35, "0,35 tr"]], ["Triệt lông", [59, "59"], [0.5, "0,5 tr"]], ["HIFU 5D", [23, "23"], [15, "15 tr"], 1], ["Chăm sóc da 280K", [12, "12"], [7.2, "7,2 tr"]]],
-        chu: "Doanh thu tính theo khách đã đến khám."},
+        chu: "Doanh thu tính theo khách đã đến khám. Dịch vụ nhiều tin nhắn nhất chưa chắc mang về nhiều tiền nhất, nên ngân sách cần chia theo doanh thu từng dịch vụ."},
       bang_dau: "Tháng", bang_cot: ["Khách đến khám", "Doanh thu"],
       bang: [["Tháng 8/2026", "17 lượt", "14,57 triệu đ"], ["Tháng 9/2026", "18 lượt", "39,47 triệu đ"], ["Tháng 10/2026", "21 lượt", "30,89 triệu đ"], ["Cộng 3 tháng", "56 lượt", "84,93 triệu đ"]],
       ghi_chu: "Doanh thu tính theo tháng khách đến khám, gồm mọi nguồn khách ghi trong bảng theo dõi. Tháng 10/2026 (01 đến 26/10), ngân sách giảm còn 10,49 triệu đồng. Chi phí mỗi cuộc trò chuyện giảm 27,6% so với tháng 9, nhưng 135 hồ sơ mới từ Meta Ads chỉ có 8 lịch hẹn, tỷ lệ 5,9%. Bước chuyển tin nhắn thành lịch hẹn vẫn là việc đang làm.",
       bai_hoc: "Tin nhắn rẻ nhất chưa chắc ra tiền. Phải nhìn tới doanh thu từng dịch vụ rồi mới chia ngân sách."
     },
     {
+      noi_bat: {so: "51 tin nhắn", nhan: "gần như không có khách đến khám"},
       id: "cora", gia_dinh: false, thuong_hieu: "CORA", phu: "Phòng khám chuyên khoa thẩm mỹ, Quận 10", nganh: "Thẩm mỹ", nam: "2026", buoc: 3,
       vai_tro: "Meta Ads, nghiên cứu đối thủ, kế hoạch 30 ngày", thoi_gian: "tháng 6 đến 9",
-      van_de: "287.837 người tiếp cận với 10 triệu đồng chạy nhận diện thương hiệu",
+      van_de: "51 tin nhắn, gần như không có khách đến khám. CORA đã điều chỉnh thông điệp thế nào?",
       chi_so: [
-        {so: "3 dịch vụ", nhan: "nâng mũi, cắt mí, căng chỉ, chạy quảng cáo nhận diện và tin nhắn trên Meta"},
-        {so: "27.868 đ",  nhan: "CPM đợt nhận diện 01 đến 21/06/2026, tần suất 1,25 lần mỗi người"},
-        {so: "51",        nhan: "tin nhắn từ 14,89 triệu đồng, 30/07 đến 28/08/2026, gần như không ai đến khám"}
+        {so: "51", nhan: "tin nhắn từ 14,89 triệu đồng, 30/07 đến 28/08/2026, gần như không ai đến khám"},
+        {so: "287.837", nhan: "người tiếp cận trong đợt chạy nhận diện 01 đến 21/06/2026, chi 10 triệu đồng"},
+        {so: "30 ngày", nhan: "kế hoạch mình đề xuất ngày 05/09/2026, dồn vào cắt mí. Hồ sơ chưa có số lịch hẹn sau kế hoạch"}
       ],
       boi_canh: "CORA là phòng khám chuyên khoa thẩm mỹ ở Quận 10, TP.HCM, được Sở Y tế cấp phép, làm nâng mũi, cắt mí và căng chỉ. Mình chạy Meta Ads từ tháng 6/2026: 3 tuần đầu để phủ nhận diện, sau đó chuyển sang quảng cáo tin nhắn với ngân sách dưới 30 triệu đồng mỗi tháng.",
       chan_doan: [
@@ -1381,13 +1564,14 @@ vi: {
       bai_hoc: "Với dịch vụ phẫu thuật, giá rẻ trong quảng cáo kéo về người hỏi giá. Khách thật cần thấy giấy phép, bác sĩ và giá trọn gói trước khi đặt lịch."
     },
     {
+      noi_bat: {so: "+35,1%", nhan: "doanh thu đặt phòng web 3 khách sạn, 1 đến 10/2026 so với cùng kỳ, kết quả cả đội"},
       id: "silverland", gia_dinh: false, thuong_hieu: "Silverland Hotels", phu: "Bến Thành, Sakyo, Jolie", nganh: "Khách sạn", nam: "2025 đến 2026", buoc: 4,
       vai_tro: "Google Ads, đối soát tracking, SEO, GEO", thoi_gian: "đang làm",
-      van_de: "Doanh thu đặt phòng trên web 3 khách sạn tăng 56,5% năm 2025, 10 tháng đầu 2026 tăng tiếp 35,1% so với cùng kỳ",
+      van_de: "Mình phát hiện Google Ads tính một lượt đặt phòng thành hai, rồi đối chiếu lại theo từng mã đặt phòng",
       chi_so: [
-        {so: "20,59 tỷ",    nhan: "doanh thu đặt phòng trên web 3 khách sạn năm 2025 (theo ngày đặt), năm 2024 là 13,15 tỷ"},
-        {so: "+35,1%",      nhan: "doanh thu web 3 khách sạn tháng 1 đến 10/2026 so với cùng kỳ 2025: 22,17 tỷ so với 16,42 tỷ"},
-        {so: "15,0",        nhan: "ROAS Google Ads Bến Thành tháng 10/2025, tính trên 1 chuyển đổi chính sau khi sửa tracking"}
+        {so: "+35,1%", nhan: "doanh thu đặt phòng trên website Bến Thành, Sakyo, Jolie, tính theo ngày đặt, tháng 1 đến 10/2026 so với cùng kỳ 2025. Đây là kết quả của cả đội Silverland"},
+        {so: "2 → 1", nhan: "chuyển đổi chính được tính cho mỗi lượt đặt phòng ở Bến Thành, trước và sau khi mình sửa tracking (08 đến 12/2025)"},
+        {so: "15,0", nhan: "ROAS Google Ads Bến Thành tháng 10/2025, tính trên 1 chuyển đổi chính sau khi sửa"}
       ],
       boi_canh: "Silverland Hospitality có chuỗi khách sạn boutique 4 sao ở Quận 1, TP.HCM. Mục tiêu là tăng khách đặt phòng trực tiếp trên website, bớt phụ thuộc vào OTA như Booking.com, Agoda. Mình phụ trách Google Ads, SEO và GEO cho 3 khách sạn Bến Thành, Sakyo và Jolie.",
       chan_doan: [
@@ -1433,17 +1617,15 @@ en: {
   ],
   hanh_trinh: [
     {nam: "2023", noi_dung: "Started in performance marketing, taking projects for spas and aesthetic clinics in Ho Chi Minh City."},
-    {nam: "2025", noi_dung: "Joined Silverland Hospitality to run Google Ads, SEO and GEO for its District 1 hotels."},
-    {nam: "2026", noi_dung: "Ran communications and ads for KBIT's K-Beauty MEETS 2026 event."}
+    {nam: "2025", noi_dung: "Joined Silverland Hospitality. In 2025, web booking revenue at its 3 hotels grew 56.5% over 2024."},
+    {nam: "2026", noi_dung: "Added events: KBIT's K-Beauty MEETS 2026, 1,274 sign-ups from ads."},
+    {nam: "12/2026", noi_dung: "Opening up for new freelance projects.", sap: true}
   ],
   ky_nang: [{nhom: "Expertise", ds: ["Data analytics", "Media design", "Applying AI at work", "Office software"]},
             {nhom: "Ways of working", ds: ["Working independently", "Teamwork", "Negotiation"]}],
-  cong_cu: [
-    ["Meta Ads Manager", "Ads"], ["Google Ads", "Ads"],
-    ["GA4", "Tracking"], ["Google Tag Manager", "Tracking"],
-    ["Search Console", "SEO"], ["Semrush", "SEO and GEO"],
-    ["Google Sheets", "Data"], ["Looker Studio", "Reporting"], ["Power BI", "Reporting"]
-  ],
+  cong_cu_dan: "Ordered the way data flows, from the ad running to the report",
+  cong_cu: [{nhom: "Ads", ds: ["Meta Ads Manager", "Google Ads"]}, {nhom: "Tracking", ds: ["GA4", "Google Tag Manager"]},
+            {nhom: "SEO and GEO", ds: ["Search Console", "Semrush"]}, {nhom: "Data and reporting", ds: ["Google Sheets", "Looker Studio", "Power BI"]}],
   dv_du_an: {nhan_gia: "Quoted by scope", hoi: "Ask for a quote", xem: "See details", nhom: "Project-based services",
     ds: [
       {ma: "du-lieu", ten: "Data analysis and dashboards", mo: "Bring sales, customer and ad data into one place, find where money comes in and where it leaks, and build dashboards for decisions.", trang: "du-lieu",
@@ -1453,20 +1635,24 @@ en: {
       {ma: "noi-dung", ten: "Brand content", mo: "Decide what the brand says and to whom, then write and optimise content for the website, social pages and Google.",
        gom: ["Core message and brand voice", "Content pillars and a monthly content calendar", "Rewritten website, service pages and Google Business Profile", "Optimised so Google and AI tools understand the brand correctly"]}
     ]},
+  noi_bat_tc: {t: "Two things I found", xem: "Open the case study", ds: [
+    {du_an: "silverland", nhan: "Hotels · Google Ads", so: ["2", "1"], so_nhan: "primary conversions per booking",
+     phat_hien: "Google Ads was counting each booking twice.", chi_tiet: "From Aug to Dec 2025, the Bến Thành account had 2 purchase actions set as primary conversions, so reported ROAS ran higher than reality.",
+     lam: "I matched every booking number across Google Ads, GA4 and the booking engine, then kept a single primary conversion.",
+     ghi: "Web booking revenue at the 3 hotels grew 35.1% in Jan to Oct 2026 vs the same period of 2025, by booking date. That is a result of the whole Silverland team."},
+    {du_an: "kbit", nhan: "Events · Meta Ads", so: ["128", "471"], so_nhan: "flight 1 sign-ups: Meta reported, matched list",
+     phat_hien: "On the same VND 25.56M, Meta reported 128 sign-ups. The list had 471.", chi_tiet: "So the cost per sign-up was VND 199,697 by Meta's count, but only VND 54,270 by the real sign-up list.",
+     lam: "I pulled every form sign-up into one sheet, split ad traffic by UTM and reported the real cost per sign-up.",
+     ghi: "Across all 4 flights: 1,274 sign-ups from ads."}]},
   du_lieu: {
-    dan: "Your business already has sales, customer and ad data, but it sits in Excel, sales software, a CRM, Meta and Google. I bring it together, clean it, reconcile the sources, show where money comes in and where it leaks, then build a self-updating dashboard so decisions rest on numbers.",
+    dan: "Sales, customer and ad numbers usually sit across Excel, sales software, a CRM, Meta and Google. Each one reports a different figure, so there is plenty of data and decisions still rest on gut feel.",
     dh_t: "You need this when",
     dh: ["Each team reports a different revenue figure", "Month-end reports take days to put together by hand", "You spend on ads every month but cannot tell which channel brings revenue", "You have numbers but do not know which one to look at first"],
-    buoc_t: "What I do",
-    buoc: [{ten: "Collect", mo: "Connect Excel, Google Sheets, sales software, CRM, Meta Ads, Google Ads and GA4 in one place."},
-           {ten: "Clean and reconcile", mo: "Remove duplicates, standardise channel and product names, reconcile sources down to each order."},
-           {ten: "Analyse", mo: "Split by channel, product, customer group and time to see what makes money and what loses it."},
-           {ten: "Dashboard and actions", mo: "A self-updating dashboard in Looker Studio, Power BI or Google Sheets, with the next steps to take."}],
     da_t: "Done for real",
     da: [{du_an: "silverland", mo: "Booking reconciliation across Google Ads, GA4 and the booking engine by booking number, updated automatically with Apps Script"},
          {du_an: "kla", mo: "A funnel dashboard by treatment: messages, bookings, visits, revenue"},
          {du_an: "kbit", mo: "A sign-up trend sheet by event and by source, updated every day"}],
-    cc_t: "Tools", cc: ["Google Sheets", "Apps Script", "Looker Studio", "Power BI", "Excel", "GA4", "Meta Ads", "Google Ads"],
+    nguon: ["Excel", "Sales software", "CRM", "Meta Ads", "Google Ads"], ve_mot: "One shared set of numbers",
     gia: "Quoted by the number of data sources and dashboards needed.", cta: "Describe your data to me", goi: "Data analysis and dashboards",
     db: {tieu_de: "Dashboards by industry", dan: "Each industry needs different numbers. Pick an industry and a time range and the dashboard changes. Every figure below is hypothetical.",
       nhan_mau: "HYPOTHETICAL", ky: n => `Last ${n} days vs the ${n} days before`, ky_ngan: n => `${n} days`, so_ky: "vs previous period",
@@ -1512,7 +1698,6 @@ en: {
   loi_tat: [
     {dich: "toi",      ten: "About",    mo: "Who I am, my career so far, the tools I use every day."},
     {dich: "dich-vu",  ten: "Services", mo: "Meta Ads, Google Ads, SEO and GEO, page and site care, priced by the month. Sales websites and brand content as projects."},
-    {dich: "du-lieu",  ten: "Data",     mo: "Analysis of the data your business already has, with industry dashboards for decisions."},
     {dich: "du-an",    ten: "Work",     mo: "5 projects with real numbers, ordered by where customers dropped off."},
     {dich: "cach-lam", ten: "Process",  mo: "4 steps, from diagnosis to regular reporting."},
     {dich: "lien-he",  ten: "Contact",  mo: "A reply within 24 hours, with a first take on your funnel."}
@@ -1521,16 +1706,20 @@ en: {
     gom_goi: n => `Everything in ${n}, plus:`, vuot: "Swipe to see all 3 tiers", khong_gom: "Not included", gia_le: "Separately", nhom_goi: "Monthly plans", nhom_combo: "Bundles", nhom_le: "One-off services",
     phi_cot: ["Billing", "Applies to", "Details"],
     ns: "Your monthly ad budget", bai: "Articles per month", don_ns: "million VND", don_bai: "articles a month", tren: "Above 60M",
-    moc: ["under 10M", "10M to 30M", "31M to 60M", "above 60M"], moc_bai: ["2 articles", "4 articles", "8 articles"], moc_tren: "10%",
+    moc: ["under 10M", "10M to 30M", "31M to 60M", "above 60M"], moc_bai: ["2 articles", "4 articles", "8 articles"], moc_tren: "Large budget",
+    phi_moc: f => f.pt ? (f.min ? `${f.pt}%, min VND ${f.min}M` : `${f.pt}% of spend`) : `VND ${f.v}M/mo`,
+    tr: v => `VND ${+v.toFixed(1)}M`, ns_tra: n => `Ad budget, paid to ${n}`, phi_dv: "My service fee", tong: "Total per month",
+    tong_aria: (a, b, c, n) => `Budget ${a} paid to ${n}, plus a ${b} service fee, total ${c} a month`, bao_cao: "Your monthly report shows:",
+    phi_pt: f => f.min ? `a month, ${f.pt}% of spend, minimum VND ${f.min}M` : `a month, ${f.pt}% of actual spend`,
     goi_y: "Drag to what you spend now. The plan that fits that budget, and its fee, show up alongside.", goi_y_bai: "Drag to how many articles you need a month. SEO and GEO run for at least 3 months.",
     muc_n: (i, n) => `TIER ${i} / ${n}`, theo_ns: "BY SPEND", tien: v => `VND ${+(v).toFixed(2)}M`,
     phi10: "a month, 10% of actual spend", phi10_min: "a month, 10% of spend, minimum VND 3.5M",
     gom_truoc: (n, c) => `Everything in ${n} (${c} items)`, gia_tri: (v, g) => `VND ${v} million, ${g} plan`, gia_tri_bai: (v, g) => `${v} articles, ${g} plan`},
   goi_kenh: [
-    {ma: "facebook", ten: "Meta Ads", mo: "Facebook and Instagram", vd: "kla",
+    {ma: "facebook", ten: "Meta Ads", mo: "Facebook and Instagram", vd: "kla", nen_tang: "Meta", tren_pt: 10,
      khong_gom: "graphic design, video production, writing and posting daily page content (see the Page and site plans), ad spend.",
      muc: [
-      {ten: "Basic", gia: "VND 2.5M", don_vi: "per month", ngan_sach: "Ad budget under VND 10M a month",
+      {ten: "Basic", gia: "VND 2.5M", phi: 2.5, don_vi: "per month", ngan_sach: "Ad budget under VND 10M a month",
        gom: ["Facebook page review and clean-up: cover, about, action button, greeting, saved replies, FAQs",
              "Business Manager, ad account and Instagram connected, Meta Pixel installed",
              "Audience research and a look at 3 competitors in the Meta Ad Library",
@@ -1539,7 +1728,7 @@ en: {
              "Monitoring and optimisation twice a week",
              "A sample reply script for whoever answers your inbox",
              "A monthly report: spend, messages, cost per message, customers closed"]},
-      {ten: "Standard", gia: "VND 3.5M", don_vi: "per month", ngan_sach: "Ad budget VND 10M to 30M a month",
+      {ten: "Standard", gia: "VND 3.5M", phi: 3.5, don_vi: "per month", ngan_sach: "Ad budget VND 10M to 30M a month",
        gom: ["A detailed content plan: headline and key points for 12 posts a month",
              "Image and video briefs for 6 to 8 ads, new ads tested every week",
              "Remarketing audiences (people who messaged, engaged or watched) and lookalikes",
@@ -1547,31 +1736,31 @@ en: {
              "Optimisation every working day",
              "A monthly read of inbox conversations, with feedback on your closing script",
              "Weekly and monthly reports"]},
-      {ten: "Advanced", gia: "VND 5M", don_vi: "per month", ngan_sach: "Ad budget VND 30M to 60M a month",
+      {ten: "Advanced", gia: "VND 5M", phi: 5, don_vi: "per month", ngan_sach: "Ad budget VND 31M to 60M a month",
        gom: ["A full 3-stage funnel: awareness, consideration, conversion, split by service or product",
              "10 to 15 ads a month, with message and landing page tests",
              "A seasonal and holiday offer plan",
              "A self-updating dashboard: spend, leads, bookings, revenue",
              "A review call every 2 weeks"]}
      ]},
-    {ma: "google", ten: "Google Ads", mo: "Search, Performance Max, YouTube", vd: "silverland",
+    {ma: "google", ten: "Google Ads", mo: "Search, Performance Max, YouTube", vd: "silverland", nen_tang: "Google", tren_pt: 10,
      khong_gom: "graphic design, video production, rebuilding landing pages, ad spend.",
      muc: [
-      {ten: "Basic", gia: "VND 1.8M", don_vi: "per month", ngan_sach: "Ad budget under VND 10M a month",
+      {ten: "Basic", gia: "VND 1.8M", phi: 1.8, don_vi: "per month", ngan_sach: "Ad budget under VND 10M a month",
        gom: ["Account check or setup, linked to GA4 and Google Business Profile",
              "Conversion tracking for calls, forms and Zalo",
              "Keyword research and a negative keyword list",
              "1 to 2 Search campaigns: ad copy, sitelinks, callouts, call extension",
              "Weekly search term review and negative keywords",
              "A monthly report"]},
-      {ten: "Standard", gia: "VND 2.8M", don_vi: "per month", ngan_sach: "Ad budget VND 10M to 30M a month",
+      {ten: "Standard", gia: "VND 2.8M", phi: 2.8, don_vi: "per month", ngan_sach: "Ad budget VND 10M to 30M a month",
        gom: ["Performance Max or Demand Gen added, plus remarketing",
              "Target CPA or target ROAS bidding",
              "Landing page feedback: message match, load speed, forms",
              "Auction insights on competitors",
              "The ad source attached to every lead, checked against real bookings",
              "Weekly reports"]},
-      {ten: "Advanced", gia: "10% of spend", don_vi: "minimum VND 3.5M a month", ngan_sach: "Ad budget VND 30M to 60M a month",
+      {ten: "Advanced", gia: "10% of spend", phi_pt: 10, phi_min: 3.5, don_vi: "minimum VND 3.5M a month", ngan_sach: "Ad budget VND 31M to 60M a month",
        gom: ["Multiple markets and languages, plus YouTube",
              "Conversions reconciled with your CRM or booking system",
              "A self-updating dashboard",
@@ -1585,16 +1774,19 @@ en: {
              "Google Business Profile: details, categories, photos, 4 posts a month, review reply templates",
              "Research on 10 main keywords, 5 key pages optimised",
              "2 SEO articles a month",
-             "GA4 and Search Console set up if missing, plus a monthly Search Console report"]},
+             "GA4 and Search Console set up if missing, plus a monthly Search Console report"],
+       bao_cao: "Google impressions, clicks and average position for your 10 main keywords, from Search Console."},
       {ten: "Standard", gia: "VND 5M", don_vi: "per month", ngan_sach: "Minimum 3 months",
        gom: ["20 to 30 keywords, 4 articles a month, internal linking",
              "FAQs and schema on key pages",
-             "Basic GEO: consistent name, address and brand details everywhere, so AI tools read them correctly"]},
+             "Basic GEO: consistent name, address and brand details everywhere, so AI tools read them correctly"],
+       bao_cao: "impressions, clicks and average position for 20 to 30 keywords, plus visits to the new articles."},
       {ten: "Advanced", gia: "VND 8M", don_vi: "per month", ngan_sach: "Minimum 3 months",
        gom: ["8 articles a month, built in topic clusters",
              "A monthly prompt set: is your brand mentioned and cited by ChatGPT, Gemini and AI Overviews",
              "Content written to be easy for AI to cite, plus press and review sites to get your brand mentioned",
-             "A dashboard for rankings, traffic and AI mentions"]}
+             "A dashboard for rankings, traffic and AI mentions"],
+       bao_cao: "rankings, traffic, and how many questions in the monthly prompt set get your brand named by ChatGPT, Gemini and AI Overviews."}
      ]},
     {ma: "cham-soc", ten: "Page and site", ten_goi: "Page and site care", mo: "Monthly content and upkeep",
      bai: [12, 20, 30], moc_bai: ["12 posts", "20 posts", "30 posts"], nhan: "Page posts per month", don: "page posts a month",
@@ -1627,13 +1819,14 @@ en: {
   ],
   du_an: [
     {
+      noi_bat: {so: "284,170", nhan: "people reached for the booth over a 3-day trade show"},
       id: "human", gia_dinh: false, thuong_hieu: "Human", phu: "K-Beauty Expo Vietnam 2026, booth H03", nganh: "Beauty", nam: "2026", buoc: 0,
       vai_tro: "Meta Ads, post-event reporting", thoi_gian: "before and during the 3-day show",
-      van_de: "284,170 people reached over a 3-day trade show, on VND 4.9 million in ad spend",
+      van_de: "Awareness ads for a trade-show booth: 284,170 people reached over 3 days, on VND 4.9 million",
       chi_so: [
-        {so: "3 days",    nhan: "of ads for booth H03 at K-Beauty Expo, SECC, with an on-site skin test offer"},
+        {so: "284,170", nhan: "people reached, 29 to 31 Oct 2026. The case has no count of people who actually visited the booth, so results are measured up to reach and page views"},
         {so: "1,123", nhan: "VND per landing page view, 1,823 views in total"},
-        {so: "−28.1%",    nhan: "cost per 1,000 people reached for the skin-test offer, against the benchmark in the report"}
+        {so: "−28.1%", nhan: "cost per 1,000 people reached for the skin-test offer, against the benchmark in the report"}
       ],
       boi_canh: "Human exhibited at K-Beauty Expo Vietnam 2026 and Saigon Beauty Show at SECC, booth H03, from 29 to 31 Oct 2026. The ads had to make beauty shoppers aware of the booth and its on-site skin-test offer.",
       chan_doan: [
@@ -1653,13 +1846,14 @@ en: {
       bai_hoc: "For a 3-day show, judge the ads on cost per reach and landing page views. This time the messaging campaign spent VND 1.35 million without a single conversation, so next time that money goes to reach."
     },
     {
+      noi_bat: {so: "128 vs 471", nhan: "flight 1 sign-ups: Meta reported vs the matched list"},
       id: "kbit", gia_dinh: false, thuong_hieu: "KBIT", phu: "K-Beauty MEETS 2026", nganh: "Events", nam: "2026", buoc: 2,
       vai_tro: "Meta Ads, sign-up tracking, cost reporting", thoi_gian: "4 flights, from 27 Aug 2026",
-      van_de: "1,274 event sign-ups from ads across 4 flights",
+      van_de: "On the same VND 25.56 million in flight 1, Meta recorded 128 sign-ups while the matched list had 471 from ads",
       chi_so: [
-        {so: "3 events",   nhan: "for doctors and clinic owners: Symposium and K.A.T in HCMC, Congress in Hanoi"},
-        {so: "54,270", nhan: "VND real cost per sign-up in flight 1, against VND 199,697 reported by Meta"},
-        {so: "130.5%",     nhan: "of the Symposium sign-up target, 522 against 400"}
+        {so: "54,270", nhan: "VND per sign-up in flight 1 by the matched list. For the same period, Meta's own count puts it at VND 199,697"},
+        {so: "1,274", nhan: "sign-ups from ads in total across 4 flights, from 27 Aug 2026"},
+        {so: "130.5%", nhan: "of the Symposium sign-up target, 522 against 400"}
       ],
       boi_canh: "KBIT organises K-Beauty MEETS 2026, a series of 3 events for doctors and aesthetic clinic owners: the Symposium on 3 Oct and K.A.T on 4 Oct in Ho Chi Minh City, and the Congress on 17 and 18 Oct in Hanoi. Meta ads ran in 4 flights to drive sign-ups, with a planned budget of VND 70 million and a target of 2,600 sign-ups.",
       chan_doan: [
@@ -1679,13 +1873,14 @@ en: {
       bai_hoc: "The real sign-up count was nearly 3.7 times what Meta reported. To know which ads work, check them against the real sign-up list."
     },
     {
+      noi_bat: {so: "VND 84.93M", nhan: "revenue from 56 clinic visits, Aug to Oct 2026"},
       id: "kla", gia_dinh: false, thuong_hieu: "KLA Center", nganh: "Aesthetics", nam: "2026", buoc: 3,
       vai_tro: "Meta Ads, customer tracking by treatment", thoi_gian: "since Aug 2026",
-      van_de: "VND 84.93 million in revenue from 56 clinic visits, Aug to Oct 2026",
+      van_de: "In Sep 2026, Pico + Meso drew 110 messages and VND 350,000 in revenue, while HIFU 5D drew 23 messages and VND 15 million",
       chi_so: [
-        {so: "4", nhan: "treatments on message ads: HIFU 5D, Pico + Meso, VND 280K facial, hair removal"},
-        {so: "1.38M",  nhan: "VND in ad cost per clinic visit, Sep 2026"},
-        {so: "78.3%",      nhan: "of booked patients showed up, 18 of 23 appointments"}
+        {so: "84.93M", nhan: "VND in revenue from 56 clinic visits, Aug to Oct 2026, across every patient source in the tracking sheet"},
+        {so: "1.38M", nhan: "VND in ad cost per clinic visit, Sep 2026"},
+        {so: "78.3%", nhan: "of booked patients showed up, 18 of 23 appointments, Sep 2026"}
       ],
       boi_canh: "KLA Center is an aesthetic clinic running Meta messaging ads for 4 treatments: HIFU 5D, Pico + Meso, a VND 280K facial and hair removal. Each campaign spends about VND 350,000 to 400,000 a day. The consultants log every customer in a tracking sheet: need, appointment, whether they showed up, and revenue.",
       chan_doan: [
@@ -1700,20 +1895,21 @@ en: {
             "Reworked audiences and creative: cost per conversation fell from VND 79,561 (Sep) to VND 57,624 (Oct)."],
       minh_hoa: {loai: "cot", tieu_de: "SEP 2026 · BY TREATMENT", cot: ["MESSAGES", "REVENUE"],
         hang: [["Pico + Meso", [110, "110"], [0.35, "0.35M"]], ["Hair removal", [59, "59"], [0.5, "0.5M"]], ["HIFU 5D", [23, "23"], [15, "15M"], 1], ["VND 280K facial", [12, "12"], [7.2, "7.2M"]]],
-        chu: "Revenue counts only customers who visited the clinic."},
+        chu: "Revenue counts only customers who visited the clinic. The treatment with the most messages is not always the one that brings in money, so the budget should follow revenue per treatment."},
       bang_dau: "Month", bang_cot: ["Clinic visits", "Revenue"],
       bang: [["Aug 2026", "17", "VND 14.57M"], ["Sep 2026", "18", "VND 39.47M"], ["Oct 2026", "21", "VND 30.89M"], ["Total, 3 months", "56", "VND 84.93M"]],
       ghi_chu: "Revenue is counted in the month of the clinic visit and covers every customer source in the tracking sheet. In Oct 2026 (1 to 26 Oct), budget dropped to VND 10.49 million. Cost per conversation fell 27.6% from September, but the 135 new Meta Ads leads produced only 8 appointments, a 5.9% rate. Turning messages into appointments is still work in progress.",
       bai_hoc: "The cheapest message is not always the one that pays. Look at revenue per treatment before you split the budget."
     },
     {
+      noi_bat: {so: "51 messages", nhan: "almost no one came in for a consultation"},
       id: "cora", gia_dinh: false, thuong_hieu: "CORA", phu: "Aesthetic surgery clinic, District 10", nganh: "Aesthetics", nam: "2026", buoc: 3,
       vai_tro: "Meta Ads, competitor research, 30-day plan", thoi_gian: "Jun to Sep",
-      van_de: "287,837 people reached on VND 10 million of brand awareness ads",
+      van_de: "51 messages, almost no clinic visits. How did CORA change its message?",
       chi_so: [
-        {so: "3 services", nhan: "rhinoplasty, eyelid surgery, thread lift, on awareness and message ads on Meta"},
-        {so: "27,868",     nhan: "VND CPM for the awareness flight, 1 to 21 Jun 2026, frequency 1.25"},
-        {so: "51",         nhan: "messages on VND 14.89 million, 30 Jul to 28 Aug 2026, with almost no clinic visits"}
+        {so: "51", nhan: "messages on VND 14.89 million, 30 Jul to 28 Aug 2026, with almost no clinic visits"},
+        {so: "287,837", nhan: "people reached during the awareness flight, 1 to 21 Jun 2026, on VND 10 million"},
+        {so: "30 days", nhan: "the plan I proposed on 5 Sep 2026, focused on eyelid surgery. The case has no appointment numbers after the plan yet"}
       ],
       boi_canh: "CORA is a licensed aesthetic surgery clinic in District 10, Ho Chi Minh City, offering rhinoplasty, eyelid surgery and thread lifts. I ran Meta Ads from June 2026: three weeks of brand awareness first, then message ads on a budget under VND 30 million a month.",
       chan_doan: [
@@ -1734,13 +1930,14 @@ en: {
       bai_hoc: "For surgery, a cheap price in the ad brings in price-checkers. Real patients need to see the licence, the doctor and an all-in price before they book."
     },
     {
+      noi_bat: {so: "+35.1%", nhan: "web booking revenue at 3 hotels, Jan to Oct 2026 vs same period, a team result"},
       id: "silverland", gia_dinh: false, thuong_hieu: "Silverland Hotels", phu: "Bến Thành, Sakyo, Jolie", nganh: "Hotels", nam: "2025 to 2026", buoc: 4,
       vai_tro: "Google Ads, tracking reconciliation, SEO, GEO", thoi_gian: "ongoing",
-      van_de: "Direct web booking revenue across 3 hotels up 56.5% in 2025, then up another 35.1% year on year in Jan to Oct 2026",
+      van_de: "I found Google Ads counting each booking twice, then matched results back by booking number",
       chi_so: [
-        {so: "20.59B", nhan: "VND in direct web booking revenue across the 3 hotels in 2025 (by booking date), VND 13.15B in 2024"},
-        {so: "+35.1%",     nhan: "direct web revenue across the 3 hotels in Jan to Oct 2026 vs the same period of 2025: VND 22.17B vs VND 16.42B"},
-        {so: "15.0",       nhan: "Bến Thành Google Ads ROAS in Oct 2025, measured on a single primary conversion after the tracking fix"}
+        {so: "+35.1%", nhan: "direct website booking revenue at Bến Thành, Sakyo and Jolie, by booking date, Jan to Oct 2026 vs the same period of 2025. A result of the whole Silverland team"},
+        {so: "2 → 1", nhan: "primary conversions counted per booking at Bến Thành, before and after my tracking fix (Aug to Dec 2025)"},
+        {so: "15.0", nhan: "Bến Thành Google Ads ROAS in Oct 2025, on a single primary conversion after the fix"}
       ],
       boi_canh: "Silverland Hospitality runs a chain of 4-star boutique hotels in District 1, Ho Chi Minh City. The goal is more direct bookings on the hotel website and less reliance on OTAs such as Booking.com and Agoda. I run Google Ads, SEO and GEO for 3 of the hotels: Bến Thành, Sakyo and Jolie.",
       chan_doan: [
@@ -1771,6 +1968,9 @@ en: {
 /* Chữ giao diện. Bản tiếng Việt của phần tĩnh nằm sẵn trong HTML; UI.en thay thế khi mở bản tiếng Anh. */
 const UI_ALL = {
 vi: {
+  mega: {da: "5 dự án, mỗi dự án một con số", da_tat: "Xem đủ 5 dự án", dv: "Gói theo tháng", tu: "từ", thang: "mỗi tháng", dv_da: "Dữ liệu, website, nội dung báo giá theo dự án", chua_ro: "Chưa rõ nên chọn dịch vụ nào? Hỏi mình"},
+  pheu: {t: "Một đồng quảng cáo đi tới đâu", minh: "Hình minh hoạ", aria: "Minh hoạ phễu 5 bước và thứ tự 4 việc mình làm", tang: ["Hiển thị", "Click", "Tin nhắn", "Lịch hẹn", "Khách đến"], roi: "rơi nhiều nhất", lich: "Lịch làm 30 ngày đầu",
+    buoc: [["Kiểm số liệu", "Số nào cũng có nguồn và ngày lấy số."], ["Tìm bước rơi nhiều nhất", "Đo tỷ lệ qua từng bước, bước nào rơi mạnh nhất thì xử lý trước."], ["Sửa tracking", "Gắn nguồn cho từng lượt khách để biết khách đến từ quảng cáo nào."], ["Rồi mới tăng ngân sách", "Không tăng ngân sách khi chưa biết khách đến từ quảng cáo nào."]]},
   tieu_de: document.title,
   so_gia_dinh: "SỐ MINH HOẠ", so_that: "SỐ THẬT",
   kiem: "ĐÃ KIỂM CHỨNG", suy: "GIẢ THUYẾT",
@@ -1784,24 +1984,29 @@ vi: {
   cta_bb: "Khách của bạn cũng rơi ở bước này? Nhắn mình →",
   tuan: "T", ctr_aria: (a, b, c) => `CTR giảm từ ${a}% xuống ${b}% rồi tăng lên ${c}%`,
   roas_aria: (a, b, c) => `ROAS báo cáo ${a}, trong đó ${b} là thật và ${c} do đếm trùng`,
-  muc: {'toi': '01 Giới thiệu', 'dich-vu': '02 Gói dịch vụ', 'du-lieu': '03 Dữ liệu', 'du-an': '04 Dự án', 'cach-lam': '05 Cách làm', 'lien-he': '06 Liên hệ'}, mo_dau: '00 Trang chủ',
-  ten_trang: {'toi': 'Giới thiệu', 'dich-vu': 'Gói dịch vụ', 'du-lieu': 'Dữ liệu', 'du-an': 'Dự án', 'cach-lam': 'Cách làm', 'lien-he': 'Liên hệ'}, tiep: 'Trang tiếp theo',
-  phieu_ti: ti => `${ti}% NGƯỜI XEM ĐI TỚI DOANH THU`, phieu_ti_gon: ti => `${ti}% TỚI DOANH THU · CHẠM VÀO PHỄU ĐỂ SỬA`,
+  muc: {'toi': '01 Giới thiệu', 'dich-vu': '02 Gói dịch vụ', 'du-lieu': '02 Gói dịch vụ', 'du-an': '03 Dự án', 'cach-lam': '04 Cách làm', 'lien-he': '05 Liên hệ'}, mo_dau: '00 Trang chủ',
+  ten_trang: {'toi': 'Giới thiệu', 'dich-vu': 'Gói dịch vụ', 'du-an': 'Dự án', 'cach-lam': 'Cách làm', 'lien-he': 'Liên hệ'}, tiep: 'Trang tiếp theo',
+  phan_minh: 'Phần mình làm', tang_cuoi: 'Khách đã thanh toán', phieu_ti: ti => `${ti}% NGƯỜI XEM ĐÃ THANH TOÁN`, phieu_ti_gon: ti => `${ti}% ĐÃ THANH TOÁN · CHẠM VÀO PHỄU ĐỂ SỬA`,
   lenh_goi_y: "Gõ ngành, thương hiệu hoặc vấn đề: lead, nha khoa, ROAS", lenh_aria: "Tìm dự án hoặc mục",
   lenh_muc: [
     {ten: 'Giới thiệu', mo: 'Mình là ai, quá trình làm việc, công cụ', the: 'Trang 01', href: '#toi', tim: 'gioi thieu toi la ai kinh nghiem qua trinh cong cu'},
     {ten: 'Gói dịch vụ', mo: 'Meta Ads, Google Ads, SEO và GEO, chăm sóc fanpage và website, kéo để xem gói và phí', the: 'Trang 02', href: '#dich-vu', tim: 'dich vu goi bang gia phi ngan sach tracking quang cao meta google seo geo dashboard cham soc fanpage website content viet bai thiet ke anh hashtag'},
-    {ten: 'Dữ liệu', mo: 'Phân tích dữ liệu, dashboard theo ngành', the: 'Trang 03', href: '#du-lieu', tim: 'du lieu phan tich data analyst dashboard bao cao power bi looker khach san tham my ban le nha hang'},
-    {ten: 'Cách làm', mo: 'Chẩn đoán, sửa tracking, chạy test, báo cáo', the: 'Trang 05', href: '#cach-lam', tim: 'cach lam quy trinh chan doan bao cao'},
-    {ten: 'Liên hệ', mo: 'Zalo, điện thoại, email, LinkedIn, Facebook', the: 'Trang 06', href: '#lien-he', tim: 'lien he zalo email dien thoai linkedin facebook form'}
+    {ten: 'Phân tích dữ liệu', mo: 'Dashboard mẫu theo ngành, trong Gói dịch vụ', the: 'Dịch vụ', href: '#du-lieu', tim: 'du lieu phan tich data analyst dashboard bao cao power bi looker khach san tham my ban le nha hang'},
+    {ten: 'Cách làm', mo: 'Chẩn đoán, sửa tracking, chạy test, báo cáo', the: 'Trang 04', href: '#cach-lam', tim: 'cach lam quy trinh chan doan bao cao'},
+    {ten: 'Liên hệ', mo: 'Zalo, điện thoại, email, LinkedIn, Facebook', the: 'Trang 05', href: '#lien-he', tim: 'lien he zalo email dien thoai linkedin facebook form'}
   ],
   lenh_rong: ["Chưa có dự án khớp", "Nhắn mình, có thể mình đã làm việc tương tự"],
-  f_thieu: "Bạn điền giúp mình tên và thương hiệu nhé.", f_da_mo: "Đã mở Gmail. Nếu không thấy, nhắn mình qua Zalo.",
+  f_thieu: "Bạn điền giúp mình tên và thương hiệu nhé.", f_da_mo: "Đã mở bản nháp trong Gmail, bạn xem lại rồi bấm gửi. Nếu không thấy, nhắn mình qua Zalo.",
   f_chu_de: "Nhờ xem phễu: ", f_nhan: ["Tên", "Thương hiệu", "Ngành", "Vấn đề", "Dịch vụ quan tâm"],
   chip_svl: "Doanh thu web 3 khách sạn Silverland Bến Thành, Sakyo, Jolie theo ngày đặt: năm 2025 đạt 20,59 tỷ, tăng 56,5% so với 13,15 tỷ năm 2024. Tháng 1 đến 10/2026 đạt 22,17 tỷ, tăng 35,1% so với cùng kỳ", chip_da: "5 dự án",
   doi_ngu: {href: '?lang=en', text: 'EN', lang: 'en', aria: 'Switch to English'}
 },
 en: {
+  mega: {da: "5 projects, each with one number", da_tat: "See all 5 projects", dv: "Monthly plans", tu: "from", thang: "a month", dv_da: "Data, websites and content are quoted per project", chua_ro: "Not sure which service fits? Ask me"},
+  chua_ro_lk: "Not sure which service you need? <b>Tell me where you are, I will suggest a plan</b> <span aria-hidden=\"true\">→</span>",
+  dl_so: "SERVICE DETAIL 01", h_dl: "Data analysis and dashboards",
+  pheu: {t: "Where an ad dollar goes", minh: "Illustration", aria: "Illustrated 5-step funnel and the 4 things I do, in order", tang: ["Impressions", "Clicks", "Messages", "Bookings", "Visits"], roi: "biggest drop", lich: "The first 30 days, week by week",
+    buoc: [["Check the numbers", "Every number has a source and a pull date."], ["Find the biggest drop", "Measure the rate between steps and fix the steepest drop first."], ["Fix tracking", "Tag every visit with its source so you know which ad brought it."], ["Then scale the budget", "Never scale before knowing which ads bring in customers."]]},
   tieu_de: "Đào Mạnh Dũng · Dũng Ads Strategy · Ad strategy and campaign management",
   mo_ta_trang: "Dũng is a performance marketer in Ho Chi Minh City: ads, tracking and reporting for aesthetics, beauty, dental, events and hotels. 5 projects, ordered by the funnel step where customers dropped off.",
   so_gia_dinh: "ILLUSTRATIVE FIGURES", so_that: "REAL FIGURES",
@@ -1816,19 +2021,19 @@ en: {
   cta_bb: "Losing customers at this step too? Message me →",
   tuan: "W", ctr_aria: (a, b, c) => `CTR fell from ${a}% to ${b}%, then rose to ${c}%`,
   roas_aria: (a, b, c) => `Reported ROAS ${a}, of which ${b} is real and ${c} is double-counted`,
-  muc: {'toi': '01 About', 'dich-vu': '02 Services', 'du-lieu': '03 Data', 'du-an': '04 Work', 'cach-lam': '05 Process', 'lien-he': '06 Contact'}, mo_dau: '00 Home',
-  ten_trang: {'toi': 'About', 'dich-vu': 'Services', 'du-lieu': 'Data', 'du-an': 'Work', 'cach-lam': 'Process', 'lien-he': 'Contact'}, tiep: 'Next page',
-  phieu_ti: ti => `${ti}% OF VIEWERS REACH REVENUE`, phieu_ti_gon: ti => `${ti}% REACH REVENUE · TAP THE FUNNEL TO FIX A STEP`,
+  muc: {'toi': '01 About', 'dich-vu': '02 Services', 'du-lieu': '02 Services', 'du-an': '03 Work', 'cach-lam': '04 Process', 'lien-he': '05 Contact'}, mo_dau: '00 Home',
+  ten_trang: {'toi': 'About', 'dich-vu': 'Services', 'du-an': 'Work', 'cach-lam': 'Process', 'lien-he': 'Contact'}, tiep: 'Next page',
+  phan_minh: 'My part', tang_cuoi: 'Paying customers', phieu_ti: ti => `${ti}% OF VIEWERS PAID`, phieu_ti_gon: ti => `${ti}% PAID · TAP THE FUNNEL TO FIX A STEP`,
   lenh_goi_y: "Type an industry, brand or problem: lead, dental, ROAS", lenh_aria: "Search projects and sections",
   lenh_muc: [
     {ten: 'About', mo: 'Who I am, career so far, tools', the: 'Page 01', href: '#toi', tim: 'about me experience career tools'},
     {ten: 'Services', mo: 'Meta Ads, Google Ads, SEO and GEO, page and site care, drag to see the plan and fee', the: 'Page 02', href: '#dich-vu', tim: 'services package pricing price fee budget tracking ads meta google seo geo dashboard page care fanpage website content posts design hashtag'},
-    {ten: 'Data', mo: 'Data analysis, industry dashboards', the: 'Page 03', href: '#du-lieu', tim: 'data analyst analysis dashboard report power bi looker hotel aesthetics retail restaurant'},
-    {ten: 'Process', mo: 'Diagnose, fix tracking, test, report', the: 'Page 05', href: '#cach-lam', tim: 'process how i work diagnose report'},
-    {ten: 'Contact', mo: 'Zalo, phone, email, LinkedIn, Facebook', the: 'Page 06', href: '#lien-he', tim: 'contact zalo email phone linkedin facebook form'}
+    {ten: 'Data analysis', mo: 'Sample industry dashboards, under Services', the: 'Service', href: '#du-lieu', tim: 'data analyst analysis dashboard report power bi looker hotel aesthetics retail restaurant'},
+    {ten: 'Process', mo: 'Diagnose, fix tracking, test, report', the: 'Page 04', href: '#cach-lam', tim: 'process how i work diagnose report'},
+    {ten: 'Contact', mo: 'Zalo, phone, email, LinkedIn, Facebook', the: 'Page 05', href: '#lien-he', tim: 'contact zalo email phone linkedin facebook form'}
   ],
   lenh_rong: ["No matching project", "Message me, I may have done something similar"],
-  f_thieu: "Please add your name and brand.", f_da_mo: "Gmail should now be open. If not, message me on Zalo.",
+  f_thieu: "Please add your name and brand.", f_da_mo: "Your draft should now be open in Gmail. Check it, then send. If not, message me on Zalo.",
   f_chu_de: "Funnel review request: ", f_nhan: ["Name", "Brand", "Industry", "Problem", "Service"],
   chip_svl: "Direct web revenue of 3 Silverland hotels (Bến Thành, Sakyo, Jolie) by booking date: VND 20.59B in 2025, up 56.5% from VND 13.15B in 2024. VND 22.17B in Jan to Oct 2026, up 35.1% year on year", chip_da: "5 projects",
   doi_ngu: {href: '?', text: 'VI', lang: 'vi', aria: 'Chuyển sang tiếng Việt'},
@@ -1843,24 +2048,23 @@ en: {
   f_dv: "SERVICE YOU'RE INTERESTED IN",
   tim: "Search", cta_dai: "Get in touch", cta_ngan: "Contact",
   mo_nhan: '<span>Performance marketing</span><span>Ho Chi Minh City</span>',
-  h1: '<span class="hh"><span>Where they</span></span><span class="hh"><span>drop off,</span></span><em class="hh"><span>I fix it there</span></em>',
-  mo_dan: "I'm Dũng, a performance marketer in Ho Chi Minh City. I follow customers from the first ad they see to the moment they pay. Whichever step loses the most people, I fix first, with ads, tracking or content.",
+  h1: '<span class="hh"><span>See which ads</span></span><span class="hh"><span>lead to bookings</span></span><em class="hh"><span>and sales.</span></em>',
+  mo_dan: "I'm Dũng. I help service businesses find out which ads actually bring in customers. I match your ad numbers against real sign-ups, appointments and bookings, so you know what to fix before you spend more.",
   mo_nut1: "See 5 projects", mo_nut2: "See services",
   mo_ghi_aria: "Try fixing the simulated funnel", mo_ghi: "Simulation: grey dots are people leaving the funnel. Click the funnel or fix a step:", dat_lai: "Reset",
   h_toi: "About me, <em>and what I've done</em>", the_aria: "Profile card", the_dau: "PROFILE", the_so: "NO. 0001",
-  anh_alt: "Portrait of Đào Mạnh Dũng", the_ten: "Name", the_sinh: "Born", the_que: "Hometown", the_hoc: "Education", the_hoc_v: "University of Economics Ho Chi Minh City (UEH)", the_vai: "Role", the_noi: "Based in", the_noi_v: "Ho Chi Minh City, works remotely", the_ngu: "Languages", the_ngu_v: "Vietnamese, English",
+  anh_alt: "Portrait of Đào Mạnh Dũng", the_ten: "Name", the_sinh: "Born", the_que: "Hometown", the_hoc: "Education", the_hoc_v: "University of Economics Ho Chi Minh City (UEH)", the_vai: "Role", the_noi: "Based in", the_noi_v: "Ho Chi Minh City", the_ngu: "Languages", the_ngu_v: "Vietnamese, English",
   lon: "I work in performance marketing at <b>Silverland Hospitality</b> {{CHIP_SVL}}, running Google Ads, SEO and GEO for hotels in District 1. Outside office hours, I take on freelance projects in <b>aesthetics, beauty, dental and events</b> {{CHIP_DA}}.",
-  toi_p2: "Most clients come to me with the same issue: the ads keep spending, but customers don't come. I work in this order: check the numbers, find the step where most people drop off, fix the tracking, and only then scale the budget.",
+  toi_p2: "Most clients come to me with the same issue: the ads keep spending, but customers don't come. In the projects I have run, the money usually leaks after the ad: messages that never become bookings, bookings that never turn up.",
   h_nganh: "Industries and brands", h_th_khac: "Other brands I have worked with", h_qua_trinh: "Career so far", ds_tim: "quick search", h_ky_nang: "Skills", h_cong_cu: "Tools I use every day",
-  nguyen_tac: "<p><b>RULE 1</b>Never scale the budget before knowing which ads bring in customers.</p><p><b>RULE 2</b>Every number in a report comes with its source and the date it was pulled.</p>",
   h_da: "5 projects, <em>ordered by where customers dropped off</em>", phieu_ghi: "Scroll to see which step each project sits on.",
-  h_cl: "Working with me <em>takes 4 steps:</em>", h_dl: "Plenty of data, <em>decisions still guessed</em>", dv_da: "Project-based services",
+  h_cl: "Working with me <em>takes 4 steps:</em>", dv_da: "Project-based services",
   h_lh: "Where are your customers dropping off?",
-  lh_dan: "Send me your brand name and the ad channels you're running. I'll reply within 24 hours with a first take on your funnel, free of charge.",
-  goi: "Call", f_ten: "YOUR NAME", f_th: "BRAND OR FACEBOOK PAGE LINK", f_nganh: "INDUSTRY", f_vd: "WHAT'S GOING WRONG",
-  f_vd_goi_y: "e.g. lots of messages but few bookings", f_gui: "Send to Dũng", f_ghi: "Clicking send opens Gmail with the details filled in.",
+  lh_dan: "All I need is three things: your brand name, a link to your website or Facebook page, and what's going wrong. I'll reply within 24 hours with a first take, free of charge.",
+  goi: "Call", f_ten: "YOUR NAME", f_th: "BRAND AND WEBSITE OR FACEBOOK PAGE LINK", f_nganh: "INDUSTRY", f_vd: "WHAT'S GOING WRONG",
+  f_vd_goi_y: "e.g. lots of messages but few bookings", f_gui: "Draft an email to Dũng", f_ghi: "Gmail opens a pre-filled draft, so you can check it before you send.",
   tphcm: "HCMC",
-  ft_cau: "Where they drop off, I fix it there", ft_nut: "Send your funnel, I'll review it free", ft_trang: "Pages", ft_da: "Projects", ft_lh: "Contact", ft_len: "Back to top", ft_trang_aria: "Site pages", thanh_duoi_aria: "Quick navigation", ft_da_aria: "Projects", dong_bb: "Close case study", dang_xem: "Viewing", nhan_du_an: "Taking projects from", thang_nhan: "Dec 2026",
+  ft_cau: "See which ads lead to bookings and sales", ft_nut: "Share your website or Facebook page", ft_24: "I reply within 24 hours. Just send your brand name, a link and what's going wrong.", ft_trang: "Pages", ft_da: "Projects", ft_lh: "Contact", ft_len: "Back to top", ft_trang_aria: "Site pages", thanh_duoi_aria: "Quick navigation", ft_da_aria: "Projects", dong_bb: "Close case study", dang_xem: "Viewing", nhan_du_an: "Taking projects from", thang_nhan: "Dec 2026",
   lenh_chan: "<span>↑ ↓ select</span><span>Enter open</span><span>Esc close</span>"
 }
 };
@@ -1879,12 +2083,14 @@ const duongDan = (dich, lang = LANG) => {
   const pre = BASE + (lang === 'en' ? '/en' : '');
   if (!dich || dich === 'dau-trang') return pre + '/';
   if (dich.startsWith('p:')) return `${pre}/${SLUG_MUC['du-an'][lang]}/${SLUG_DA[dich.slice(2)]}/`;
+  if (dich === 'du-lieu') return `${pre}/${SLUG_MUC['dich-vu'][lang]}/#du-lieu`;
   return SLUG_MUC[dich] ? `${pre}/${SLUG_MUC[dich][lang]}/` : pre + '/';
 };
 const docDuongDan = () => {
   if (!BUILT) { const h = location.hash; return /^#\//.test(h) ? 'p:' + h.slice(2) : h.slice(1); }
   const p = location.pathname.slice(BASE.length).replace(/^\/en(?=\/|$)/, '').replace(/^\/+|\/+$/g, '');
   const [a, b] = p.split('/');
+  if (a === 'phan-tich-du-lieu' || a === 'data-analytics' || (location.hash === '#du-lieu' && a === SLUG_MUC['dich-vu'][LANG])) return 'du-lieu';
   const muc = Object.keys(SLUG_MUC).find(k => SLUG_MUC[k][LANG] === a);
   if (muc === 'du-an' && b) { const id = Object.keys(SLUG_DA).find(k => SLUG_DA[k] === b); if (id) return 'p:' + id; }
   return muc || '';
@@ -1909,7 +2115,9 @@ const capNhatNgu = () => { const d = UI.doi_ngu, a = $('#doi-ngu'); a.href = BUI
 const chipSvl = `<a class="chip-so" href="#/silverland" title="${esc(UI.chip_svl)}"><svg width="22" height="16" viewBox="0 0 22 16" aria-hidden="true"><rect x="2" y="5.8" width="7" height="10.2" rx="1" fill="#9AA1AA"/><rect x="13" y="0" width="7" height="16" rx="1" fill="#2E4BFF"/></svg><span class="tang">+${so('56.5')}%</span></a>`;
 const chipDa = `<a class="chip-so" href="#du-an"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M1 2h14l-5 6v6l-4-2V8z" fill="none" stroke="#0E1116" stroke-width="1.6" stroke-linejoin="round"/></svg>${esc(UI.chip_da)}</a>`;
 { const el = $('[data-t="lon"]'); el.innerHTML = el.innerHTML.replace('{{CHIP_SVL}}', chipSvl).replace('{{CHIP_DA}}', chipDa); }
-document.querySelectorAll('.mo-ghi [data-va]').forEach(b => { const k = +b.dataset.va; if (k) b.textContent = GD[k]; });
+/* phễu trang chủ đếm số người, nên tầng cuối là khách đã thanh toán, không phải doanh thu */
+const GD_MO = [...GD.slice(0, 4), UI.tang_cuoi];
+document.querySelectorAll('.mo-ghi [data-va]').forEach(b => { const k = +b.dataset.va; if (k) b.textContent = GD_MO[k]; });
 $('#lenh-o').placeholder = UI.lenh_goi_y; $('#lenh-o').setAttribute('aria-label', UI.lenh_aria);
 $('#f-nganh').innerHTML = DATA.nganh_form.map(n => `<option>${esc(n)}</option>`).join('');
 
@@ -1921,6 +2129,93 @@ if (DATA.linkedin) $('#lk-li').href = DATA.linkedin; else $('#lk-li').remove();
 if (DATA.facebook) $('#lk-fb').href = DATA.facebook; else $('#lk-fb').remove();
 
 $('#ds-chot').innerHTML = DATA.chot.map(c => `<li>${esc(c)}</li>`).join('');
+
+/* trang chủ: 2 dự án nổi bật, mỗi thẻ một phát hiện */
+{
+  const T = DATA.noi_bat_tc;
+  $('#tc-noi').innerHTML = `<h2 class="dv-h">${esc(T.t)}</h2><div class="tc-luoi">${T.ds.map((x, i) => `<a class="tc-the" href="#/${x.du_an}" style="--i:${i}">
+    <span class="tc-nhan">${esc(DATA.du_an.find(d => d.id === x.du_an).thuong_hieu)} · ${esc(x.nhan)}</span>
+    <span class="tc-so" aria-hidden="true"><b>${esc(x.so[0])}</b><i>→</i><b class="moi">${esc(x.so[1])}</b></span><small class="tc-so-nhan">${esc(x.so_nhan)}</small>
+    <strong>${esc(x.phat_hien)}</strong><span class="tc-ct">${esc(x.chi_tiet)}</span>
+    <span class="tc-lam">${esc(x.lam)}</span><small class="tc-ghi">${esc(x.ghi)}</small>
+    <span class="tc-xem">${esc(T.xem)} <span aria-hidden="true">→</span></span></a>`).join('')}</div>`;
+}
+
+/* menu xổ xem trước: rê vào Gói dịch vụ hoặc Dự án để thấy giá và con số trước khi bấm */
+{
+  const M = UI.mega, nav = $('.dau nav');
+  const boc = (href, html) => { const a = nav.querySelector(`:scope > a[href="${href}"]`); if (!a) return; const w = document.createElement('div'); w.className = 'nav-mo'; a.replaceWith(w); w.appendChild(a); a.setAttribute('aria-haspopup', 'true'); w.insertAdjacentHTML('beforeend', `<div class="nav-xem">${html}</div>`); };
+  boc('#dich-vu', `<p class="nx-t">${esc(M.dv)}</p><ul class="nx-dv">${DATA.goi_kenh.map(k => `<li><a href="#dich-vu" data-tab="${k.ma}"><b>${esc(k.ten)}</b><small>${esc(k.mo)}</small><em>${esc(M.tu)} ${esc(k.muc[0].gia)}</em></a></li>`).join('')}</ul>
+    <div class="nx-chan"><a href="#du-lieu">${esc(M.dv_da)} <span aria-hidden="true">→</span></a><a href="#lien-he" data-goi="${esc(DATA.dv_nhan.chua_ro)}">${esc(M.chua_ro)} <span aria-hidden="true">→</span></a></div>`);
+  boc('#du-an', `<p class="nx-t">${esc(M.da)}</p><ul class="nx-da">${DATA.du_an.map(d => `<li><a href="#/${d.id}"><span>${esc(d.thuong_hieu)}<small>${esc(d.nganh)}</small></span><b>${esc(d.noi_bat.so)}</b><small class="nx-nh">${esc(d.noi_bat.nhan)}</small></a></li>`).join('')}</ul>
+    <div class="nx-chan"><a href="#du-an">${esc(M.da_tat)} <span aria-hidden="true">→</span></a></div>`);
+  /* chọn đúng tab dịch vụ sau khi tới trang */
+  document.addEventListener('click', e => { const a = e.target.closest('[data-tab]'); if (!a) return; const id = a.dataset.tab; setTimeout(() => { const t = document.getElementById('tab-' + id); if (t) t.click(); }, 30); });
+  /* Esc đóng menu đang mở bằng bàn phím; bấm xong thì đóng */
+  nav.addEventListener('keydown', e => { if (e.key === 'Escape') { const w = e.target.closest('.nav-mo'); if (w) { w.querySelector(':scope > a').focus(); w.classList.add('dong'); } } });
+  nav.addEventListener('click', e => { const w = e.target.closest('.nav-mo'); if (w && e.target.closest('.nav-xem')) { w.classList.add('dong'); document.activeElement.blur(); } });
+  nav.querySelectorAll('.nav-mo').forEach(w => w.addEventListener('mouseleave', () => w.classList.remove('dong')));
+}
+
+/* phễu minh hoạ: kiểm số, tìm bước rơi, sửa tracking, tăng ngân sách */
+(() => {
+  const F = $('#pheu'), P = UI.pheu; if (!F || !P) return;
+  const CX = 92, TOP = 26, BUOC = 52, H = 20, RX = [84, 70, 56, 42, 30], RY = r => r * .3, ROI = 2;
+  const SVGNS = 'http://www.w3.org/2000/svg';
+  const tang = RX.map((r, i) => { const y = TOP + i * BUOC, ry = RY(r);
+    return `<g class="tg${i === ROI + 1 ? ' roi' : ''}${i === 4 ? ' day' : ''}">
+      <path class="tg-than" d="M${CX - r},${y} v${H} a${r},${ry} 0 0 0 ${2 * r},0 v${-H} a${r},${ry} 0 0 1 ${-2 * r},0z"/>
+      <ellipse class="tg-mat" cx="${CX}" cy="${y}" rx="${r}" ry="${ry}"/>
+      <line class="tg-noi" x1="${CX + r + 6}" y1="${y + H / 2}" x2="196" y2="${y + H / 2}"/>
+      <text class="tg-ten" x="200" y="${y + H / 2 + 3.5}">${esc(P.tang[i])}</text></g>`; }).join('');
+  const yRoi = TOP + (ROI + 1) * BUOC;
+  F.setAttribute('aria-label', P.aria);
+  F.innerHTML = `<figcaption class="pheu-dau"><span>${esc(P.t)}</span><span><b id="pheu-so">01</b> / 04 · ${esc(P.minh)}</span></figcaption>
+    <div class="pheu-than">
+      <svg viewBox="0 0 290 268" aria-hidden="true"><defs><linearGradient id="pheu-gr" x1="0" x2="1"><stop offset="0" stop-color="rgba(14,17,22,.13)"/><stop offset=".55" stop-color="rgba(14,17,22,.03)"/><stop offset="1" stop-color="rgba(14,17,22,.1)"/></linearGradient></defs>
+        ${tang}
+        <g class="the-roi"><rect x="${CX - RX[ROI + 1] - 96}" y="${yRoi - 30}" width="${P.roi.length * 6.2 + 14}" height="17" rx="8.5"/><text x="${CX - RX[ROI + 1] - 89}" y="${yRoi - 18.5}">${esc(P.roi)}</text></g>
+        <line class="pheu-quet" x1="${CX - 92}" y1="${TOP - 8}" x2="${CX + 92}" y2="${TOP - 8}"/>
+        <g class="hat"></g></svg>
+      <div><ol class="pheu-buoc">${P.buoc.map((b, i) => `<li><button type="button" data-pha="${i}" aria-pressed="false"><span>0${i + 1}</span><b>${esc(b[0])}</b><small>${esc(b[1])}</small><i></i></button></li>`).join('')}</ol>
+      <a class="pheu-lk" href="#cach-lam">${esc(P.lich)} <span aria-hidden="true">→</span></a></div>
+    </div>`;
+  const G = F.querySelector('.hat'), DAY = F.querySelector('.day'), SO = $('#pheu-so'), NUT = [...F.querySelectorAll('.pheu-buoc button')];
+  const T = 3800; let pha = 0, hen = 0, raf = 0, thay = false, hat = [], dem = 0, cuoiDat = 0;
+  const rxTai = y => { const k = (y - TOP) / BUOC; if (k <= 0) return RX[0]; if (k >= 4) return RX[4]; const a = Math.floor(k); return RX[a] + (RX[a + 1] - RX[a]) * (k - a); };
+  const datPha = (k, tuDong) => {
+    pha = k; F.dataset.pha = k; SO.textContent = '0' + (k + 1);
+    NUT.forEach((n, i) => { n.setAttribute('aria-pressed', i === k ? 'true' : 'false'); const v = n.querySelector('i'); v.style.animation = 'none'; v.offsetWidth; v.style.animation = ''; });
+    clearTimeout(hen); if (thay && !RM) hen = setTimeout(() => datPha((pha + 1) % 4, true), T);
+  };
+  NUT.forEach(n => n.addEventListener('click', () => datPha(+n.dataset.pha)));
+  const tao = () => { const c = document.createElementNS(SVGNS, 'circle'); c.setAttribute('r', '2.3'); G.appendChild(c);
+    const u = Math.random() * 2 - 1; return {c, u, y: TOP - 14 - Math.random() * 6, vy: .95 + Math.random() * .35, roi: Math.random() < (pha >= 2 ? .1 : .58), ra: false, x: 0, vx: 0, a: 1}; };
+  const buoc = () => {
+    dem++;
+    if (dem % (pha === 3 ? 7 : 14) === 0) hat.push(tao());
+    hat = hat.filter(h => {
+      if (!h.ra) {
+        h.y += h.vy; h.x = CX + h.u * rxTai(h.y) * .72;
+        if (h.roi && h.y > yRoi - 18) { h.ra = true; h.vx = (h.u < 0 ? -1 : 1) * (1 + Math.random() * .8); h.c.classList.add('ro'); }
+        if (h.y > TOP + 4 * BUOC + H) { h.c.remove(); cuoiDat = 10; return false; }
+      } else { h.x += h.vx; h.y += .5; h.a -= .02; if (h.a <= 0) { h.c.remove(); return false; } h.c.setAttribute('opacity', h.a.toFixed(2)); }
+      h.c.setAttribute('cx', h.x.toFixed(1)); h.c.setAttribute('cy', h.y.toFixed(1)); return true;
+    });
+    if (cuoiDat > 0) { cuoiDat--; DAY.classList.toggle('sang', cuoiDat > 0); }
+    raf = requestAnimationFrame(buoc);
+  };
+  const chay = () => { if (thay && !raf) { F.classList.add('chay'); raf = requestAnimationFrame(buoc); datPha(pha); } };
+  const dung = () => { cancelAnimationFrame(raf); raf = 0; clearTimeout(hen); F.classList.remove('chay'); };
+  if (RM) {
+    datPha(3);
+    [[-.5, 40], [.3, 60], [-.1, 95], [.6, 120], [-.4, 150], [.2, 190], [-.3, 225], [.1, 245]].forEach(([u, y]) => { const c = document.createElementNS(SVGNS, 'circle'); c.setAttribute('r', '2.3'); c.setAttribute('cx', (CX + u * rxTai(y) * .72).toFixed(1)); c.setAttribute('cy', y); G.appendChild(c); });
+    return;
+  }
+  datPha(0);
+  new IntersectionObserver(es => { thay = es[0].isIntersecting; thay ? chay() : dung(); }, {threshold: .2}).observe(F);
+  document.addEventListener('visibilitychange', () => document.hidden ? dung() : chay());
+})();
 
 /* trang chủ: lối tắt tới từng trang */
 $('#ds-loi-tat').innerHTML = DATA.loi_tat.map((l, i) => `<a class="hien" href="#${l.dich}"><span class="s">0${i + 1}</span><span class="t">${esc(l.ten)}</span><p>${esc(l.mo)}</p><span class="m" aria-hidden="true">→</span></a>`).join('');
@@ -1936,6 +2231,13 @@ $('#ds-loi-tat').innerHTML = DATA.loi_tat.map((l, i) => `<a class="hien" href="#
   const giaTri = (k, p) => laSeo(k) ? baiCua(k)[p] : (() => { const z = Math.min(3, Math.floor(p / 100)), [a, b] = VUNG[z]; return a + Math.floor((b - a + 1) * (p - z * 100) / 100); })();
   const vungCua = (k, p) => laSeo(k) ? p : Math.min(3, Math.floor(p / 100));
   const VI_TRI = {facebook: 150, google: 150, seo: 1, 'cham-soc': 0};
+  /* phí theo vùng ngân sách, lấy từ dữ liệu từng gói: phi (cố định), phi_pt + phi_min (phần trăm, có mức tối thiểu), tren_pt (trên 60 triệu) */
+  const phiCua = (k, z, v) => {
+    if (z === 3) return {pt: k.tren_pt, v: v == null ? null : v * k.tren_pt / 100};
+    const m = k.muc[z];
+    return m.phi_pt ? {pt: m.phi_pt, min: m.phi_min, v: v == null ? null : Math.max(v * m.phi_pt / 100, m.phi_min)} : {v: m.phi};
+  };
+  window.__phiCua = (ma, v) => { const k = K.find(x => x.ma === ma), z = v < 10 ? 0 : v <= 30 ? 1 : v <= 60 ? 2 : 3, f = phiCua(k, z, v); return {goi: k.muc[Math.min(z, 2)].ten, phi: +f.v.toFixed(2), tong: +(v + f.v).toFixed(2)}; };
   $('#kenh-noi-dung').innerHTML = `<div id="pan-kenh" role="tabpanel" aria-labelledby="tab-${K[0].ma}">
     <div class="may" id="may-goi">
       <div class="may-trai">
@@ -1949,13 +2251,16 @@ $('#ds-loi-tat').innerHTML = DATA.loi_tat.map((l, i) => `<a class="hien" href="#
       <article class="may-the" id="may-the" aria-live="polite"></article>
     </div>
   </div>`;
+  $('#chua-ro').dataset.goi = N.chua_ro;
   let kenh = K[0], vungTruoc = -1;
   const keo = $('#may-keo');
   const veThe = (k, p) => {
     const v = giaTri(k, p), z = vungCua(k, p), j = Math.min(z, 2), m = k.muc[j], tren = z === 3;
-    const tinh = !laSeo(k) && (tren || (k.ma === 'google' && j === 2));
-    const gia = tinh ? N.tien(Math.max(v / 10, tren ? 0 : 3.5)) : m.gia;
-    const donVi = tinh ? (tren ? N.phi10 : N.phi10_min) : m.don_vi;
+    const f = laSeo(k) ? null : phiCua(k, z, v), tinh = !!(f && f.pt);
+    const gia = f ? N.tien(f.v) : m.gia;
+    const donVi = tinh ? N.phi_pt(f) : m.don_vi;
+    const tong = f ? `<dl class="t-tong" aria-label="${esc(N.tong_aria(N.tr(v), N.tr(f.v), N.tr(v + f.v), k.nen_tang))}"><div><dt>${esc(N.ns_tra(k.nen_tang))}</dt><dd>${esc(N.tr(v))}</dd></div><div><dt>${esc(N.phi_dv)}</dt><dd>+ ${esc(N.tr(f.v))}</dd></div><div class="cong"><dt>${esc(N.tong)}</dt><dd>${esc(N.tr(v + f.v))}</dd></div></dl>` : '';
+    const baoCao = m.bao_cao ? `<p class="t-bc"><b>${esc(N.bao_cao)}</b> ${esc(m.bao_cao)}</p>` : '';
     const truoc = j ? k.muc.slice(0, j).flatMap(x => x.gom) : [];
     $('#may-so').textContent = v; $('#may-don').textContent = laSeo(k) ? (k.don || N.don_bai) : N.don_ns;
     keo.setAttribute('aria-valuetext', laSeo(k) ? (k.don ? `${v} ${k.don}, ${m.ten}` : N.gia_tri_bai(v, m.ten)) : N.gia_tri(v, m.ten));
@@ -1967,7 +2272,7 @@ $('#ds-loi-tat').innerHTML = DATA.loi_tat.map((l, i) => `<a class="hien" href="#
       <div class="gia"><strong>${esc(gia)}</strong><small>${esc(donVi)}</small></div>
       ${j ? `<details><summary>${esc(N.gom_truoc(k.muc[j - 1].ten, truoc.length))}</summary><ul>${truoc.map(g => `<li>${esc(g)}</li>`).join('')}</ul></details>` : ''}
       <ul>${m.gom.map(g => `<li>${esc(g)}</li>`).join('')}</ul>
-      <a class="chon" href="#lien-he" data-goi="${esc((k.ten_goi || k.ten) + ' ' + m.ten)}">${esc(N.chon_goi)} <span aria-hidden="true">→</span></a>`;
+      ${baoCao}${tong}<a class="chon" href="#lien-he" data-goi="${esc((k.ten_goi || k.ten) + ' ' + m.ten)}">${esc(N.chon_goi)} <span aria-hidden="true">→</span></a>`;
     if (z !== vungTruoc && vungTruoc !== -1 && !RM) { const t = $('#may-the'); t.classList.remove('doi'); void t.offsetWidth; t.classList.add('doi'); }
     vungTruoc = z;
     try { doiLienKet($('#may-the')); } catch (e) {}
@@ -1979,7 +2284,7 @@ $('#ds-loi-tat').innerHTML = DATA.loi_tat.map((l, i) => `<a class="hien" href="#
     $('#may-goi-y').textContent = laSeo(k) ? (k.goi_y || N.goi_y_bai) : N.goi_y;
     keo.min = 0; keo.max = laSeo(k) ? 2 : 399; keo.step = 1; keo.value = VI_TRI[k.ma];
     $('#may-vach').innerHTML = '<i></i>'.repeat(n);
-    $('#may-moc').innerHTML = Array.from({length: n}, (_, i) => `<li><b>${esc(i < 3 ? k.muc[i].ten : N.moc_tren)}</b><small>${esc(laSeo(k) ? (k.moc_bai || N.moc_bai)[i] : N.moc[i])}</small></li>`).join('');
+    $('#may-moc').innerHTML = Array.from({length: n}, (_, i) => `<li><b>${esc(i < 3 ? k.muc[i].ten : N.moc_tren)}</b><small>${esc(laSeo(k) ? (k.moc_bai || N.moc_bai)[i] : N.moc[i])}</small>${laSeo(k) ? '' : `<em>${esc(N.phi_moc(phiCua(k, i)))}</em>`}</li>`).join('');
     $('#kenh-chan').innerHTML = `<p><b>${esc(N.khong_gom)}:</b> ${esc(k.khong_gom)}</p>${k.vd ? `<a class="vd" href="#/${k.vd}">${esc(N.vd)}: ${esc(tenDa(k.vd))} →</a>` : ''}`;
     $('#pan-kenh').setAttribute('aria-labelledby', 'tab-' + k.ma);
     try { doiLienKet($('#kenh-chan')); } catch (e) {}
@@ -2004,11 +2309,12 @@ $('#ds-loi-tat').innerHTML = DATA.loi_tat.map((l, i) => `<a class="hien" href="#
       });
     });
   }
+  const IC_DV = {'du-lieu': `<rect x="5" y="9" width="30" height="24" rx="3"/><path d="M11 27v-5M17 27v-9M23 27v-7M29 27v-12"/><circle cx="34" cy="31" r="7"/><path d="M39 36l5 5"/>`, 'web': `<rect x="4" y="8" width="40" height="30" rx="3"/><path d="M4 15h40"/><circle cx="9" cy="11.5" r="1"/><circle cx="13" cy="11.5" r="1"/><path d="M10 22h16M10 27h11"/><path d="M30 24l9 4-4 1.5-1.5 4z"/>`, 'noi-dung': `<path d="M6 9h36v22H20l-8 7v-7H6z"/><path d="M13 17h22M13 23h15"/>`};
   { const P = DATA.dv_du_an;
     $('#ds-dvda').innerHTML = P.ds.map((d, i) => `<article class="dvda-o${d.trang ? ' dvda-dl' : ''}">
-      <span class="dvda-so">0${i + 1}</span><h3>${esc(d.ten)}</h3><p>${esc(d.mo)}</p>
+      <div class="dvda-dau"><span class="dvda-so">0${i + 1}</span>${IC_DV[d.ma] ? `<svg class="dvda-ic" viewBox="0 0 48 48" aria-hidden="true">${IC_DV[d.ma]}</svg>` : ''}</div><h3>${esc(d.ten)}</h3><p>${esc(d.mo)}</p>
       ${d.gom ? `<ul>${d.gom.map(g => `<li>${esc(g)}</li>`).join('')}</ul>` : ''}
-      <div class="dvda-chan"><small>${esc(P.nhan_gia)}</small>${d.trang ? `<a class="chon" href="#${d.trang}">${esc(P.xem)} <span aria-hidden="true">→</span></a>` : `<a class="chon" href="#lien-he" data-goi="${esc(d.ten)}">${esc(P.hoi)} <span aria-hidden="true">→</span></a>`}</div>
+      <div class="dvda-chan"><small>${esc(P.nhan_gia)}</small>${d.trang ? `<a class="chon" href="#${d.trang}">${esc(P.xem)} <span aria-hidden="true">↓</span></a>` : `<a class="chon" href="#lien-he" data-goi="${esc(d.ten)}">${esc(P.hoi)} <span aria-hidden="true">→</span></a>`}</div>
     </article>`).join('');
     $('#f-dv').innerHTML = `<option>${esc(N.chua_ro)}</option><optgroup label="${esc(N.nhom_goi)}">${K.flatMap(k => k.muc.map(m => `<option>${esc((k.ten_goi || k.ten) + ' ' + m.ten)}</option>`)).join('')}</optgroup><optgroup label="${esc(P.nhom)}">${P.ds.map(d => `<option>${esc(d.ten)}</option>`).join('')}</optgroup>`;
   }
@@ -2036,9 +2342,10 @@ $('#ds-nganh').innerHTML = DATA.nganh.map((n, i) => {
 }).join('');
 
 $('#ds-th-khac').innerHTML = DATA.thuong_hieu_khac.map(t => `<li>${esc(t.ten)}<small>${esc(t.nganh)}</small></li>`).join('');
-$('#ds-hanh-trinh').innerHTML = DATA.hanh_trinh.map(h => `<li><time>${esc(h.nam)}</time><p>${esc(h.noi_dung)}</p></li>`).join('');
-$('#ds-ky-nang').innerHTML = DATA.ky_nang.map(n => `<dt>${esc(n.nhom)}</dt><dd>${n.ds.map(k => `<span>${esc(k)}</span>`).join('')}</dd>`).join('');
-$('#ds-cong-cu').innerHTML = DATA.cong_cu.map(c => `<li>${esc(c[0])}<span>${esc(c[1])}</span></li>`).join('');
+$('#ds-hanh-trinh').innerHTML = DATA.hanh_trinh.map((h, i) => `<li class="${h.sap ? 'sap' : ''}" style="--i:${i}"><time>${esc(h.nam)}</time><p>${esc(h.noi_dung)}</p></li>`).join('');
+$('#ds-ky-nang').innerHTML = DATA.ky_nang.map((n, g) => `<div class="kn-nhom${g === 0 ? ' dam' : ''}"><h3>${esc(n.nhom)}</h3><ul>${n.ds.map((k, i) => `<li style="--i:${i}"><span>${esc(k)}</span></li>`).join('')}</ul></div>`).join('');
+$('#cc-dan').textContent = DATA.cong_cu_dan;
+$('#ds-cong-cu').innerHTML = DATA.cong_cu.map((n, i) => `<li style="--i:${i}"><h3><b>0${i + 1}</b>${esc(n.nhom)}</h3><ul>${n.ds.map(t => `<li>${esc(t)}</li>`).join('')}</ul></li>`).join('');
 {
   /* lịch trình: mỗi bước là một thanh trên trục 5 cột (tuần 1 đến 4, sau đó) */
   const TRUC = [[0, .43], [.43, 1], [1, 4], null], T = DATA.truc_tuan;
@@ -2102,6 +2409,7 @@ $('#ds-duan').innerHTML = DATA.du_an.map((d, i) => `
     ${LOGO[d.id] ? `<img class="duan-logo" src="${tep(LOGO[d.id])}" alt="Logo ${esc(d.thuong_hieu)}" loading="lazy">` : ''}
     <h2 id="t-${d.id}">${esc(d.thuong_hieu)}</h2>
     <p class="van-de">${esc(d.van_de)}</p>
+    <p class="duan-vai"><b>${esc(UI.phan_minh)}:</b> ${esc(d.vai_tro)}</p>
     ${minhHoa(d)}
     <div class="chi-so">${d.chi_so.map(c => `<div><strong>${esc(c.so)}</strong><span>${esc(c.nhan)}</span></div>`).join('')}</div>
     <a class="nut" href="#/${d.id}">${UI.mo_hs} <span aria-hidden="true">→</span></a>
@@ -2170,8 +2478,10 @@ function dongBienBan() { if (bb.open) bb.close(); }
 function route() { apDung(hashSangDich(location.hash), false); }
 
 /* Mỗi mục menu là một trang riêng: chỉ hiện phần của trang đó, không cuộn cả site dài */
-const THU_TU = ['dau-trang', 'toi', 'dich-vu', 'du-lieu', 'du-an', 'cach-lam', 'lien-he'];
-const links = [...document.querySelectorAll('.dau nav a, .thanh-duoi a')];
+const THU_TU = ['dau-trang', 'toi', 'dich-vu', 'du-an', 'cach-lam', 'lien-he'];
+/* trang Dữ liệu cũ đã gộp vào Gói dịch vụ: 'du-lieu' mở Gói dịch vụ rồi cuộn tới khối dữ liệu */
+const cuonDuLieu = () => requestAnimationFrame(() => { const e = $('#du-lieu'); if (e) e.scrollIntoView({block: 'start'}); });
+const links = [...document.querySelectorAll('.dau nav > a, .dau nav .nav-mo > a, .thanh-duoi a')];
 let trangHienTai = null;
 function hienTrang(id) {
   if (!THU_TU.includes(id)) id = 'dau-trang';
@@ -2192,6 +2502,7 @@ function hienTrang(id) {
 /* Điều hướng theo slug khi đã build; khi mở file trực tiếp thì dùng # như cũ */
 function apDung(dich, muot = true) {
   if (dich.startsWith('p:')) { if (trangHienTai !== 'du-an') { hienTrang('du-an'); scrollTo({top: 0, behavior: 'instant'}); } moBienBan(dich.slice(2)); return; }
+  if (dich === 'du-lieu') { dongBienBan(); hienTrang('dich-vu'); cuonDuLieu(); return; }
   if (dich && !THU_TU.includes(dich)) return;
   dongBienBan();
   hienTrang(dich || 'dau-trang');
@@ -2199,7 +2510,7 @@ function apDung(dich, muot = true) {
 }
 function diToi(dich) {
   if (!BUILT) { location.hash = dich.startsWith('p:') ? '#/' + dich.slice(2) : '#' + (dich || 'dau-trang'); return; }
-  if (duongDan(dich) !== location.pathname) history.pushState({dich}, '', duongDan(dich));
+  if (duongDan(dich) !== location.pathname + location.hash) history.pushState({dich}, '', duongDan(dich));
   apDung(dich); capNhatNgu();
 }
 function doiLienKet(goc = document) {
@@ -2241,12 +2552,16 @@ apDung(docDuongDan(), false);
 /* trang dữ liệu: giới thiệu, dashboard theo ngành (số giả định), quy trình, việc đã làm */
 {
   const D = DATA.du_lieu, B = D.db, VI = LANG === 'vi', tenDa = id => DATA.du_an.find(x => x.id === id).thuong_hieu;
-  $('#dl-mo').innerHTML = `<p class="dl-dan">${esc(D.dan)}</p>
-    <div class="dl-dh"><h2 class="dv-h">${esc(D.dh_t)}</h2><ul>${D.dh.map((t, i) => `<li><span>0${i + 1}</span>${esc(t)}</li>`).join('')}</ul></div>`;
-  $('#dl-buoc').innerHTML = `<h2 class="dv-h">${esc(D.buoc_t)}</h2><ol>${D.buoc.map((b, i) => `<li style="--i:${i}"><span class="so">0${i + 1}</span><h3>${esc(b.ten)}</h3><p>${esc(b.mo)}</p></li>`).join('')}</ol>`;
-  $('#dl-chan').innerHTML = `<div><h2 class="dv-h">${esc(D.da_t)}</h2><ul class="dl-da">${D.da.map(x => `<li><a href="#/${x.du_an}"><b>${esc(tenDa(x.du_an))}</b><span>${esc(x.mo)}</span><i aria-hidden="true">→</i></a></li>`).join('')}</ul></div>
-    <div><h2 class="dv-h">${esc(D.cc_t)}</h2><ul class="dl-cc">${D.cc.map(c => `<li>${esc(c)}</li>`).join('')}</ul>
-    <p class="dl-gia">${esc(D.gia)}</p><a class="nut dac" href="#lien-he" data-goi="${esc(D.goi)}">${esc(D.cta)} <span aria-hidden="true">→</span></a></div>`;
+  const veNguon = () => { const N = D.nguon, h = 44;
+    const day = N.map((t, i) => { const y = 22 + i * h; return `<path class="dn-day" style="--i:${i}" d="M150,${y} C250,${y} 250,115 340,115"/>`; }).join('');
+    const the = N.map((t, i) => `<g class="dn-o" style="--i:${i}"><rect x="0" y="${6 + i * h}" width="150" height="32" rx="8"/><text x="14" y="${27 + i * h}">${esc(t)}</text></g>`).join('');
+    const cot = [38, 62, 46, 80, 70].map((v, i) => `<rect class="dn-cot" style="--i:${i}" x="${370 + i * 26}" y="${178 - v}" width="16" height="${v}" rx="2"/>`).join('');
+    return `<figure class="dl-nguon" aria-hidden="true"><svg viewBox="0 0 530 230">${day}${the}
+      <g class="dn-bang"><rect x="340" y="40" width="186" height="160" rx="12"/><text x="356" y="66">${esc(D.ve_mot)}</text><line x1="356" y1="78" x2="510" y2="78"/>${cot}<line x1="356" y1="179" x2="510" y2="179"/></g></svg></figure>`; };
+  $('#dl-mo').innerHTML = `<div><p class="dl-dan">${esc(D.dan)}</p>${veNguon()}</div>
+    <div class="dl-dh"><h3 class="dv-h">${esc(D.dh_t)}</h3><ul>${D.dh.map((t, i) => `<li><span>0${i + 1}</span>${esc(t)}</li>`).join('')}</ul></div>`;
+  $('#dl-chan').innerHTML = `<div><h3 class="dv-h">${esc(D.da_t)}</h3><ul class="dl-da">${D.da.map(x => `<li><a href="#/${x.du_an}"><b>${esc(tenDa(x.du_an))}</b><span>${esc(x.mo)}</span><i aria-hidden="true">→</i></a></li>`).join('')}</ul></div>
+    <div class="dl-cta"><p class="dl-gia">${esc(D.gia)}</p><a class="nut dac" href="#lien-he" data-goi="${esc(D.goi)}">${esc(D.cta)} <span aria-hidden="true">→</span></a></div>`;
 
   /* định dạng số */
   const tp = (v, d) => VI ? v.toFixed(d).replace('.', ',') : v.toFixed(d);
@@ -2498,7 +2813,7 @@ $('#form').addEventListener('submit', e => {
         const y = g.top + (i + .5) * g.band, x = g.cx + nua(g.top + i * g.band) + 18;
         ctx.fillStyle = i === 4 ? '#8FA2FF' : '#8C939E';
         ctx.font = `500 ${g.f1}px "IBM Plex Mono", monospace`;
-        ctx.fillText(`0${i + 1} ${GD[i].toUpperCase()}`, x, y - g.f2 / 2 + 1);
+        ctx.fillText(`0${i + 1} ${GD_MO[i].toUpperCase()}`, x, y - g.f2 / 2 + 1);
         ctx.fillStyle = i === 4 ? '#8FA2FF' : '#ECEEEA';
         ctx.font = `700 ${g.f2}px Archivo, sans-serif`;
         ctx.fillText(dem[i].toLocaleString(LANG === 'en' ? 'en-US' : 'vi-VN'), x, y + g.f2 / 2 + 1);

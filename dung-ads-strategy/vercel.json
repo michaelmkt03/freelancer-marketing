@@ -2,5 +2,27 @@
   "buildCommand": "node build.js",
   "outputDirectory": "docs",
   "cleanUrls": true,
-  "trailingSlash": true
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/phan-tich-du-lieu",
+      "destination": "/dich-vu/#du-lieu",
+      "permanent": true
+    },
+    {
+      "source": "/phan-tich-du-lieu/",
+      "destination": "/dich-vu/#du-lieu",
+      "permanent": true
+    },
+    {
+      "source": "/en/data-analytics",
+      "destination": "/en/services/#du-lieu",
+      "permanent": true
+    },
+    {
+      "source": "/en/data-analytics/",
+      "destination": "/en/services/#du-lieu",
+      "permanent": true
+    }
+  ]
 }
